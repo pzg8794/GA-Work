@@ -1,0 +1,7 @@
+index,best_row
+MAE,13.971
+Model,CPursuitNeuralUCB
+Cap type,T
+Run mode,5only
+Scenario set,no_oa
+Statement branch supports answer text,False

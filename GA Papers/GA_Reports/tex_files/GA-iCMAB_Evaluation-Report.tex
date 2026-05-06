@@ -1,0 +1,289 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=0.75in}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+% Professional color system
+\definecolor{primaryblue}{RGB}{31,81,138}
+\definecolor{secondaryblue}{RGB}{70,130,180}
+\definecolor{accentgreen}{RGB}{40,167,69}
+\definecolor{warningred}{RGB}{220,53,69}
+\definecolor{highlightgray}{RGB}{248,249,250}
+\definecolor{tableheader}{RGB}{233,236,239}
+
+% Professional highlighting commands
+\newcommand{\primarytext}[1]{\textcolor{primaryblue}{\textbf{#1}}}
+\newcommand{\secondarytext}[1]{\textcolor{secondaryblue}{\textbf{#1}}}
+\newcommand{\success}[1]{\textcolor{accentgreen}{\textbf{#1}}}
+\newcommand{\warning}[1]{\textcolor{warningred}{\textbf{#1}}}
+\newcommand{\highlight}[1]{\colorbox{highlightgray}{#1}}
+
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    breaklines=true,
+    frame=single,
+    language=Python,
+    backgroundcolor=\color{highlightgray}
+}
+
+\title{\textbf{Comprehensive Evaluation of Informative Contextual Multi-Armed Bandit Models for Quantum Network Routing}\\
+\large{Empirical Assessment of iCMAB Algorithms and Integration Framework for Adversarial Quantum Environments}}
+
+\author{Graduate Research Report\\
+Department of Computer Science\\
+Rochester Institute of Technology\\
+AI/Quantum Computing Research Track}
+
+\date{October 10, 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents a systematic empirical evaluation of informative contextual multi-armed bandit (iCMAB) algorithms for quantum network routing under stochastic conditions, focusing on stable informative variants only (iCPursuit, iCEpsilonGreedy, iCThompsonSampling, iCEXP4, iCEpochGreedy). Through multi-run protocols (3, 5, 8, 10 runs) with horizons from 6K steps, we benchmark performance using Oracle efficiency and validate robustness across configurations. Results show \primarytext{iCPursuit consistently leads (90–92\% Oracle efficiency)} with \success{very low variance}, followed by iCEpsilonGreedy and iCThompsonSampling, establishing a strong foundation for hybrid iCMAB development and deployment in adversarial quantum networks.
+\end{abstract}
+
+% \vspace{0.4cm}
+\newpage
+\tableofcontents
+
+\newpage
+
+% Executive Summary
+\begin{tcolorbox}[colback=highlightgray,colframe=primaryblue,title=\textbf{Executive Summary}]
+\begin{itemize}
+\item \primarytext{Top Performer}: iCPursuit achieves 90–92\% Oracle efficiency with excellent stability across runs.
+\item \secondarytext{Strong Statistical Baselines}: iCEpsilonGreedy ($\simeq$90\%) and iCThompsonSampling ($\simeq$88\%) provide reliable alternatives.
+\item \success{Robustness}: Coefficient of variation (CV) is sub-3\% for top informative variants under stochastic conditions.
+\item \primarytext{Hybrid Readiness}: Performance thresholds and selection criteria are established for iCMAB hybrid integration.
+\item \warning{Scope}: Unstable or experimental neural/exponential variants are excluded to ensure rigor and clarity.
+\end{itemize}
+\end{tcolorbox}
+
+\newpage
+\section{Introduction}
+
+\subsection{Research Context and Motivation}
+Quantum entanglement routing requires adaptive, context-aware decision-making under dynamic network conditions. Informative CMAB (iCMAB) algorithms extend contextual bandits with predictive context modeling to improve stability and efficiency under stochastic failures, providing a principled basis for robust quantum routing.
+
+\subsection{Research Objectives}
+\begin{enumerate}
+\item \textbf{Performance Characterization}: Identify informative contextual algorithms with superior efficiency and consistency.
+\item \textbf{Robustness Assessment}: Quantify cross-run stability under standardized stochastic conditions.
+\item \textbf{Hybrid Integration}: Establish selection criteria and thresholds for iCMAB-based hybrid architectures.
+\end{enumerate}
+
+\subsection{Contributions}
+\begin{itemize}
+\item \textbf{Systematic Benchmarking}: Evaluation of five stable iCMAB algorithms under uniform protocols.
+\item \textbf{Statistical Validation}: Multi-run consistency analysis across 3–10 runs and 6K+ horizons.
+\item \textbf{Selection Framework}: Evidence-based guidance for hybrid iCMAB development and deployment.
+\end{itemize}
+
+\section{Theoretical Foundation}
+
+\subsection{Informative Contextual Bandit Formulation}
+At step $t$, with context $x_t \in \mathcal{X}$ and informative parameters $\theta$, the expected reward for action $a$ is:
+\[
+\mu_a(x_t; \theta) = \mathbb{E}[r_{t,a} \mid x_t, \theta]
+\]
+The goal is to maximize cumulative reward and minimize regret:
+\[
+\mathrm{Regret}_T = \sum_{t=1}^{T}\left(\max_{a \in \mathcal{A}} \mu_a(x_t;\theta) - \mu_{a_t}(x_t;\theta)\right)
+\]
+
+\subsection{Evaluated iCMAB Algorithms}
+\begin{itemize}
+\item \textbf{iCPursuit}: Informative pursuit with adaptive exploration and contextual confidence.
+\item \textbf{iCEpsilonGreedy}: Context-aware epsilon-greedy with informative priors.
+\item \textbf{iCThompsonSampling}: Bayesian sampling with informative posterior updates.
+\item \textbf{iCEXP4}: Exponential weights with informative expert signals.
+\item \textbf{iCEpochGreedy}: Epoch-based exploration with contextual priors.
+\end{itemize}
+
+\section{Experimental Methodology}
+
+\subsection{Evaluation Framework}
+\begin{itemize}
+\item \textbf{Quantum Simulator}: Four-path quantum routing topology with configurable qubit capacities.
+\item \textbf{Stochastic Failures}: Attack rate 0.25 to emulate realistic decoherence/failure modes.
+\item \textbf{Oracle Baseline}: Efficiency computed relative to theoretical upper bound.
+\item \textbf{Multi-Run Protocol}: 3, 5, 8, and 10 runs; horizons from 6K steps and above.
+\end{itemize}
+
+\subsection{Standard Configuration}
+\begin{table}[H]
+\centering
+\caption{Standard iCMAB Configuration}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Purpose} \\
+\midrule
+Network Paths & 4 & Realistic routing complexity \\
+Qubit Configuration & (8, 10, 8, 9) & Heterogeneous capacities \\
+Frame Horizons & 6K–22K & Long-horizon learning \\
+Attack Rate & 0.25 (stochastic) & Failure simulation \\
+Random Seed & Controlled & Reproducibility \\
+Metric & Oracle Efficiency (\%) & Normalized performance \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Results and Analysis}
+
+\begin{tcolorbox}[colback=tableheader,colframe=primaryblue,title=\textbf{Primary iCMAB Performance Results}]
+\subsection{Cross-Run Performance Summary}
+\begin{table}[H]
+\centering
+\caption{Oracle Efficiency (\%) Across Run Configurations (Stochastic)}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{3 Runs} & \textbf{5 Runs} & \textbf{8 Runs} & \textbf{10 Runs} & \textbf{Average} \\
+\midrule
+\primarytext{iCPursuit} & \primarytext{90.3} & \primarytext{91.4} & \primarytext{92.0} & \primarytext{--} & \primarytext{91.2} \\
+iCEpsilonGreedy & 88.9 & 90.4 & -- & -- & 89.7 \\
+iCThompsonSampling & 85.4 & 90.1 & -- & -- & 87.8 \\
+iCEpochGreedy & 50.0 & 55.4 & -- & -- & 52.7 \\
+iCEXP4 & 50.5 & 54.0 & -- & -- & 52.3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{tcolorbox}
+
+\subsection{Stochastic Environment Characteristics}
+\begin{table}[H]
+\centering
+\caption{Detailed Stochastic iCMAB Performance (Best Achieved)}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{Best Efficiency} & \textbf{Oracle Gap} & \textbf{Consistency} & \textbf{Ranking} \\
+\midrule
+\primarytext{iCPursuit} & \primarytext{92.0\%} & \primarytext{8.0\%} & \primarytext{High} & \primarytext{1st} \\
+iCEpsilonGreedy & 90.4\% & 9.6\% & High & 2nd \\
+iCThompsonSampling & 90.1\% & 9.9\% & Medium & 3rd \\
+iCEpochGreedy & 55.4\% & 44.6\% & Low & 4th \\
+iCEXP4 & 54.0\% & 46.0\% & Variable & 5th \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Robustness Metrics}
+\begin{table}[H]
+\centering
+\caption{iCMAB Robustness Validation}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{Mean Efficiency} & \textbf{Std. Dev.} & \textbf{CV (\%)} & \textbf{Reliability} \\
+\midrule
+\success{iCPursuit} & \success{91.2\%} & \success{0.9\%} & \success{1.0\%} & \success{Excellent} \\
+iCEpsilonGreedy & 89.7\% & 0.8\% & 0.9\% & Very Good \\
+iCThompsonSampling & 87.8\% & 2.4\% & 2.7\% & Good \\
+iCEpochGreedy & 52.7\% & 2.7\% & 5.1\% & Fair \\
+iCEXP4 & 52.3\% & 2.3\% & 4.4\% & Fair \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Selection Framework for Hybrid Development}
+
+\subsection{Performance Tiers}
+\textbf{Tier 1 (90\%+)}: iCPursuit (91.2\%), iCEpsilonGreedy (89.7\%).\\
+\textbf{Tier 2 (80–90\%)}: iCThompsonSampling (87.8\%).\\
+\textbf{Tier 3 (40–70\%)}: iCEpochGreedy (52.7\%), iCEXP4 (52.3\%).
+
+\subsection{iCMAB Integration Guidelines}
+\begin{table}[H]
+\centering
+\caption{Algorithm Selection Guidelines}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Scenario} & \textbf{Primary Choice} & \textbf{Rationale} \\
+\midrule
+Maximum Performance & iCPursuit & Highest efficiency and stability \\
+Balanced Deployment & iCEpsilonGreedy & Simplicity with strong performance \\
+Bayesian Integration & iCThompsonSampling & Theoretical grounding and consistency \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Integration Criteria:}
+\begin{itemize}
+\item \textbf{Efficiency Threshold}: \(\geq 90\%\) Oracle efficiency for Tier 1 hybrids.
+\item \textbf{Stability Target}: CV \(\leq 3\%\) across multi-run configurations.
+\item \textbf{Robustness}: Maintain \(<25\%\) degradation from baseline to stochastic.
+\end{itemize}
+
+\section{Limitations and Future Work}
+
+\subsection{Limitations}
+\begin{itemize}
+\item Primary focus on stochastic failures; full adversarial spectrum remains future work.
+\item Some 8/10-run matrices are partial due to compute scheduling.
+\item Lower-tier methods (iCEpochGreedy, iCEXP4) require tuning for higher stability.
+\end{itemize}
+
+\subsection{Future Directions}
+\begin{enumerate}
+\item Extend evaluation to adversarial models and multi-threat scenarios.
+\item Optimize iCMAB hybrids anchored on iCPursuit and iCEpsilonGreedy.
+\item Scale to larger topologies and longer horizons for deployment readiness.
+\end{enumerate}
+
+\section{Implementation and Reproducibility}
+
+\subsection{Framework Architecture}
+\begin{lstlisting}[caption=Core iCMAB Components]
+quantum_algorithms.py              # iCMAB implementations
+quantum_environment.py             # Enhanced quantum simulation
+quantum_evaluator_visualizer.py    # Analysis and visualization
+quantum_framework_updated.py       # Integration and orchestration
+\end{lstlisting}
+
+\subsection{Reproducibility Guidelines}
+\begin{itemize}
+\item Standardized parameters across runs and horizons.
+\item Controlled seeds and consistent protocol design.
+\item Modular framework enabling extension and auditability.
+\end{itemize}
+
+\newpage
+\section{Conclusions}
+
+\subsection{Outcomes}
+\begin{enumerate}
+\item \primarytext{iCPursuit leads} with 90–92\% Oracle efficiency and excellent robustness.
+\item \success{Top informative variants} (iCEpsilonGreedy, iCThompsonSampling) show low variance and strong baselines.
+\item \secondarytext{Hybrid readiness} established via clear thresholds and selection criteria.
+\item \textbf{Deployment path}: Prioritize iCMAB hybrids grounded in Tier 1 informative algorithms.
+\end{enumerate}
+
+\subsection{Implications}
+iCMAB provides a high-performance, stable basis for hybrid quantum routing under realistic failures, with iCPursuit as the recommended anchor for near-term integration.
+
+\newpage
+\section{Acknowledgments}
+Prepared as part of GA work in AI/Quantum Computing at RIT, focusing on informative contextual bandits for quantum network routing.
+
+\end{document}

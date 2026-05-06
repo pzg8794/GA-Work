@@ -1,0 +1,6 @@
+Scenario,Source-best config,Source-best Eff (%),Gain vs default (pp)
+NONE,"Dynamic + (T, s=1.0)",99.899,0.014
+STOCHASTIC,"ThompsonSampling + (T, s=1.0)",95.37,0.6
+MARKOV,"Dynamic + (T, s=1.0)",93.242,0.286
+ADAPTIVE,"ThompsonSampling + (T, s=1.0)",95.692,2.908
+ONLINEADAPTIVE,"Default + (T, s=2.0)",99.792,0.0

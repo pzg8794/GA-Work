@@ -1,0 +1,4 @@
+index,Tier,Paper label,Source dataset,Source model,3 Runs,5 Runs,Avg. Eff.
+10,Collapsed (structural failure),CEpochGreedy,CMABs,CEPOCHGREEDY,37.52,37.51,37.52
+11,Collapsed (structural failure),iCEpochGreedy,iCMABs,ICEPOCHGREEDY,37.24,37.16,37.2
+12,Collapsed (structural failure),iCEXP4,iCMABs,ICEXP4,36.85,36.84,36.84

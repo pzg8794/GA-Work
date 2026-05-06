@@ -1,0 +1,69 @@
+Label,Reason,Rows,Cols
+all_hybrid,excluded-by-name,1860,30
+audit,audit-table (exported elsewhere),4,9
+"audit_map[""rq2_metric_audits['Avg Eff. (%)']""]",audit-table (exported elsewhere),4,9
+"audit_map[""rq2_metric_audits['CV (%)']""]",audit-table (exported elsewhere),4,9
+"audit_map[""rq2_metric_audits['Floor (%)']""]",audit-table (exported elsewhere),4,9
+"audit_map[""table_xi_audits['CMABs']""]",audit-table (exported elsewhere),20,10
+"audit_map[""table_xi_audits['EXP3-based']""]",audit-table (exported elsewhere),12,10
+"audit_map[""table_xi_audits['Hybrid Neural']""]",audit-table (exported elsewhere),16,10
+"audit_map[""table_xi_audits['Paper 12']""]",audit-table (exported elsewhere),16,10
+"audit_map[""table_xi_audits['Paper 2']""]",audit-table (exported elsewhere),16,10
+"audit_map[""table_xi_audits['Paper 7']""]",audit-table (exported elsewhere),16,10
+"audit_map[""table_xi_audits['Paper 8']""]",audit-table (exported elsewhere),16,10
+"audit_map[""table_xi_audits['iCMABs']""]",audit-table (exported elsewhere),20,10
+audit_map['audit_sub'],audit-table (exported elsewhere),16,10
+audit_map['rq1_summary'],audit-table (exported elsewhere),26,11
+audit_map['rq1_table_v_audit_3'],audit-table (exported elsewhere),13,10
+audit_map['rq1_table_v_audit_5'],audit-table (exported elsewhere),13,10
+audit_map['rq2_evaluator_win_summary_df'],audit-table (exported elsewhere),4,10
+audit_map['rq2_runner_win_summary_df'],audit-table (exported elsewhere),4,10
+audit_map['rq2_summary'],audit-table (exported elsewhere),16,10
+audit_map['rq2_win_dominance_audit'],audit-table (exported elsewhere),4,9
+audit_map['rq3a_audit'],audit-table (exported elsewhere),14,8
+audit_map['rq3a_summary'],audit-table (exported elsewhere),14,8
+audit_map['rq3b_best_audit'],audit-table (exported elsewhere),24,10
+audit_map['rq3b_summary'],audit-table (exported elsewhere),24,11
+audit_map['rq3c_best_table_audit'],audit-table (exported elsewhere),12,9
+audit_map['rq3c_caption_audit'],audit-table (exported elsewhere),12,9
+audit_map['rq3c_summary'],audit-table (exported elsewhere),12,10
+audit_map['rq3d_default_audit'],audit-table (exported elsewhere),2,7
+audit_map['table_x_audit'],audit-table (exported elsewhere),88,11
+audit_map['view'],audit-table (exported elsewhere),4,9
+audit_sub,audit-table (exported elsewhere),16,10
+combined_high_df,audit-table (exported elsewhere),73,21
+df,audit-table (exported elsewhere),4,9
+high,empty,0,9
+high2,audit-table (exported elsewhere),17,12
+high_rows,empty,0,2
+hybrid_df,excluded-by-name,4650,30
+master_inventory,excluded-by-name,11,2
+rq1_summary,audit-table (exported elsewhere),26,11
+rq1_table_v_audit_3,audit-table (exported elsewhere),13,10
+rq1_table_v_audit_5,audit-table (exported elsewhere),13,10
+rq2_evaluator_win_summary_df,audit-table (exported elsewhere),4,10
+rq2_metric_audits['Avg Eff. (%)'],audit-table (exported elsewhere),4,9
+rq2_metric_audits['CV (%)'],audit-table (exported elsewhere),4,9
+rq2_metric_audits['Floor (%)'],audit-table (exported elsewhere),4,9
+rq2_runner_win_summary_df,audit-table (exported elsewhere),4,10
+rq2_summary,audit-table (exported elsewhere),16,10
+rq2_win_dominance_audit,audit-table (exported elsewhere),4,9
+rq3a_audit,audit-table (exported elsewhere),14,8
+rq3a_summary,audit-table (exported elsewhere),14,8
+rq3b_best_audit,audit-table (exported elsewhere),24,10
+rq3b_summary,audit-table (exported elsewhere),24,11
+rq3c_best_table_audit,audit-table (exported elsewhere),12,9
+rq3c_caption_audit,audit-table (exported elsewhere),12,9
+rq3c_summary,audit-table (exported elsewhere),12,10
+rq3d_default_audit,audit-table (exported elsewhere),2,7
+table_x_audit,audit-table (exported elsewhere),88,11
+table_xi_audits['CMABs'],audit-table (exported elsewhere),20,10
+table_xi_audits['EXP3-based'],audit-table (exported elsewhere),12,10
+table_xi_audits['Hybrid Neural'],audit-table (exported elsewhere),16,10
+table_xi_audits['Paper 12'],audit-table (exported elsewhere),16,10
+table_xi_audits['Paper 2'],audit-table (exported elsewhere),16,10
+table_xi_audits['Paper 7'],audit-table (exported elsewhere),16,10
+table_xi_audits['Paper 8'],audit-table (exported elsewhere),16,10
+table_xi_audits['iCMABs'],audit-table (exported elsewhere),20,10
+verification_status_scale,excluded-by-name,3,2
+view,audit-table (exported elsewhere),4,9

@@ -1,0 +1,120 @@
+00:00:40 Speaker 1
+Yeah buddy, how's it going? Good good. Sorry about the background.
+00:00:47 Speaker 2
+They're just Oh that's alright. You're just getting out of class.
+00:00:50 Speaker 1
+Yeah they're just getting out of class.
+00:00:52 Speaker 2
+So I I figured we'll we can keep this short. I want to go over. 
+00:00:58 Speaker 1
+Yeah, they're just getting out. Right.
+00:01:01 Speaker 2
+Yeah. No, I was going to say, I just wanted to, I mean keep this short or I want to go over, like your paper you've been working on. Um, I uh just opened up Did I open up? Like yeah, I just opened up yourum project proposal for the first time and have not really looked through that yet. Um and so for the paperum, The threat aware evaluation of quantum entanglement routing. Um, Have you had a chance to go through and doum address all the comments in there yet?
+00:01:36 Speaker 1
+Yeah. Uh, most of them. Um, I need to push. Uh I have one that I'm that I'm I was finishing uh going over. Butum. Since the last update that I gave you, the latest one that you put in there, yeah, I have them on a to- do list that I'm working on them. So I need to okay. I'm going to be pushing the uh tonight and And when you say pushing,
+00:02:02 Speaker 2
+You mean doing it right? You're not working off a separate copy.
+00:02:05 Speaker 1
+Oh no no. It's in GitHub. That's that's what I mean. So I when I wait. 
+00:02:11 Speaker 2
+Wait wait wait wait what's in GitHub?
+00:02:13 Speaker 1
+In my is in my private repository the yeah. 
+00:02:16 Speaker 2
+But what is the paper?
+00:02:18 Speaker 1
+The paper, yes. So I push it there, so that way I have I track each because I have the whole list, right? So I track each one that I'm doing uh in order.
+00:02:27 Speaker 2
+So so so you don't work off Overleaf directly?
+00:02:31 Speaker 1
+Now no, because it's easier for me to keep track of each item because before, okay, I had to go through the history, But now I just go through the commits. It's almost easier. So,
+00:02:41 Speaker 2
+So dumb question. So if I go through Overleaf, right? And I make up if I were to make updates now, would you see those updates?
+00:02:48 Speaker 1
+Yeah, Because from Overleaf, there's a integration tab. And there you click GitHub, and then you do push.
+00:02:55 Speaker 2
+Yep. All right, so we're so we're good on that. Yeah yeah yeah So. What I would say is if you can clean up the paper, the the writeup you are doing a graduate, frankly, is. Pretty meaningless to me because you you can that's easy. I mean, That's you sitting down over the weekend or whenever and just doing the write up. That, that part does not um um the paper is what I am mostly interested in. So yeah, um, what I would so what I would say to do is really two things. Um, first for your graduation, Make sure you are keeping track of what you are going to need to do because what I tell everybody.
+00:03:35 Speaker 2
+Um, I get so screwed up with keeping track of what's required for master's students for data science, for software engineering, then computer science. I just like talk to your advisor or whatever. Make sure that um you know make sure that you're hunky dory with what you need to do to graduate. Like so you're doing like the defense. Yeah. Um, you're scheduling that, You know everything else. So there's a lot of little there's a couple little things to do, So from your perspective, Absolutely focus on that because I will one hundred percent forget, and I get screwed up between all the different rules. No worries. And then departments change and I am just like, yeah, they just that's you know you focus on that. So first of all make sure that you review the graduation requirements. I would do that this week and make sure you are all set. I mean there you have plenty of time to defend in things. Yeah, I am not worried about your write up.
+00:04:32 Speaker 2
+Yeah. Because we can take that from your paper, okay?
+00:04:34 Speaker 1
+Yeah. Just so you know, I did that like last semester. What do you say? Oh, okay, cool. Yeah. So it's all settled. I have a plan withum even before the last semester, I already did a plan with my uh advisor with and and withum well, I did a plan withum uh my guy I'm forgetting her name. I can't believe Megan. Megan, yes, I did a plan with Megan and then we run it through Travis, right? He he he accepted the plan. So I also went, I took some courses that I wanted to because you know, they were not in the in the whole program. So yeah, all of that is taken care like okay cool. Yeah so we're good there. Yeah. And what you said about, you know, keeping track of the uh write up and everything yeah I'm doing that closely with Travis. So like we're good in there.
+00:05:27 Speaker 1
+Uh, and of course, running it through you. But yeah, but like Well,
+00:05:31 Speaker 2
+Yeah. Yeah. I I mean, the thing is I'm more like as long as you have the dates and your defense requirements all set like, that's that's you don't need to really run it by me It's like you do whatever you need to do And. Then when we get to a date, we'll get to a date That's. All there is to it I mean You don't need to like, uh have me bless anything. Like did I fill can I fill out this form? Like no You can fill it out. Like fill it out. Um, yeah,
+00:05:57 Speaker 1
+No, but you've been giving me pretty good feedback in terms of writing papers, you know, and directions. So uh those are welcome for this as well. Even though it's easier right? Yeah. So I purposely took an easier scope. I took a scope that I already started from another paper right? And I just kind of like gave it like like a whole different view and perspective from, you know, the quantum bandits, which. I find them to be like amazing in terms of the purpose that I want to achieve in the in that one aspect there. And like you said, like this scope is is is is easy, so it's not as as bad. Yeah.
+00:06:38 Speaker 2
+Okay. Um, so secondly, what I would like is for you to get the paper. Don't even worry about your dissertation, like I said, Your thesis or whatever it's called, don't even worry about that. Yeah focus on your paper for now. And what I'd like to see you do is, um, address the comments. You'll see some of the comments touch on everything. And really focus on your write-up and cleaning things up because, um, I do want to talk to Z about that. Yeah. Um, and his student and get some of their feedback. And right now it needs to have some of those changes made to it. Yeah So I'd say, if you can make those changes in the next few days, let me know Um I'm going to review it again in a little bit.
+00:07:20 Speaker 2
+Um, and then so we can share it with G.
+00:07:22 Speaker 1
+Yeah, so two things I'm yeah two things I'm gonna deliver for you this week. So uh uh, you're definitely gonna have if not all most I'm gonna because I haven't pushed it, but if not all most of them, uh, but before I push, you know, I'm gonna make sure that I you. Uh that I go into the the paper itself. And in case you made any changes, because i i don't i don't want it to get lost. Soum so two things right, um. You're gonna have so the uh those comments, the the new one, the newly added comments. I'm gonna address them and push that finish addressing and push that uh tonight. And by the end of the week, I expect to have the um they're new testing um uh done and at least have uh, if no halfway, at least you know almost halfway.
+00:08:19 Speaker 1
+Uh, the integration of the new testbed, uh, uh, the group uh advice. So yeah. So. So we're going to be you know, by the end, at least by the end of this week. By this weekend, we're going to be close to like midway or close to the end of the integration of the new testbed. So next week I'll be delivering the results for that notice bed.
+00:08:42 Speaker 2
+Perfect yeah perfect. Um yeah. I mean, that's really it for me unless you have anything else.
+00:08:48 Speaker 1
+No, that's it. I think that's great.
+00:08:50 Speaker 2
+Oh, by the way, my comments, I'm using the actual comment tool inside Overleaf FYI. So hopefully you can see all those. Yeah, I. 
+00:08:59 Speaker 1
+Started using that because last time I noticed it, but then this time when I went and went over the comments, I forgot to go and look at the review panel.
+00:09:10 Speaker 2
+Yeah. And once you address the comments, you can delete what I have. 
+00:09:14 Speaker 1
+You can do the check boxes or whatever Okay, yeah yeah, For you to do.
+00:09:19 Speaker 2
+No, no, do them and then that way Ium.
+00:09:21 Speaker 1
+You are no one's.
+00:09:22 Speaker 2
+You just yeah yeah. So if you just address them and then just check do the checkbox get rid of the comments that's fine.
+00:09:29 Speaker 1
+I'll do that yeah okay soum, Um what I'm gonna do is this after I push and after you review, if I don't hear anything from me, I'm just gonna check them as done. Yeah that way, uh I'll give you a chance to look at the work first. And then I know that you're comfortable with the with the changes here. So it's perfect. Awesome. Um,
+00:09:52 Speaker 2
+Okay, cool. You need anything else from me or are you good?
+00:09:55 Speaker 1
+No, I think yeah, I think we're good. I think, uh, we have a good plan. And so in two weeks, we should be good in terms of likeum changes and a test. So I think if you're planning to reach out to Xi for review, Uh, you can start planning, you know as as you know, as early as uh uh next uh two weeks from now. Yeah.
+00:10:20 Speaker 2
+Okay. Sounds great man. Yeah. All right, I'll let you go but thanks for everything.
+00:10:25 Speaker 1
+No worries, yeah. Thank you. I I feel like I'm in a better place now because I took that whole week break I, slept a lot.
+00:10:32 Speaker 2
+Oh good, good, good, good.
+00:10:33 Speaker 1
+Good Good And I started going to the gym, so I can eat better now.
+00:10:37 Speaker 2
+So Good for you Good for you. 
+00:10:38 Speaker 1
+Man We like we're in a good place now like now, I can. I am ahead in most of like even the even for this paper that I had to write, right? I am ahead on that. Like I already have the next phase and the same thing for my bioinformatics paper as well. So I am like we're good. So like I am going to start focusing on this, you know, more uh while I prepare for for PhD um applications and everything. I want to start you know, Cleaning up my LinkedIn, uh, you know.
+00:11:10 Speaker 2
+Well so so the main thing you need did you take the GREs yet?
+00:11:14 Speaker 1
+All of that all of that I'm going to start now yeah. Um yeah.
+00:11:17 Speaker 2
+So the main things for a PhD application are the GREs and take those and papers. Yep Everything else is very secondary. So think like when you apply for a PhD like, Forty five percent is yourumum G R E scores. Forty five percent is publications, and the rest is very little. Like yeah, LinkedIn stuff that I won't even worry about that right now. I mean I mean focus on doing well in your G R E scores. Yeah, focus on getting publications. Everything else is not worth much if anything really.
+00:11:50 Speaker 1
+Yeah, What I mean by LinkedIn is like putting papers in there like the stuff that we're doing all those thingsum and cleaning it up to like, you know, kind of like. Put that upfront. So,
+00:11:59 Speaker 2
+Was it like a whole bunch of I won't even do LinkedIn now. That's a waste of your time.
+00:12:04 Speaker 1
+I got it. So,
+00:12:05 Speaker 2
+Leave GRE and publications. That's all you should care about.
+00:12:08 Speaker 1
+Do you think it's a good idea? I was thinking to uh sign up to take a course for GRE because I'm so old just before I take it.
+00:12:17 Speaker 2
+Well, I mean that, that that's up to you becauseum I don't really have any good GRE advice other than get the best score.
+00:12:23 Speaker 1
+You can Exactly Yeah So. What would.
+00:12:27 Speaker 2
+Yeah Um but like yeah, I would say to do those things. And you know, then that's all you can do.
+00:12:33 Speaker 1
+Yep. Yeah, so I'll do that. I'll I'll start doing a course so, Um so by the end of the semester, I, can you know, just go and take it right? So okay, yeah, some, yeah sounds sounds like a plan yeah.
+00:12:45 Speaker 2
+Okay awesome man well uh why don't you get running? I'll talk to you later on.
+00:12:49 Speaker 1
+Later take care see ya buddy bye. 

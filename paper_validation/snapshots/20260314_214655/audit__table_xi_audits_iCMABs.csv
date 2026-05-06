@@ -1,0 +1,21 @@
+Source,Algorithm,Metric,Expected,Actual,Note,B - A,|B - A|,|B - A| / Expected,Priority
+iCMABs,iCEpsilonGreedy,Avg Eff (%),88.56,88.56,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEpsilonGreedy,Gap (%),11.44,11.44,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEpsilonGreedy,Floor (%),81.0,81.0,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEpsilonGreedy,Exp. Winner,75.0,75.0,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCPursuit,Avg Eff (%),68.69,68.69,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCPursuit,Gap (%),31.31,31.31,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCPursuit,Floor (%),56.9,56.9,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCPursuit,Exp. Winner,0.0,0.0,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCThompsonSampling,Avg Eff (%),68.01,68.01,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCThompsonSampling,Gap (%),31.99,31.99,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCThompsonSampling,Floor (%),62.8,62.8,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCThompsonSampling,Exp. Winner,0.0,0.0,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEXP4,Avg Eff (%),37.5,37.5,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEXP4,Gap (%),62.5,62.5,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEXP4,Floor (%),36.1,36.1,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEXP4,Exp. Winner,0.0,0.0,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEpochGreedy,Avg Eff (%),37.57,37.57,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEpochGreedy,Gap (%),62.43,62.43,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEpochGreedy,Floor (%),36.1,36.1,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+iCMABs,iCEpochGreedy,Exp. Winner,0.0,0.0,"file=Master_Dataset_iCMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None

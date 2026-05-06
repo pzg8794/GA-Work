@@ -1,0 +1,5 @@
+index,evaluator_dominance
+CPursuit,25.609756097560975
+iCEpsilonGreedy,43.90243902439025
+EXPNeuralUCB,30.48780487804878
+EXP3/UCB,0.0

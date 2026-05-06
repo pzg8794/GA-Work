@@ -1,0 +1,2 @@
+model,scale,scenario,runs,frames,cap_type,allocator,n,eff_pct_mean,eff_pct_std
+ICPURSUITNEURALUCB,2.0,ONLINEADAPTIVE,3,6000,T,Default,1,99.79226493621252,

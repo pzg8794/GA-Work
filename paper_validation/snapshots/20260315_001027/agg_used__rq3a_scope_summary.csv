@@ -1,0 +1,2 @@
+Source dataset,Models,Allocator,Cap type,Scale,Frames,Run suites,Scenarios,Rows
+Validated_Logs/Master_Dataset_Hybrid.csv,"CPursuitNeuralUCB, iCPursuitNeuralUCB",Default,T,2.0,6000,"3, 5","NONE, STOCHASTIC, MARKOV, ADAPTIVE, ONLINEADAPTIVE",20

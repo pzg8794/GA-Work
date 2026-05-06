@@ -1,0 +1,12 @@
+Allocator,Metric,Expected,Actual,Source,B - A,|B - A|,|B - A| / Expected,Priority
+Fixed,Avg Eff (%),87.7,92.239,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,4.5390000000000015,4.5390000000000015,0.051756,High
+Fixed,Floor (%),84.8,88.309,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,3.5090000000000003,3.5090000000000003,0.04138,High
+DynamicUCB,Avg Eff (%),70.1,83.038,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,12.938000000000002,12.938000000000002,0.184565,High
+DynamicUCB,Floor (%),68.2,71.15,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,2.950000000000003,2.950000000000003,0.043255,High
+DynamicUCB,Span (pp),3.0,21.274,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,18.274,18.274,6.091333,High
+Random,Avg Eff (%),37.3,95.032,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,57.732,57.732,1.547775,High
+Random,Floor (%),36.9,92.331,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,55.431000000000004,55.431000000000004,1.502195,High
+Random,Span (pp),1.8,4.006,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,2.2060000000000004,2.2060000000000004,1.225556,High
+Thompson,Avg Eff (%),88.2,83.632,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,-4.567999999999998,4.567999999999998,0.051791,High
+Thompson,Floor (%),65.0,68.708,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,3.7079999999999984,3.7079999999999984,0.057046,High
+Thompson,Span (pp),28.3,26.538,Hybrid / CPursuitNeuralUCB / T / 6K / s=2 / 5only / no_oa,-1.7620000000000005,1.7620000000000005,0.062261,High

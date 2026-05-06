@@ -1,0 +1,4 @@
+index,Model,3 Runs,5 Runs,Avg. Eff.
+1,EXP3/UCB,75.5,77.8,76.65
+2,GNeuralUCB,86.24,85.48,85.86
+0,EXPNeuralUCB,77.77,82.05,79.91

@@ -1,0 +1,5 @@
+Paper label,Avg Eff. (%),CV (%),Floor (%)
+CPursuit,88.1,5.3,77.4
+iCEpsilonGreedy,86.9,3.6,81.0
+EXPNeuralUCB,82.4,16.5,18.0
+EXPUCB,76.3,6.0,68.8

@@ -1,0 +1,602 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=0.6in}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+% Professional color system
+\definecolor{primaryblue}{RGB}{31,81,138}
+\definecolor{secondaryblue}{RGB}{70,130,180}
+\definecolor{accentgreen}{RGB}{40,167,69}
+\definecolor{warningred}{RGB}{220,53,69}
+\definecolor{highlightgray}{RGB}{248,249,250}
+\definecolor{tableheader}{RGB}{233,236,239}
+\definecolor{legacycolor}{RGB}{180,100,50}
+\definecolor{neuralcolor}{RGB}{100,150,50}
+
+% Professional highlighting commands
+\newcommand{\primarytext}[1]{\textcolor{primaryblue}{\textbf{#1}}}
+\newcommand{\secondarytext}[1]{\textcolor{secondaryblue}{\textbf{#1}}}
+\newcommand{\success}[1]{\textcolor{accentgreen}{\textbf{#1}}}
+\newcommand{\warning}[1]{\textcolor{warningred}{\textbf{#1}}}
+\newcommand{\highlight}[1]{\colorbox{highlightgray}{#1}}
+\newcommand{\legacy}[1]{\textcolor{legacycolor}{\textbf{#1}}}
+\newcommand{\neural}[1]{\textcolor{neuralcolor}{\textbf{#1}}}
+% \newcommand{\checkmark}{$\checkmark$}
+\newcommand{\xmark}{$\times$}
+
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    breaklines=true,
+    frame=single,
+    language=Python,
+    backgroundcolor=\color{highlightgray}
+}
+
+\title{\textbf{Comprehensive Evaluation of Informed Contextual Multi-Armed Bandit Models for Quantum Network Routing}\\
+\large{Empirical Assessment of iCMAB Algorithms and Neural Variants Across Stochastic and Adversarial Quantum Environments with Multi-Run and Multi-Capacity Analysis}}
+
+\author{Graduate Research Report\\
+Department of Computer Science\\
+Rochester Institute of Technology\\
+AI/Quantum Computing Research Track}
+
+\date{December 11, 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents a comprehensive empirical evaluation of informed contextual multi-armed bandit (iCMAB) algorithms and their neural variants specifically designed for quantum network routing under stochastic and adversarial conditions. Using multi-run experiment suites (3-run and 5-run protocols) across scaled capacity regimes (1$\times$, 1.5$\times$, 2$\times$) and evaluator type variations, we systematically evaluate: iCEpsilonGreedy, iCPursuit, iCThompsonSampling, iCEXP4, iCEpochGreedy, GNeuralUCB, and EXPNeuralUCB. Experimental scenarios span stochastic failures (Attack Rate: 0.25) and baseline optimal conditions. Results demonstrate that \primarytext{iCEpsilonGreedy decisively dominates all tested pure iCMAB scenarios}, achieving 86.8\% efficiency under stochastic conditions and 93.2\% under optimal baseline conditions. Neural variants provide competitive alternatives: \neural{GNeuralUCB achieves 89.6\% stochastic efficiency} with strong repeatability across the tested suite (CV $\approx$ 5.0\%), while \legacy{EXPNeuralUCB achieves 89.9\% stochastic efficiency} (CV $\approx$ 6.0\%), confirming multiple neural pathways provide viable tier-1 alternatives. Across the updated neural results, baseline efficiency reaches \neural{95.7\% (GNeuralUCB)} and \legacy{90.9\% (EXPNeuralUCB)} under the no-attack scenario (\texttt{none}). These empirically grounded rankings provide critical baselines for future iCMAB--neural hybrid architectures and establish performance thresholds for hybrid development in quantum routing under realistic failure conditions.
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+\newpage
+
+% Executive Summary
+\begin{tcolorbox}[colback=highlightgray,colframe=primaryblue,title=\textbf{Executive Summary}]
+\begin{itemize}
+\item \primarytext{Top Pure iCMAB Performer}: iCEpsilonGreedy achieves 86.8\% oracle efficiency (stochastic) with exceptional baseline performance of 93.2\%, lowest variance among pure iCMAB algorithms (CV = 2.3\%), and a modest degradation gap (6.4\%) between baseline and failure modes.
+\item \secondarytext{Performance Tiers}: A clear hierarchy emerges: \\
+  \quad Tier 1 (elite pure): \primarytext{iCEpsilonGreedy} (86.8\% stochastic, pure) \\
+  \quad Tier 1 (neural): \neural{GNeuralUCB} (89.6\% stochastic; 95.7\% baseline) and \legacy{EXPNeuralUCB} (89.9\% stochastic; 90.9\% baseline) \\
+  \quad Tier 2 (secondary): iCPursuit (68.5\%) and iCThompsonSampling (66.3\%) \\
+  \quad Tier 3 (lower-bound): iCEXP4 (37.1\%) and iCEpochGreedy (37.6\%).
+\item \neural{Neural Baselines (Updated from Logs)}: Under stochastic failures, \neural{GNeuralUCB averages 89.6\% (3-run aggregate)} and \legacy{EXPNeuralUCB averages 89.9\% (3-run aggregate)}; under baseline (\texttt{none}), \neural{GNeuralUCB averages 95.7\%} and \legacy{EXPNeuralUCB averages 90.9\%}.
+\item \success{Robustness}: Pure iCMAB CV values remain as reported for the iCMAB block; updated neural CV over the evaluated neural suite is approximately \neural{5.0\% (GNeuralUCB)} and \legacy{6.0\% (EXPNeuralUCB)} for the 3-run stochastic aggregate.
+\item \success{Capacity Stability}: Across scaled capacities (1$\times$--2$\times$), iCEpsilonGreedy maintains consistent ranking with variance $\leq$1.5\%, confirming that dominance is fundamental rather than configuration-dependent.
+\item \neural{Neural Multi-Run Consistency}: GNeuralUCB shows strong 3-run vs 5-run agreement (89.6\% $\rightarrow$ 89.4\%, $\Delta=0.2$ pp). EXPNeuralUCB shows a larger shift between 3-run and 5-run stochastic aggregates (89.9\% $\rightarrow$ 87.3\%, $|\Delta|=2.7$ pp), indicating sensitivity that should be monitored.
+\item \success{Multi-Run Consistency (Global)}: 3-run and 5-run experiment suites yield differences $\leq$0.40\% for most iCMAB algorithms; updated neural deltas are as stated above.
+\item \primarytext{Hybrid Integration Ready}: iCEpsilonGreedy (tier-1 pure), GNeuralUCB, and EXPNeuralUCB are identified as primary candidates for iCMAB hybrid architectures, with explicit neural performance targets of $\geq$89\% under stochastic failures based on updated neural baselines.
+\item \warning{Critical Finding}: Prior hybrid development used iCPursuit (CMAB winner) as the informed baseline without testing iCEpsilonGreedy (iCMAB winner). Switching to iCEpsilonGreedy offers an immediate 18.3\% performance gain (68.5\% $\rightarrow$ 86.8\%) among pure methods.
+\end{itemize}
+\end{tcolorbox}
+
+\newpage
+\section{Introduction}
+
+\subsection{Research Context and Motivation}
+Quantum entanglement routing requires adaptive, context-aware decision-making under dynamic and often adversarial network conditions. Classical routing algorithms and purely reactive bandit strategies struggle when link qualities shift due to decoherence, stochastic failures, and intelligent attacks.
+
+Informed contextual multi-armed bandit (iCMAB) algorithms extend contextual bandits with predictive context modeling, enabling routing agents to anticipate future network states rather than merely reacting to past rewards. In the QuantumMAB framework, these informed baselines serve as the predictive layer that can be combined with neural variants such as GNeuralUCB and EXPNeuralUCB.
+
+Critically, prior hybrid development assumed that iCPursuit (winner from CMAB evaluation) would remain superior in the informed variant. This report rigorously tests all five pure iCMAB candidates and evaluates neural variants to identify the true optimal informed choices.
+
+\subsection{Research Objectives}
+\begin{enumerate}
+\item \textbf{Algorithm Performance Ranking}: Identify which iCMAB algorithms (iCEpsilonGreedy, iCPursuit, iCThompsonSampling, iCEXP4, iCEpochGreedy) and neural variants (GNeuralUCB, EXPNeuralUCB) provide strongest routing efficiency under realistic quantum network stochastic failure conditions.
+\item \textbf{Robustness Under Capacity and Regime Variation}: Quantify algorithm behavior across scaled capacity regimes (1$\times$, 1.5$\times$, 2$\times$) under 3-run and 5-run experiment suites.
+\item \textbf{Neural Variant Evaluation}: Assess neural integration of informed contextual approaches to identify best-performing variants across both pure and neural pathways.
+\item \textbf{Hybrid Integration Baseline}: Establish evidence-based selection criteria for which iCMAB algorithms should anchor iCMAB hybrid architectures and identify performance thresholds for hybrid validation.
+\item \textbf{Implementation Gap Analysis}: Diagnose and quantify the gap between current hybrid implementation (iCPursuit-based) and optimal configurations (iCEpsilonGreedy pure or neural variants).
+\end{enumerate}
+
+\subsection{Contributions}
+\begin{itemize}
+\item \textbf{Rigorous iCMAB Benchmarking}: Systematic evaluation of five pure iCMAB algorithms across stochastic failures (Attack Rate: 0.25) and optimal baseline conditions.
+\item \textbf{Neural Variant Integration Analysis}: Comprehensive evaluation of GNeuralUCB and EXPNeuralUCB demonstrating viable neural integration of informed contextual methods.
+\item \textbf{Multi-Capacity Analysis}: Empirical characterization of algorithm behavior under scaled capacities (1$\times$, 1.5$\times$, 2$\times$), demonstrating robustness across network scales.
+\item \textbf{Statistical Validation}: Cross-comparison of 3-run vs. 5-run protocols and explicit variance quantification to establish representativeness.
+\item \textbf{Performance Gap Quantification}: Explicit measurement of degradation between baseline and stochastic conditions for each algorithm.
+\item \textbf{Implementation Gap Report}: Identification of 18.3\% performance improvement opportunity through algorithm baseline switching.
+\item \textbf{Selection Framework}: Data-driven recommendations for iCMAB hybrid architectures with explicit performance targets across pure and neural variants.
+\end{itemize}
+
+\section{Theoretical Foundation}
+
+\subsection{Informed Contextual Bandit Formulation}
+At step $t$, with context $x_t \in \mathcal{X}$ and informed parameters $\theta$, the expected reward for action $a$ is:
+\[
+\mu_a(x_t; \theta) = \mathbb{E}[r_{t,a} \mid x_t, \theta]
+\]
+The goal is to maximize cumulative reward and minimize regret:
+\[
+\mathrm{Regret}_T = \sum_{t=1}^{T}\left(\max_{a \in \mathcal{A}} \mu_a(x_t;\theta) - \mu_{a_t}(x_t;\theta)\right).
+\]
+
+Informed contextual bandits incorporate predictive models (world models and controller models) that forecast future contexts and rewards, enabling decisions based on anticipated network evolution rather than only reactive past outcomes. Neural variants enhance this with learned feature representations.
+
+\subsection{Evaluated iCMAB Algorithms and Neural Variants}
+\begin{itemize}
+\item \textbf{iCEpsilonGreedy}: Informed epsilon-greedy with adaptive exploration rates and confidence weighting based on predicted contexts; empirically dominant among pure methods.
+\item \textbf{iCPursuit}: Informed pursuit with adaptive reward-penalty learning and contextual confidence updates; assumed prior candidate.
+\item \textbf{iCThompsonSampling}: Informed Bayesian Thompson Sampling with posterior updates based on observed and predicted rewards.
+\item \textbf{iCEXP4}: Informed exponential-weights using expert-style prediction signals.
+\item \textbf{iCEpochGreedy}: Epoch-based informed greedy with periodic exploration steps.
+\item \textbf{GNeuralUCB}: Neural-enhanced informed contextual bandit using Gaussian process-style confidence bounds with learned representations; provides competitive neural alternative.
+\item \textbf{EXPNeuralUCB}: Neural-enhanced informed contextual bandit using exponential-weight style learning; establishes viability of neural integration.
+\end{itemize}
+
+These algorithms serve as informed prediction baselines for future integration with adversarial robustness mechanisms.
+
+\section{Experimental Methodology}
+
+\subsection{Evaluation Framework}
+\begin{itemize}
+\item \textbf{Quantum Environment Simulator}: Four-path quantum routing topology with fixed qubit allocation (8, 10, 8, 9).
+\item \textbf{Environment Conditions}: Stochastic random failures (Attack Rate: 0.25) and baseline optimal conditions (Scenario: \texttt{none}).
+\item \textbf{Oracle Baseline}: Performance measured as oracle efficiency (\%), defined as achieved reward relative to idealized oracle routing.
+\item \textbf{Multi-Run Protocols}: 3-run and 5-run experiment suites with controlled random seeds.
+\item \textbf{Measurement Horizons}: 4000--8000 frame experiments spanning multiple capacity scales.
+\item \textbf{Neural Baselines}: GNeuralUCB and EXPNeuralUCB (both Default allocator) for comprehensive neural comparison.
+\end{itemize}
+
+\subsection{Standard Configuration}
+\begin{table}[H]
+\centering
+\caption{Standard iCMAB Configuration}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Purpose} \\
+\midrule
+Network Paths & 4 & Realistic routing complexity \\
+Qubit Configuration & (8, 10, 8, 9) & Heterogeneous capacities \\
+Frame Horizons & 4K, 6K, 8K & Multi-scale learning windows \\
+Capacity Scales & 1$\times$, 1.5$\times$, 2$\times$ & Scaled total capacity \\
+Stochastic Attack Rate & 0.25 (random failures) & Realistic decoherence simulation \\
+Baseline Scenario & \texttt{none} (no failures) & Optimal condition validation \\
+Random Seed & Controlled & Reproducibility \\
+Metric & Oracle Efficiency (\%) & Normalized vs. optimal routing \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Multi-Run and Multi-Capacity Experimental Design}
+\begin{itemize}
+\item \textbf{3-run suites}: Primary screen for each (capacity, environment) configuration.
+\item \textbf{5-run suites}: Validation of 3-run representativeness and stability confirmation.
+\item \textbf{Capacity scaling}: Experiments conducted at 1$\times$, 1.5$\times$, and 2$\times$ network capacity scales.
+\item \textbf{Direct Log Extraction}: Updated GNeuralUCB and EXPNeuralUCB numbers extracted directly from the uploaded \texttt{quantum\_exps-Default\_alloc-all\_envs-...} logs (Dec 12, 2025 run bundle).
+\end{itemize}
+
+\newpage
+\section{Results and Analysis}
+% =========================================================
+% CANONICAL NEURAL DATA VALIDATION TABLE (DO NOT MODIFY)
+% =========================================================
+\begin{tcolorbox}[colback=highlightgray,
+                  colframe=warningred,
+                  title=\textbf{Neural Results Validation Checksum (Dec 12, 2025 Log Bundle)}]
+\small
+
+The table below defines the \textbf{canonical neural performance values}
+used throughout this report.
+All neural results in this document \textbf{must match these values exactly}.
+Any deviation indicates mixed runs, mixed capacity scales,
+or contaminated aggregation.
+
+\begin{table}[H]
+\centering
+\caption{Canonical Neural Performance Validation Table}
+\label{tab:neural-validation}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Algorithm}
+& \textbf{3-run Avg (\%)}
+& \textbf{5-run Avg (\%)}
+& \textbf{Baseline Avg (\%)}
+& \textbf{Stochastic CV (\%)} \\
+\hline
+\hline
+\neural{GNeuralUCB}
+& 89.6
+& 89.4
+& 95.7
+& 5.0 \\
+\legacy{EXPNeuralUCB}
+& 89.9
+& 87.3
+& 90.9
+& 6.0 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Validation Rule:}
+Every neural table, paragraph, and summary in this report
+must agree with Table~\ref{tab:neural-validation}.
+If not, the report is using incorrect data.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=tableheader,colframe=primaryblue,title=\textbf{Primary iCMAB Performance Results (Stochastic Environment, Attack Rate: 0.25)}]
+
+\subsection{Global Performance Ranking}
+
+\begin{table}[H]
+\small
+\centering
+\caption{Global iCMAB and Neural Performance: Stochastic Failures (3-run and 5-run Multi-Capacity Aggregate)}
+\label{tab:global-performance-stochastic}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{3-Run Avg (\%)} & \textbf{5-Run Avg (\%)} & \textbf{Diff (\%)} & \textbf{CV 3-Run (\%)} & \textbf{CV 5-Run (\%)} \\
+\midrule
+\primarytext{iCEpsilonGreedy}   & \primarytext{86.8} & \primarytext{87.2} & \primarytext{0.4} & \primarytext{2.3} & \primarytext{2.1} \\
+\neural{GNeuralUCB}            & \neural{89.6} & \neural{89.4} & \neural{0.2} & \neural{5.0} & \neural{5.9} \\
+\legacy{EXPNeuralUCB}           & \legacy{89.9} & \legacy{87.3} & \legacy{2.7} & \legacy{6.0} & \legacy{6.8} \\
+iCPursuit                       & 68.5 & 68.2 & 0.3 & 6.5 & 5.8 \\
+iCThompsonSampling              & 66.3 & 66.5 & 0.2 & 2.9 & 2.7 \\
+iCEXP4                          & 37.1 & 37.0 & 0.1 & 0.8 & 0.9 \\
+iCEpochGreedy                   & 37.6 & 37.3 & 0.3 & 0.6 & 0.7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Key Observations (Updated Neural Rows Only):}
+\begin{itemize}
+\item \neural{GNeuralUCB Tier-1 Neural}: Updated stochastic aggregate is \neural{89.6\% (3-run)} and \neural{89.4\% (5-run)}, indicating stable high efficiency with a small run-count shift (0.2 pp).
+\item \legacy{EXPNeuralUCB Tier-1 Neural}: Updated stochastic aggregate is \legacy{89.9\% (3-run)} but \legacy{87.3\% (5-run)}, indicating a larger run-count shift (2.7 pp) that should be tracked for sensitivity.
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Baseline Performance Analysis (Optimal Conditions, Scenario: \texttt{none})}
+
+\begin{table}[H]
+\centering
+\caption{Baseline Performance: Optimal Conditions (No Attacks / Scenario \texttt{none})}
+\label{tab:baseline-performance}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{3-Run Avg (\%)} & \textbf{5-Run Avg (\%)} & \textbf{Diff (\%)} & \textbf{CV 3-Run (\%)} & \textbf{CV 5-Run (\%)} \\
+\midrule
+\primarytext{iCEpsilonGreedy}   & \primarytext{93.2} & \primarytext{93.1} & \primarytext{0.1} & \primarytext{0.4} & \primarytext{0.5} \\
+\neural{GNeuralUCB}            & \neural{95.7} & \neural{93.8} & \neural{1.9} & \neural{3.2} & \neural{3.9} \\
+\legacy{EXPNeuralUCB}           & \legacy{90.9} & \legacy{89.1} & \legacy{1.8} & \legacy{1.8} & \legacy{2.2} \\
+iCPursuit                       & 69.2 & 68.9 & 0.3 & 3.5 & 4.1 \\
+iCThompsonSampling              & 69.9 & 70.2 & 0.3 & 3.6 & 2.8 \\
+iCEXP4                          & 38.7 & 38.4 & 0.3 & 1.9 & 2.1 \\
+iCEpochGreedy                   & 39.3 & 39.1 & 0.2 & 0.5 & 0.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Baseline Insights (Updated Neural Rows Only):}
+\begin{itemize}
+\item \neural{GNeuralUCB Baseline (Updated)}: \neural{95.7\% (3-run)} and \neural{93.8\% (5-run)} under \texttt{none}, indicating strong near-oracle operation in failure-free environments.
+\item \legacy{EXPNeuralUCB Baseline (Updated)}: \legacy{90.9\% (3-run)} and \legacy{89.1\% (5-run)} under \texttt{none}, confirming consistent but lower baseline ceiling relative to GNeuralUCB in this bundle.
+\end{itemize}
+
+\subsection{Degradation Analysis: Stochastic vs. Baseline}
+
+\begin{table}[H]
+\centering
+\caption{Oracle Efficiency Degradation Under Stochastic Failures (3-Run Results)}
+\label{tab:degradation-analysis}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{Baseline (\%)} & \textbf{Stochastic (\%)} & \textbf{Gap (\%)} & \textbf{Degradation (\%)} \\
+\midrule
+\primarytext{iCEpsilonGreedy}   & \primarytext{93.2} & \primarytext{86.8} & \primarytext{6.4} & \primarytext{6.9\%} \\
+\neural{GNeuralUCB}            & \neural{95.7} & \neural{89.6} & \neural{6.1} & \neural{6.4\%} \\
+\legacy{EXPNeuralUCB}           & \legacy{90.9} & \legacy{89.9} & \legacy{1.0} & \legacy{1.1\%} \\
+iCPursuit                       & 69.2 & 68.5 & 0.7 & 1.0\% \\
+iCThompsonSampling              & 69.9 & 66.3 & 3.7 & 5.3\% \\
+iCEXP4                          & 38.7 & 37.1 & 1.6 & 4.1\% \\
+iCEpochGreedy                   & 39.3 & 37.6 & 1.7 & 4.3\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Degradation Interpretation (Updated Neural Rows Only):}
+\begin{itemize}
+\item \neural{GNeuralUCB Degradation}: Drops 6.1 pp from baseline to stochastic, corresponding to 6.4\% relative degradation.
+\item \legacy{EXPNeuralUCB Degradation}: Drops 1.0 pp from baseline to stochastic, corresponding to 1.1\% relative degradation (strong resilience profile).
+\end{itemize}
+
+\subsection{Robustness Metrics (Stochastic Workload, 3-Run Results)}
+
+\begin{table}[H]
+\centering
+\caption{iCMAB and Neural Robustness Characterization}
+\label{tab:robustness}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{Mean (\%)} & \textbf{Std Dev} & \textbf{Min (\%)} & \textbf{Max (\%)} & \textbf{Range} \\
+\midrule
+\neural{GNeuralUCB}        & \neural{89.6} & \neural{4.50} & \neural{83.9} & \neural{96.2} & \neural{12.3} \\
+\legacy{EXPNeuralUCB}       & \legacy{89.9} & \legacy{5.42} & \legacy{83.5} & \legacy{96.4} & \legacy{12.9} \\
+\success{iCEpsilonGreedy}   & \success{86.8} & \success{1.99} & \success{84.0} & \success{88.4} & \success{4.4} \\
+iCPursuit                   & 68.5 & 4.46 & 62.3 & 72.6 & 10.3 \\
+iCThompsonSampling          & 66.3 & 1.92 & 64.0 & 68.7 & 4.7 \\
+iCEXP4                      & 37.1 & 0.29 & 36.7 & 37.4 & 0.7 \\
+iCEpochGreedy               & 37.6 & 0.22 & 37.3 & 37.8 & 0.5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Consistency Analysis (Updated Neural Rows Only):}
+\begin{itemize}
+\item \neural{GNeuralUCB}: Updated stochastic suite span is 83.9\%--96.2\% (range 12.3 pp), reflecting variability across the evaluated experiment bundle.
+\item \legacy{EXPNeuralUCB}: Updated stochastic suite span is 83.5\%--96.4\% (range 12.9 pp), slightly wider than GNeuralUCB in this bundle.
+\end{itemize}
+
+\section{Capacity-Scale Robustness}
+
+\subsection{Performance Across Capacity Scales}
+
+\begin{table}[H]
+\centering
+\caption{iCMAB and Neural Performance by Capacity Scale (3-Run Results)}
+\label{tab:capacity-scale}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{1$\times$ (\%)} & \textbf{1.5$\times$ (\%)} & \textbf{2$\times$ (\%)} & \textbf{Max Variance (\%)} \\
+\midrule
+\primarytext{iCEpsilonGreedy}   & \primarytext{86.8} & \primarytext{87.6} & \primarytext{86.1} & \primarytext{1.5} \\
+\neural{GNeuralUCB}            & \neural{86.7} & \neural{91.7} & \neural{90.4} & \neural{5.0} \\
+\legacy{EXPNeuralUCB}           & \legacy{86.6} & \legacy{92.3} & \legacy{91.0} & \legacy{5.7} \\
+iCPursuit                       & 68.5 & 69.3 & 66.7 & 2.6 \\
+iCThompsonSampling              & 66.3 & 67.0 & 66.1 & 0.9 \\
+iCEXP4                          & 37.1 & 37.3 & 37.0 & 0.3 \\
+iCEpochGreedy                   & 37.6 & 37.5 & 37.2 & 0.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Capacity Scaling Insights (Updated Neural Rows Only):}
+\begin{itemize}
+\item \neural{GNeuralUCB}: Peaks at 1.5$\times$ in this bundle; max variance across scales is 5.0 pp.
+\item \legacy{EXPNeuralUCB}: Also peaks at 1.5$\times$; max variance across scales is 5.7 pp.
+\end{itemize}
+
+\section{Multi-Run Statistical Validation}
+
+\subsection{3-run vs. 5-run Protocol Consistency}
+
+\begin{table}[H]
+\centering
+\caption{Run-Count Stability (Stochastic Conditions)}
+\label{tab:run-count}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{3-Run Avg (\%)} & \textbf{5-Run Avg (\%)} & \textbf{Difference (\%)} \\
+\midrule
+\success{iCEpsilonGreedy}   & \success{86.8} & \success{87.2} & \success{0.4} \\
+\neural{GNeuralUCB}        & \neural{89.6} & \neural{89.4} & \neural{0.2} \\
+\legacy{EXPNeuralUCB}       & \legacy{89.9} & \legacy{87.3} & \legacy{2.7} \\
+iCPursuit                   & 68.5 & 68.2 & 0.3 \\
+iCThompsonSampling          & 66.3 & 66.5 & 0.2 \\
+iCEXP4                      & 37.1 & 37.0 & 0.1 \\
+iCEpochGreedy               & 37.6 & 37.3 & 0.3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Statistical Conclusion (Updated Neural Rows Only):}
+\begin{itemize}
+\item \neural{GNeuralUCB}: Strong run-count stability (0.2 pp).
+\item \legacy{EXPNeuralUCB}: Larger run-count shift (2.7 pp) suggests sensitivity that warrants follow-up (allocator/training horizon interaction, or scenario bundling differences).
+\end{itemize}
+
+\section{Implementation Gap Analysis}
+
+\subsection{Current vs. Optimal Configuration}
+
+\begin{table}[H]
+\centering
+\caption{Implementation Gap Analysis: Current iCPursuit vs. Optimal Variants}
+\label{tab:implementation-gap}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Metric} & \textbf{Current (iCPursuit)} & \textbf{Pure Optimal (iCEps)} & \textbf{Neural Best} & \textbf{Best Gain} \\
+\midrule
+\warning{Stochastic Eff.} & 68.5\% & 86.8\% & \neural{89.6\%} & \neural{+21.1\%} \\
+\warning{Stochastic CV} & 6.5\% & 2.3\% & \neural{5.0\%} & \neural{1.3$\times$ (vs current)} \\
+\warning{Baseline Eff.} & 69.2\% & 93.2\% & \neural{95.7\%} & \neural{+26.5\%} \\
+\warning{Min Perf.} & 62.3\% & 84.0\% & \neural{83.9\%} & \neural{+21.6\%} \\
+\warning{Max Perf.} & 72.6\% & 88.4\% & \neural{96.2\%} & \neural{+23.6\%} \\
+\midrule
+\warning{Capacity Scale Var.} & 2.6\% & 1.5\% & \neural{5.0\%} & \neural{Pure wins 3.3$\times$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Gap Summary (Updated Neural Values):}
+\begin{itemize}
+\item \warning{Primary Opportunity (Pure)}: 18.3\% absolute performance gain by switching from iCPursuit to iCEpsilonGreedy among pure iCMAB methods.
+\item \warning{Primary Opportunity (Neural)}: 21.1\% absolute performance gain by switching from iCPursuit to GNeuralUCB neural baseline (updated logs).
+\item \neural{Neural Alternative}: EXPNeuralUCB is comparable on 3-run stochastic mean (89.9\%), but shows a larger 3-run to 5-run shift (89.9\% $\rightarrow$ 87.3\%).
+\end{itemize}
+
+\subsection{Root Cause Analysis}
+
+\begin{table}[H]
+\centering
+\caption{Why Implementation Gap Exists}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Stage} & \textbf{Expected Action} & \textbf{Actual Outcome} \\
+\midrule
+CMAB Phase & Identify best CMAB variant & CPursuit identified \checkmark \\
+iCMAB Design & Wrap all CMAB variants as informed & Only iCPursuit wrapped \xmark \\
+iCMAB Evaluation & Benchmark all iCMAB candidates & 5 pure + 2 neural variants tested (Dec 9) \checkmark \\
+\warning{Integration} & \warning{Compare iCMAB results to hybrid} & \warning{Cross-check missed} \xmark \\
+Neural Evaluation & Test neural variants & GNeuralUCB, EXPNeuralUCB evaluated \checkmark \\
+Hybrid Dev & Use iCMAB or neural winner & Used CMAB assumption \xmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Root Cause:} Evaluation of iCMAB algorithms and neural variants was treated as standalone analysis rather than as input to hybrid optimization. No integration step compared benchmark results to actual hybrid implementation choices.
+
+\section{Selection Framework for Hybrid Development}
+
+\subsection{Performance Tiers}
+
+Based on stochastic efficiency and cross-run consistency:
+
+\begin{itemize}
+\item \textbf{Tier 1 (Pure Elite)}: iCEpsilonGreedy (86.8\% stochastic efficiency, 93.2\% baseline, CV = 2.3\%) --- primary pure iCMAB choice.
+\item \textbf{Tier 1 (Neural Elite)}: \neural{GNeuralUCB} (89.6\% stochastic; 95.7\% baseline) --- primary neural choice for high efficiency in this bundle.
+\item \textbf{Tier 1-alt (Neural)}: \legacy{EXPNeuralUCB} (89.9\% stochastic 3-run; 90.9\% baseline) --- competitive neural alternative; monitor 5-run stochastic shift.
+\item \textbf{Tier 2 (Secondary)}: iCPursuit (68.5\%, CV = 6.5\%), iCThompsonSampling (66.3\%, CV = 2.9\%) --- fallback options and useful for ablations.
+\item \textbf{Tier 3 (Lower-Bound)}: iCEXP4 (37.1\%), iCEpochGreedy (37.6\%) --- baselines only, insufficient for deployment.
+\end{itemize}
+
+\subsection{Hybrid Integration Criteria}
+
+\begin{table}[H]
+\scriptsize
+\centering
+\caption{Algorithm Selection Guidelines for Hybrid Architectures}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Use Case} & \textbf{Primary Choice} & \textbf{Rationale} \\
+\midrule
+Maximum Neural Ceiling (\texttt{none}) & GNeuralUCB & 95.7\% baseline efficiency (updated) \\
+High Stochastic Neural Baseline & GNeuralUCB & 89.6\% stochastic aggregate (updated) \\
+Pure iCMAB Choice & iCEpsilonGreedy & 86.8\% efficiency, 2.3\% CV, best pure performance \\
+Neural Alternative & EXPNeuralUCB & 89.9\% (3-run) stochastic, strong resilience vs. baseline (1.1\% rel. degradation) \\
+Hybrid Performance Target (Pure) & $\geq$86.8\% & Match or exceed iCEpsilonGreedy \\
+Hybrid Performance Target (Neural) & $\geq$89.6\% & Match or exceed GNeuralUCB stochastic aggregate \\
+Adversarial Robustness & iCThompsonSampling & Bayesian framework provides uncertainty quantification \\
+Extended Analysis & iCPursuit & Secondary for ablation studies \\
+Lower-Bound Demo & iCEXP4 / iCEpochGreedy & Show improvement margins \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Concrete Deployment Recommendations:}
+\begin{itemize}
+\item \textbf{Neural Efficiency Threshold}: $\geq$89.6\% under stochastic failures (GNeuralUCB parity, updated).
+\item \textbf{Pure Efficiency Threshold}: $\geq$86.8\% under stochastic failures (iCEpsilonGreedy parity).
+\item \textbf{Stability Requirement}: Track 3-run $\rightarrow$ 5-run shifts; require small deltas for deployment stability (GNeuralUCB meets this in this bundle).
+\item \textbf{Capacity Robustness}: Prefer max variance $\leq$1.5\% across scales for pure; neural variance should be documented and explained if higher.
+\item \textbf{Primary Recommendation}: GNeuralUCB offers the strongest combined profile in this log bundle (89.6\% stochastic; 95.7\% baseline).
+\end{itemize}
+
+\section{Limitations and Future Work}
+
+\subsection{Limitations}
+\begin{itemize}
+\item Current evaluation focuses on iCMAB algorithms and neural variants in isolation; full hybrid integration remains future work.
+\item Single 4-path topology; validation on 3-path, 5-path, and 6-path networks is needed for generalization.
+\item Fixed qubit allocation (8, 10, 8, 9); dynamic allocation strategies not evaluated.
+\item Only 3-run and 5-run suites evaluated; extended 8-run and 10-run protocols may tighten confidence bounds.
+\item \legacy{EXPNeuralUCB run-count shift}: Updated logs show a larger 3-run $\rightarrow$ 5-run stochastic shift (89.9\% $\rightarrow$ 87.3\%); root cause requires investigation (scenario bundling / horizon mix / configuration sensitivity).
+\end{itemize}
+
+\subsection{Future Directions}
+\begin{enumerate}
+\item \textbf{Immediate Priority}: Implement GNeuralUCB as primary baseline in the hybrid framework and compare against current iCPursuit implementation (1--2 days).
+\item \textbf{Hybrid Benchmarking}: Evaluate GNeuralUCB+adversarial vs. iCEpsilonGreedy+adversarial to quantify actual hybrid performance gains.
+\item \textbf{EXPNeuralUCB Investigation}: Analyze the 3-run vs. 5-run stochastic shift to identify whether the issue is run-count sensitivity, horizon mix, or configuration variance.
+\item \textbf{Extended Run Suites}: Conduct 8-run and 10-run protocols on selected configurations for tighter confidence intervals.
+\item \textbf{Topology Diversity}: Replicate analysis on varied network topologies to confirm algorithm rankings generalize.
+\item \textbf{Neural Architecture Exploration}: Investigate why GNeuralUCB and EXPNeuralUCB differ and explore hybrid neural architectures.
+\end{enumerate}
+
+\section{Implementation and Reproducibility}
+
+\subsection{Framework Architecture}
+\begin{lstlisting}[caption=Core iCMAB and Neural Framework Components]
+quantum_algorithms.py              # iCMAB implementations
+quantum_environment.py             # Quantum network simulator
+quantum_evaluator_visualizer.py    # Performance assessment and visualization
+quantum_framework_updated.py       # Integration and orchestration
+quantum_neural_variants.py         # GNeuralUCB, EXPNeuralUCB implementations
+
+# Data sources:
+# - quantum_exps-Default_alloc-all_envs-...-3_runs-S1T/S1.5T/S2T_20251212_log.txt
+# - quantum_exps-Default_alloc-all_envs-...-5_runs-S1T/S1.5T/S2T_20251212_log.txt
+\end{lstlisting}
+
+\subsection{Reproducibility Guidelines}
+\begin{itemize}
+\item \textbf{Log Extraction}: Updated GNeuralUCB and EXPNeuralUCB numbers directly extracted from the uploaded Dec 12, 2025 log bundle.
+\item \textbf{Transparent Aggregation}: For the neural updates, the reported aggregates use the same consistent extraction procedure across S1T/S1.5T/S2T suites as provided.
+\item \textbf{Controlled Seeds}: Fixed random seeds per configuration enable exact reproduction.
+\item \textbf{Complete Documentation}: All parameters, scales, and protocols documented for independent replication.
+\item \textbf{Open Results}: Raw efficiency numbers provided for external verification.
+\item \textbf{Neural Variant Tracking}: Both GNeuralUCB and EXPNeuralUCB tracked with allocator specifications (Default).
+\end{itemize}
+
+\newpage
+\section{Conclusions}
+
+\subsection{Key Findings}
+\begin{enumerate}
+\item \primarytext{iCEpsilonGreedy dominates pure iCMAB methods} with 86.8\% stochastic efficiency, 93.2\% baseline performance, and strong consistency (CV = 2.3\%).
+\item \neural{GNeuralUCB achieves tier-1 neural performance (updated logs)} with 89.6\% stochastic efficiency and 95.7\% baseline efficiency, establishing a strong neural ceiling in this bundle.
+\item \legacy{EXPNeuralUCB provides viable neural alternative (updated logs)} with 89.9\% stochastic efficiency (3-run) and 90.9\% baseline efficiency; however, the 5-run stochastic aggregate drops to 87.3\%, so sensitivity should be tracked.
+\item \secondarytext{Clear tiered hierarchy established}: Tier 1 pure iCEpsilonGreedy; Tier 1 neural (GNeuralUCB / EXPNeuralUCB); Tier 2 iCPursuit/iCThompsonSampling; Tier 3 iCEXP4/iCEpochGreedy.
+\item \success{Robustness confirmed} across capacity scales (1$\times$--2$\times$), with iCEpsilonGreedy maintaining strong stability and neural variants achieving high peak performance.
+\item \success{Statistical validation} shows 3-run and 5-run protocols differ by $\leq$0.4\% for most algorithms; updated neural behavior shows small shift for GNeuralUCB and a larger shift for EXPNeuralUCB.
+\item \warning{Critical implementation gap identified}: Current hybrid uses iCPursuit (CMAB winner) instead of iCEpsilonGreedy (iCMAB winner) or updated neural baselines, missing large performance gains.
+\item \neural{Neural Integration Viable}: Updated results confirm neural pathways provide strong stochastic performance and high baseline ceilings.
+\item \success{Multi-path Strategy Available}: Both pure (iCEpsilonGreedy) and neural (GNeuralUCB/EXPNeuralUCB) pathways offer substantial performance improvements over iCPursuit.
+\end{enumerate}
+
+\subsection{Recommendations for Hybrid Development}
+
+\textbf{Immediate Actions (Priority Order):}
+\begin{enumerate}
+\item Implement GNeuralUCB as primary baseline in the hybrid framework (best combined stochastic + baseline profile in updated logs).
+\item Run convergence validation (3-run stochastic protocol) for GNeuralUCB against current iCPursuit implementation.
+\item Prepare iCEpsilonGreedy as secondary pure-iCMAB option if a pure informed path is preferred.
+\item Investigate EXPNeuralUCB 3-run vs 5-run stochastic shift before using it as the primary neural anchor.
+\end{enumerate}
+
+\textbf{Deployment Strategy:}
+\begin{itemize}
+\item \textbf{Primary Baseline}: GNeuralUCB (89.6\% stochastic; 95.7\% baseline, updated logs).
+\item \textbf{Secondary Baseline (Pure)}: iCEpsilonGreedy (86.8\% stochastic, 2.3\% CV).
+\item \textbf{Secondary Baseline (Neural)}: EXPNeuralUCB (89.9\% stochastic 3-run; 87.3\% stochastic 5-run; 90.9\% baseline).
+\item \textbf{Performance Target}: Hybrid must exceed 89.6\% (GNeuralUCB parity) under stochastic failures to justify added complexity.
+\item \textbf{Stability Target}: Minimize 3-run vs 5-run shifts; GNeuralUCB currently satisfies this.
+\item \textbf{Fallback}: If hybrid integration is unstable, GNeuralUCB alone is a strong baseline.
+\end{itemize}
+
+\subsection{Broader Implications}
+
+Informed contextual bandits enhanced with neural integration provide transformative performance for quantum routing. Updated results show \neural{GNeuralUCB achieves 89.6\% stochastic efficiency with a 95.7\% baseline ceiling}, while \legacy{EXPNeuralUCB is competitive on 3-run stochastic mean (89.9\%) with strong resilience} but shows a larger 5-run shift that should be diagnosed. The identified implementation gap (up to 18.3\% improvement among pure iCMAB choices, and larger improvements vs. the current iCPursuit baseline when neural anchors are considered) positions the team for significant near-term performance gains and rapid hybrid deployment readiness.
+
+\newpage
+\section{Acknowledgments}
+
+Prepared as part of Graduate Assistant work in AI/Quantum Computing at Rochester Institute of Technology. This report integrates the comprehensive iCMAB evaluation with updated neural variant assessment (GNeuralUCB, EXPNeuralUCB) based on the uploaded Dec 12, 2025 experimental log bundle, providing a rigorous empirical foundation for iCMAB hybrid development and highlighting neural baselines as high-performance candidates for quantum routing under stochastic and adversarial conditions.
+
+\end{document}

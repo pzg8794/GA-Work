@@ -1,0 +1,27 @@
+Tier,Model,Expected,Actual,Source,Note,B - A,|B - A|,|B - A| / Expected,Priority,Item
+Top tier (viable under stochastic),CPursuit,89.6,90.02,CMABs / CPURSUIT,,0.4200000000000017,0.4200000000000017,0.004688,Low,CPursuit / 3 Runs
+Top tier (viable under stochastic),iCEpsilonGreedy,88.0,87.75,iCMABs / ICEPSILONGREEDY,,-0.25,0.25,0.002841,Low,iCEpsilonGreedy / 3 Runs
+Top tier (viable under stochastic),CEpsilonGreedy,87.5,87.93,CMABs / CEPSILONGREEDY,,0.4300000000000068,0.4300000000000068,0.004914,Low,CEpsilonGreedy / 3 Runs
+Top tier (viable under stochastic),GNeuralUCB,85.2,86.24,EXP3 / GNEURALUCB,,1.039999999999992,1.039999999999992,0.012207,High,GNeuralUCB / 3 Runs
+Mid-tier (degraded),EXPNeuralUCB,82.1,82.05,Hybrid / EXPNEURALUCB,,-0.04999999999999716,0.04999999999999716,0.000609,Low,EXPNeuralUCB / 3 Runs
+Mid-tier (degraded),EXPUCB,76.2,75.5,EXP3 / EXPUCB,Paper label refers to EXP3/UCB.,-0.7000000000000028,0.7000000000000028,0.009186,Medium,EXPUCB / 3 Runs
+Mid-tier (degraded),CEXP4,70.1,69.24,CMABs / CEXP4,,-0.8599999999999994,0.8599999999999994,0.012268,Medium,CEXP4 / 3 Runs
+Mid-tier (degraded),iCPursuit,68.7,67.18,iCMABs / ICPURSUIT,,-1.519999999999996,1.519999999999996,0.022125,High,iCPursuit / 3 Runs
+Mid-tier (degraded),CThompsonSampling,66.6,65.74,CMABs / CTHOMPSONSAMPLING,,-0.8599999999999994,0.8599999999999994,0.012913,Medium,CThompsonSampling / 3 Runs
+Mid-tier (degraded),iCThompsonSampling,66.5,65.73,iCMABs / ICTHOMPSONSAMPLING,,-0.769999999999996,0.769999999999996,0.011579,Medium,iCThompsonSampling / 3 Runs
+Collapsed (structural failure),CEpochGreedy,37.6,37.52,CMABs / CEPOCHGREEDY,,-0.0799999999999983,0.0799999999999983,0.002128,Low,CEpochGreedy / 3 Runs
+Collapsed (structural failure),iCEpochGreedy,37.5,37.24,iCMABs / ICEPOCHGREEDY,,-0.259999999999998,0.259999999999998,0.006933,Low,iCEpochGreedy / 3 Runs
+Collapsed (structural failure),iCEXP4,37.4,36.85,iCMABs / ICEXP4,,-0.5499999999999972,0.5499999999999972,0.014706,Medium,iCEXP4 / 3 Runs
+Top tier (viable under stochastic),CPursuit,90.1,90.2,CMABs / CPURSUIT,,0.10000000000000853,0.10000000000000853,0.00111,Low,CPursuit / 5 Runs
+Top tier (viable under stochastic),iCEpsilonGreedy,88.6,87.85,iCMABs / ICEPSILONGREEDY,,-0.75,0.75,0.008465,Medium,iCEpsilonGreedy / 5 Runs
+Top tier (viable under stochastic),CEpsilonGreedy,87.9,87.82,CMABs / CEPSILONGREEDY,,-0.0800000000000125,0.0800000000000125,0.00091,Low,CEpsilonGreedy / 5 Runs
+Top tier (viable under stochastic),GNeuralUCB,86.3,85.48,EXP3 / GNEURALUCB,,-0.8199999999999932,0.8199999999999932,0.009502,Medium,GNeuralUCB / 5 Runs
+Mid-tier (degraded),EXPNeuralUCB,83.8,80.94,Hybrid / EXPNEURALUCB,,-2.8599999999999994,2.8599999999999994,0.034129,High,EXPNeuralUCB / 5 Runs
+Mid-tier (degraded),EXPUCB,78.4,77.8,EXP3 / EXPUCB,Paper label refers to EXP3/UCB.,-0.6000000000000085,0.6000000000000085,0.007653,Medium,EXPUCB / 5 Runs
+Mid-tier (degraded),CEXP4,70.2,69.32,CMABs / CEXP4,,-0.8800000000000097,0.8800000000000097,0.012536,Medium,CEXP4 / 5 Runs
+Mid-tier (degraded),iCPursuit,69.0,67.45,iCMABs / ICPURSUIT,,-1.5499999999999972,1.5499999999999972,0.022464,High,iCPursuit / 5 Runs
+Mid-tier (degraded),CThompsonSampling,68.1,67.31,CMABs / CTHOMPSONSAMPLING,,-0.789999999999992,0.789999999999992,0.011601,Medium,CThompsonSampling / 5 Runs
+Mid-tier (degraded),iCThompsonSampling,68.0,67.19,iCMABs / ICTHOMPSONSAMPLING,,-0.8100000000000023,0.8100000000000023,0.011912,Medium,iCThompsonSampling / 5 Runs
+Collapsed (structural failure),CEpochGreedy,37.6,37.51,CMABs / CEPOCHGREEDY,,-0.09000000000000341,0.09000000000000341,0.002394,Low,CEpochGreedy / 5 Runs
+Collapsed (structural failure),iCEpochGreedy,37.5,37.16,iCMABs / ICEPOCHGREEDY,,-0.3400000000000034,0.3400000000000034,0.009067,Low,iCEpochGreedy / 5 Runs
+Collapsed (structural failure),iCEXP4,37.4,36.84,iCMABs / ICEXP4,,-0.5599999999999952,0.5599999999999952,0.014973,Medium,iCEXP4 / 5 Runs

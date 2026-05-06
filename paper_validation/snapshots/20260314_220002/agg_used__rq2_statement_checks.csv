@@ -1,0 +1,4 @@
+Statement,Source check,Result,Note
+CPursuit outperforms EXPNeuralUCB and EXPUCB on average under adversarial threats,"CPursuit=87.99, EXPNeuralUCB=83.12, EXPUCB=76.44; deltas=4.87pp and 11.55pp",supported,Direction is fully supported from source; exact magnitude differs slightly from the manuscript values.
+"EXPNeuralUCB is fragile, while iCEpsilonGreedy is the most stable informed baseline with the strongest floor","EXPNeuralUCB CV=15.08, floor=18.01; iCEpsilonGreedy CV=3.65, floor=80.98",supported,The stability/worst-case ordering is source-backed and aligns closely with the manuscript numbers.
+"Within the iCMAB corpus, iCEpsilonGreedy has 100% in-family win rate under the same threat suite",iCEpsilonGreedy in-family win share = 100.0% over 144 source-backed configurations,supported,This correction is fully supported by the source-backed iCMAB adversarial slice.

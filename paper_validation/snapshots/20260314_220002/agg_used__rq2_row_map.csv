@@ -1,0 +1,5 @@
+Paper label,Source dataset,Source model
+CPursuit,CMABs,CPURSUIT
+iCEpsilonGreedy,iCMABs,ICEPSILONGREEDY
+EXPNeuralUCB,EXP3,EXPNEURALUCB
+EXPUCB,EXP3,EXPUCB

@@ -1,0 +1,6 @@
+Algorithm,Avg Reward,Regret,Efficiency (%),Gap (%),Winner Count Text
+ORACLE,300.5402,0.0,,,---
+iCPursuitNeuralUCB,210.419,60833.4,67.85,32.15,1/20
+EXPNeuralUCB,186.6561,82175.2,61.93,38.07,10/20
+GNeuralUCB,183.0388,83361.0,61.65,38.35,4/20
+CPursuitNeuralUCB,182.0116,84024.2,61.42,38.58,5/20

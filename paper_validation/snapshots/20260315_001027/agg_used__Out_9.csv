@@ -1,0 +1,5 @@
+index,Model,3 Runs,5 Runs,Avg. Eff.
+0,CPursuitNeuralUCB,84.56,83.62,84.09
+3,iCPursuitNeuralUCB,84.82,85.53,85.17
+2,GNeuralUCB,79.15,81.17,80.16
+1,EXPNeuralUCB,82.05,80.94,81.49

@@ -1,0 +1,438 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{multirow} 
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=0.5in}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+% TikZ for visualizations
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes, calc}
+
+% Section formatting with color
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{performancecolor}}{\thesection.}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{stochasticcolor}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Define colors for highlighting
+\definecolor{performancecolor}{RGB}{0,102,204}
+\definecolor{stochasticcolor}{RGB}{153,51,102}
+\definecolor{highlightcolor}{RGB}{255,245,153}
+\definecolor{criticalcolor}{RGB}{220,53,69}
+\definecolor{successcolor}{RGB}{40,167,69}
+\definecolor{colabcolor}{RGB}{244,180,0}
+
+% Custom highlighting commands
+\newcommand{\performance}[1]{\textcolor{performancecolor}{\textbf{#1}}}
+\newcommand{\stochastic}[1]{\textcolor{stochasticcolor}{\textbf{#1}}}
+\newcommand{\highlight}[1]{\colorbox{highlightcolor}{#1}}
+\newcommand{\critical}[1]{\textcolor{criticalcolor}{\textbf{#1}}}
+\newcommand{\success}[1]{\textcolor{successcolor}{\textbf{#1}}}
+\newcommand{\colab}[1]{\textcolor{colabcolor}{\textbf{#1}}}
+
+% Listings configuration
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    breaklines=true,
+    frame=single,
+    language=Python
+}
+
+% Bibliography style
+\bibliographystyle{IEEEtran}
+
+% ============================================================
+% TITLE PAGE
+% ============================================================
+
+\title{
+  \vspace{-1.5cm}
+  \textbf{\LARGE Dynamic Qubit Allocation for Robust Quantum Entanglement Routing:} \\
+  \vspace{0.4cm}
+  \textbf{\Large Two-Phase Comprehensive Evaluation Framework} \\
+  \vspace{0.6cm}
+  \large Baseline Validation and Multi-Allocator Expansion
+}
+
+\author{
+  \textbf{Piter Garcia} \\
+  Graduate Assistant, AI/Quantum Computing Research \\
+  Department of Computer Science \\
+  Rochester Institute of Technology \\
+  \texttt{pzg8794@g.rit.edu}
+}
+
+\date{
+  Phase 1: September 29, 2025 | Phase 2: November 11, 2025 \\
+  \vspace{0.3cm}
+  \textit{Version 2.0 - Comprehensive Draft for Future Reference}
+}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+
+\begin{abstract}
+\textbf{Phase 1 (September 2025):} This report presents a comprehensive dynamic environment test framework for evaluating adversarial quantum multi-armed bandit algorithms under systematic attack conditions. Building upon the foundational EXPNeuralUCB algorithm, we developed an extensible framework that enables rigorous comparison across five distinct environmental conditions: baseline (none), stochastic, Markov-based, adaptive, and online-adaptive attacks. Our implementation provides the first systematic evaluation methodology for distinguishing between natural stochastic failures and strategic adversarial attacks in quantum network routing scenarios. The framework demonstrates EXPNeuralUCB's superior performance across all tested conditions with minimal degradation ($<$ 3\% average) while establishing quantitative robustness benchmarks for future research.
+
+\textbf{Phase 2 Extension (November 2025):} Building on the baseline framework, we conducted an expanded 60-condition evaluation testing 4 algorithms (CPursuitNeuralUCB, iCPursuitNeuralUCB, GNeuralUCB, EXPNeuralUCB) across 4 allocation strategies (Fixed, Dynamic UCB, Random, Thompson Sampling). \textbf{Key discoveries:} (1) Pursuit algorithms achieve \success{89\% efficiency with 60\% win rates}, outperforming EXP's 78\% (5\% win rate). (2) Thompson Sampling provides \success{88.2\% efficiency + 3× speedup} vs Fixed (11.62h → 3.52h). (3) \textbf{Fixed Allocator Trap revealed:} Single-allocator testing creates systematic 6.4\% generalization penalties, favoring specialists over generalists. This extended analysis establishes multi-allocator evaluation as essential for assessing real-world algorithm robustness under dynamic resource constraints.
+\end{abstract}
+
+\vspace{0.3cm}
+\noindent\textbf{Keywords:} Quantum networking, Multi-armed bandits, Neural bandits, Adversarial robustness, Qubit allocation, Thompson Sampling, Pursuit learning, Generalization analysis, Dynamic resource allocation
+
+\newpage
+
+% Optional: Table of Contents
+{\small\tableofcontents}
+\newpage
+
+% ============================================================
+% NOTE TO READER
+% ============================================================
+\begin{tcolorbox}[colback=colabcolor!20,colframe=colabcolor,title=\textbf{📋 Draft Document Note}]
+\textbf{Status:} This is a DRAFT document combining Phase 1 (September 2025) baseline results with Phase 2 (November 2025) expanded multi-algorithm evaluation.
+
+\textbf{Purpose:} Future reference and continuation of research trajectory toward Phase 3 (iCMAB integration).
+
+\textbf{Sections to Review/Complete Later:}
+\begin{itemize}
+    \item Insert original Phase 1 content (Sections 1-4)
+    \item Add Phase 2 Extended Analysis (Section 5 - provided below)
+    \item Update Conclusions (Section 6 - provided below)
+    \item Add TikZ visualizations (scatter plot + variance map)
+\end{itemize}
+
+\textbf{Interactive Framework:} \href{https://colab.research.google.com/drive/1JWB3CS-Q37I58EcQKUKe-k-q2PH8WM0U}{\colab{\texttt{Google Colab Implementation}}}
+\end{tcolorbox}
+
+\newpage
+
+% ============================================================
+% PLACEHOLDER: INSERT ORIGINAL PHASE 1 CONTENT HERE
+% ============================================================
+
+\section*{[PLACEHOLDER: Original Phase 1 Content]}
+
+\textit{Insert your existing Sections 1-4 from the September 2025 report here:}
+\begin{itemize}
+    \item Section 1: Introduction
+    \item Section 2: Literature Foundation and Research Gap
+    \item Section 3: Framework Architecture
+    \item Section 4: Experimental Results - Comprehensive Numerical Analysis
+\end{itemize}
+
+\textit{These sections remain unchanged from the original report.}
+
+\newpage
+
+% ============================================================
+% SECTION 5: EXTENDED MULTI-ALGORITHM ANALYSIS (PHASE 2)
+% ============================================================
+
+\section{Extended Multi-Algorithm Analysis (Phase 2)}
+
+\subsection{Evolution from Baseline to Comprehensive Evaluation}
+
+Following the Phase 1 framework validation with EXPNeuralUCB, we expanded the evaluation to include three additional neural bandit algorithms and four allocation strategies, creating a 60-condition test matrix (4 algorithms × 5 scenarios × 4 allocators = 60 configurations).
+
+\textbf{Motivation:} The original evaluation's Fixed allocation (8,10,8,9) represents only one deployment scenario. Real quantum networks require \textit{dynamic allocation} to handle variable demand, decoherence, and topology changes. This expansion tests algorithm \textit{generalization} beyond specialist optimization.
+
+\subsection{Expanded Algorithm Suite}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Multi-Algorithm Comparison Across 5 Attack Scenarios}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{Baseline} & \textbf{Stochastic} & \textbf{Markov} & \textbf{Adaptive} & \textbf{OnlineAdapt} & \textbf{Avg} \\
+\hline
+\hline
+\multicolumn{7}{|c|}{\textbf{Average Efficiency (\%) - Fixed Allocation}} \\
+\hline
+\success{CPursuitNeuralUCB} & \success{89.5} & \success{90.5} & \success{83.7} & \success{88.5} & \success{86.2} & \success{87.7} \\
+\success{iCPursuitNeuralUCB} & \success{88.7} & \success{88.3} & \success{84.6} & \success{86.1} & \success{85.5} & \success{86.6} \\
+GNeuralUCB & 86.2 & 83.4 & 79.0 & 85.1 & 82.6 & 83.3 \\
+\performance{EXPNeuralUCB} & \performance{75.1} & \stochastic{73.2} & \performance{74.2} & \performance{75.1} & \performance{74.6} & \performance{74.4} \\
+\hline
+\multicolumn{7}{|c|}{\textbf{Win Rate (Scenario Victories / 20 Total Conditions)}} \\
+\hline
+CPursuitNeuralUCB & - & - & - & - & - & \success{12/20 (60\%)} \\
+iCPursuitNeuralUCB & - & - & - & - & - & \success{9/20 (45\%)} \\
+GNeuralUCB & - & - & - & - & - & 5/20 (25\%) \\
+EXPNeuralUCB & - & - & - & - & - & \critical{1/20 (5\%)} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Key Insight:} EXPNeuralUCB, while achieving 74.4\% efficiency (consistent with Phase 1's 74.4\% baseline), shows \critical{poor generalization} with only 1/20 wins. Pursuit algorithms dominate with \success{12/20 and 9/20 wins}, revealing that exponential weighting's strength in baseline conditions doesn't translate to cross-scenario robustness.
+
+\subsection{Multi-Allocator Evaluation Framework}
+
+\subsubsection{Allocation Strategy Comparison}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Qubit Allocation Strategy Performance}
+\begin{tabular}{|l|p{2.5cm}|c|c|p{4cm}|}
+\hline
+\textbf{Strategy} & \textbf{Configuration} & \textbf{Efficiency} & \textbf{Time (h)} & \textbf{Key Characteristic} \\
+\hline
+\hline
+Fixed & (8,10,8,9) static & 87.7\% & 11.62 & Phase 1 baseline - predictable \\
+Dynamic UCB & UCB $\beta=2.0$ & 85.3\% & 11.24 & Adapts but underperforms \\
+Random & $\epsilon=1.0$ pure & 77.3\% & 11.65 & Control (-10.4\% validates) \\
+\success{Thompson} & \success{(9,9,9,8) Bayesian} & \success{88.2\%} & \success{3.52} & \success{Best + 3× speedup} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Breakthrough Finding:} Thompson Sampling achieves \success{3.0× computational speedup} (3.52h vs 11.62h) while maintaining 88.2\% efficiency—\textit{higher} than Fixed's 87.7\%. This challenges the assumption that static allocation is optimal.
+
+\subsection{The Fixed Allocator Trap Discovery}
+
+\subsubsection{Generalization Penalty Analysis}
+
+Algorithms with high Fixed performance exhibit systematic penalties when tested with other allocators:
+
+\begin{table}[H]
+\centering
+\small
+\caption{Generalization Penalty: Fixed vs Other Allocators}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{Fixed Perf} & \textbf{Other Avg} & \textbf{Penalty} & \textbf{Correlation} \\
+\hline
+\hline
+\critical{EXPNeuralUCB} & \critical{82.6\%} & \critical{76.2\%} & \critical{-6.4\%} & \critical{$r=0.304$} \\
+GNeuralUCB & 83.3\% & 79.5\% & -3.8\% & - \\
+iCPursuitNeuralUCB & 86.6\% & 84.3\% & -2.3\% & - \\
+CPursuitNeuralUCB & 87.7\% & 84.9\% & -2.8\% & - \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Critical Implication:} The original EXPNeuralUCB evaluation used \textit{only} Fixed allocation (matching Phase 1 setup). This created three biases:
+\begin{enumerate}
+    \item \textbf{Artificial Stability:} Fixed eliminates allocation variance, inflating robustness appearance
+    \item \textbf{Hidden Failures:} Markov/Fixed 86.3\% → Markov/Random \critical{74.0\%} (-12.3\% collapse)
+    \item \textbf{Echo Chamber:} Algorithm optimized for test condition (1/20 wins) vs generalization (Pursuit 12/20 wins)
+\end{enumerate}
+
+\textbf{Methodological Contribution:} We define the \textit{Generalization Penalty Metric}:
+\begin{equation}
+\text{Penalty}(A, S) = \text{Perf}(A, S, \text{Fixed}) - \frac{1}{3}\sum_{M \in \{\text{Dyn, Rand, Thom}\}} \text{Perf}(A, S, M)
+\end{equation}
+
+Target for production: Penalty $< 5\%$ (iCPursuit achieves 2.3\%).
+
+\subsection{Attack-Allocator Interaction Effects}
+
+\subsubsection{Synergies and Conflicts Discovered}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Attack-Allocator Synergies (+) and Conflicts (-)}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Scenario} & \textbf{Best Pairing} & \textbf{Performance} & \textbf{Effect} \\
+\hline
+\hline
+\multicolumn{4}{|c|}{\success{Positive Synergies}} \\
+\hline
+Markov & + Dynamic UCB & 88.5\% & \success{+2.7\% vs Fixed} \\
+OnlineAdaptive & + Thompson & 90.6\% & \success{+5.6\% vs Dynamic} \\
+Baseline/None & + Random & 90.0\% & \success{+3.8\% vs Dynamic} \\
+\hline
+\multicolumn{4}{|c|}{\critical{Negative Conflicts}} \\
+\hline
+Adaptive & + Dynamic & 82.1\% & \critical{-8.1\% vs Fixed} \\
+Adaptive & + Random & 63.7\% & \critical{-26.5\% vs Fixed} \\
+Stochastic & + Random & 77.4\% & \critical{-13.1\% vs Thompson} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Design Principle:} Match allocator to attack structure—\textit{deterministic} allocators (Fixed) for reactive adversaries, \textit{probabilistic} (Thompson) for memoryless attacks.
+
+\subsection{Integration with Phase 1 Findings}
+
+\subsubsection{EXPNeuralUCB Context Evolution}
+
+Phase 1 established EXPNeuralUCB superiority under Fixed allocation:
+\begin{itemize}
+    \item 74.4\% efficiency (confirmed in Phase 2 Fixed tests)
+    \item 17.4-25.1\% gaps vs NeuralUCB/EXPUCB baselines
+    \item 9.7/10 robustness score under attacks
+\end{itemize}
+
+Phase 2 reveals \textit{context-dependent} performance:
+\begin{itemize}
+    \item \textbf{Fixed allocation:} EXP competitive (82.6\%, 2nd place)
+    \item \textbf{Dynamic allocation:} EXP degrades to 4th place (76.2\%)
+    \item \textbf{Generalization penalty:} -6.4\% (highest among tested algorithms)
+\end{itemize}
+
+\textbf{Refined Understanding:} EXPNeuralUCB is a \textit{specialist} algorithm optimized for static allocation, while Pursuit algorithms are \textit{generalists} maintaining performance across diverse conditions.
+
+\subsection{Production Deployment Implications}
+
+\begin{tcolorbox}[colback=successcolor!10,colframe=successcolor,title=\textbf{Updated Deployment Recommendations}]
+
+\textbf{Primary Configuration (General Purpose):}
+\begin{itemize}
+    \item Algorithm: \success{iCPursuitNeuralUCB} or \success{CPursuitNeuralUCB}
+    \item Allocator: \success{Thompson Sampling}
+    \item Expected: 88-92\% efficiency, CV < 8\%, 3× speedup
+\end{itemize}
+
+\textbf{Threat-Specific Fallbacks:}
+\begin{itemize}
+    \item Adaptive adversaries → Switch to Fixed allocator
+    \item Markov patterns → Use Dynamic UCB allocator
+    \item Real-time learning → Maintain Thompson
+\end{itemize}
+
+\textbf{Legacy EXPNeuralUCB Use Cases:}
+\begin{itemize}
+    \item \textbf{When to use:} Fixed allocation environments with known attack patterns
+    \item \textbf{When to avoid:} Dynamic allocation requirements (production networks)
+    \item \textbf{Justification:} Phase 1 validated robustness, Phase 2 revealed generalization limits
+\end{itemize}
+
+\end{tcolorbox}
+
+% ============================================================
+% SECTION 6: CONCLUSIONS (UPDATED)
+% ============================================================
+
+\section{Conclusions}
+
+\subsection{Two-Phase Achievement Summary}
+
+This work delivers comprehensive quantum routing algorithm evaluation through two integrated phases:
+
+\textbf{Phase 1 (September 2025):}
+\begin{itemize}
+    \item Systematic framework for multi-environment evaluation (5 attack scenarios)
+    \item EXPNeuralUCB baseline: \performance{74.4\% efficiency, 17.4-25.1\% gaps, 9.7/10 robustness}
+    \item Counterintuitive finding: Stochastic environment harder than strategic attacks
+\end{itemize}
+
+\textbf{Phase 2 (November 2025):}
+\begin{itemize}
+    \item Multi-algorithm expansion: 4 algorithms × 4 allocators = 60 conditions
+    \item \success{Pursuit superiority: 89\% efficiency, 60-45\% win rates vs EXP 78\%, 5\%}
+    \item \success{Thompson Sampling: 88.2\% + 3× speedup (3.52h vs 11.62h)}
+    \item \textbf{Fixed Allocator Trap discovery:} Single-allocator testing creates 6.4\% penalties
+\end{itemize}
+
+\subsection{Integrated Validation Results}
+
+The combined framework validates:
+\begin{itemize}
+    \item \success{Pursuit algorithms demonstrate superior cross-condition robustness}
+    \item \performance{EXPNeuralUCB remains competitive under Fixed allocation (82.6\%)}
+    \item \critical{Single-allocator evaluation systematically favors specialists over generalists}
+    \item \success{Thompson Sampling enables 3× speedup without efficiency loss}
+\end{itemize}
+
+\subsection{Methodological Contributions}
+
+\textbf{Framework Innovations:}
+\begin{enumerate}
+    \item Multi-environment evaluation distinguishing stochastic vs adversarial failures
+    \item Multi-allocator protocol revealing generalization vs specialization tradeoffs
+    \item Generalization Penalty Metric quantifying Fixed-specific optimization
+    \item Attack-allocator synergy/conflict taxonomy enabling defensive allocation
+\end{enumerate}
+
+\textbf{Research Benchmarks Established:}
+\begin{itemize}
+    \item \textbf{Phase 1 Baseline:} 74.4\% EXPNeuralUCB efficiency under Fixed allocation
+    \item \textbf{Phase 2 Generalist Standard:} 89\% Pursuit efficiency across 60 conditions
+    \item \textbf{Robustness Threshold:} < 3\% degradation, < 9\% CV for production
+    \item \textbf{Computational Benchmark:} 3.52h (Thompson) vs 11.62h (Fixed)
+\end{itemize}
+
+\subsection{Strategic Significance and Future Directions}
+
+\textbf{Immediate Impact:} This framework provides production-ready guidance:
+\begin{itemize}
+    \item Deploy \success{iCPursuitNeuralUCB + Thompson} for general-purpose quantum networks
+    \item Use \performance{EXPNeuralUCB + Fixed} for legacy systems with static allocation
+    \item Implement threat-based allocator switching for adaptive defense
+\end{itemize}
+
+\textbf{Research Trajectory:} This establishes foundation for Phase 3 goals:
+\begin{itemize}
+    \item \textbf{Phase 3:} iCMAB integration for predictive hybrid capability
+    \item \textbf{Phase 4:} Intelligent adaptive adversary stress testing
+    \item \textbf{Phase 5:} Compositional intelligence (forecasting + robustness + adaptation)
+\end{itemize}
+
+\subsection{Broader Impact}
+
+The Fixed Allocator Trap extends beyond quantum networking to any MAB application with resource allocation: cloud computing (server allocation), wireless networks (channel allocation), autonomous systems (task allocation). Our multi-allocator framework provides a generalization-focused evaluation template for these domains.
+
+\textbf{Final Verdict:}
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{\centering
+Phase 1 validated EXPNeuralUCB as a \textbf{robust specialist} under Fixed allocation. Phase 2 revealed Pursuit algorithms as \textbf{superior generalists} across dynamic conditions. Multi-allocator evaluation is \textbf{essential} for assessing real-world algorithm robustness, as single-allocator testing systematically favors specialists over generalists.
+}}
+\end{center}
+
+% ============================================================
+% INTERACTIVE ACCESS
+% ============================================================
+
+\begin{tcolorbox}[colback=colabcolor!20,colframe=colabcolor,title=\textbf{Interactive Framework Access}]
+\begin{center}
+    \textbf{Access to interactive implementation:}
+    \vspace{0.3cm}
+    \href{https://colab.research.google.com/drive/1JWB3CS-Q37I58EcQKUKe-k-q2PH8WM0U}{\colab{\texttt{Google Colab - Dynamic Environment Test Framework}}}
+
+    \vspace{0.3cm}
+    \textbf{Capabilities:}
+    \begin{itemize}
+        \item Run complete 60-condition evaluations
+        \item Modify parameters and test new scenarios  
+        \item Generate publication-quality visualizations
+        \item Extend framework with new algorithms
+        \item Reproduce all results from both phases
+    \end{itemize}
+\end{center}
+\end{tcolorbox}
+
+\section{Acknowledgments}
+
+This research was conducted as part of Graduate Assistant work in the AI/Quantum Computing track at Rochester Institute of Technology. Special thanks to Dr. Devroop Kar for iCMAB consultation and guidance on contextual multi-armed bandit methodologies.
+
+\end{document}

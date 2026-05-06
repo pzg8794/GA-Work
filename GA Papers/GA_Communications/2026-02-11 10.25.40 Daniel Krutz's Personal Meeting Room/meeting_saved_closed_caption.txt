@@ -1,0 +1,966 @@
+[Daniel Krutz] 10:08:40
+papers in the next month or two. You could talk to Shirja.
+
+[Piter Garcia (RIT Student)] 10:08:44
+Okay, look and see what venues and…
+
+[Daniel Krutz] 10:08:47
+Yeah, that deadlines are in the next month or two, okay?
+
+[Piter Garcia (RIT Student)] 10:08:49
+Available. Okay.
+
+[Piter Garcia (RIT Student)] 10:08:52
+I'm gonna reach out to, uh, uh…
+
+[Piter Garcia (RIT Student)] 10:08:55
+Uh, the route, you told me to reach out, right?
+
+[Daniel Krutz] 10:08:58
+Yeah, what I would do is first look yourself.
+
+[Piter Garcia (RIT Student)] 10:09:01
+Okay, uh…
+
+[Daniel Krutz] 10:09:01
+Alright, because you just don't want to go to them and say, do your work for you. You want to say, what's out there, alright?
+
+[Piter Garcia (RIT Student)] 10:09:07
+Okay.
+
+[Daniel Krutz] 10:09:07
+Or you want to say, this is what I found out there, do you have recommendations?
+
+[Daniel Krutz] 10:09:11
+Uh, to build on that, or not do those, or other recommendations?
+
+[Piter Garcia (RIT Student)] 10:09:13
+I can't do that. I can't do that, yes. I'm gonna put a… actually, I'm gonna put a…
+
+[Daniel Krutz] 10:09:15
+Okay.
+
+[Piter Garcia (RIT Student)] 10:09:19
+a list of values, uh, with deadlines, and I'm gonna reach out.
+
+[Piter Garcia (RIT Student)] 10:09:25
+to that group and CCU.
+
+[Piter Garcia (RIT Student)] 10:09:27
+And, you know, and see what feedback. Do you want me to CC Professor Travis, just in case he has… okay.
+
+[Daniel Krutz] 10:09:27
+Mm-hmm.
+
+[Daniel Krutz] 10:09:32
+No, uh, if you want, you can, that's fine.
+
+[Piter Garcia (RIT Student)] 10:09:36
+Okay, I'll CC him just in case he wants to interject and say, yeah.
+
+[Daniel Krutz] 10:09:37
+Um, but let's…
+
+[Daniel Krutz] 10:09:40
+Okay. Alright, so now let's look at the paper, right? So I'm going to share my screen.
+
+[Piter Garcia (RIT Student)] 10:09:45
+Yeah.
+
+[Daniel Krutz] 10:09:49
+All right, so now let's look at the paper, okay.
+
+[Daniel Krutz] 10:09:52
+So, um, a couple… so I left some comments in there, I don't know when.
+
+[Piter Garcia (RIT Student)] 10:09:52
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:09:56
+Yeah, I have to re-read that whole paper again, by the way, with no changes.
+
+[Daniel Krutz] 10:09:58
+Um, so…
+
+[Daniel Krutz] 10:10:00
+Yeah, so, number one, I would make sure to compare, like, you know, I left a note in there, make sure you compare against that citation.
+
+[Piter Garcia (RIT Student)] 10:10:07
+Yes. Although I'll do that again, yeah.
+
+[Daniel Krutz] 10:10:08
+Um,
+
+[Daniel Krutz] 10:10:12
+what, um, I need to do is I need to proofread again, because it's been, like, a month since I've looked at this.
+
+[Piter Garcia (RIT Student)] 10:10:17
+Yeah, yeah, yeah, and there has been some updates based on the feedback, so…
+
+[Piter Garcia (RIT Student)] 10:10:22
+I think it's only fair to…
+
+[Piter Garcia (RIT Student)] 10:10:27
+Uh, Dulu, another swipe, yeah.
+
+[Daniel Krutz] 10:10:28
+Yeah, so what I would do is update this to address the comments.
+
+[Piter Garcia (RIT Student)] 10:10:31
+Mm-hmm.
+
+[Daniel Krutz] 10:10:32
+Okay. Do you have any other results to add in here?
+
+[Piter Garcia (RIT Student)] 10:10:37
+Um, the only thing that I can add, which is quickly, is the Epsilon. That's gonna be a quick one.
+
+[Daniel Krutz] 10:10:42
+Okay. Okay, so…
+
+[Piter Garcia (RIT Student)] 10:10:44
+I can also, if you go all the way to the bottom,
+
+[Piter Garcia (RIT Student)] 10:10:46
+I can also run… because I run the testbeds…
+
+[Piter Garcia (RIT Student)] 10:10:50
+But I run… I run them… I… I hope this makes sense to you. I run them with their…
+
+[Daniel Krutz] 10:10:53
+Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:10:55
+With their wrong configurations and their…
+
+[Daniel Krutz] 10:10:59
+Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:11:00
+configurations overall, but I didn't use our own runs.
+
+[Daniel Krutz] 10:11:04
+Okay.
+
+[Piter Garcia (RIT Student)] 10:11:04
+Because we're using a baseline for our runs, which is…
+
+[Piter Garcia (RIT Student)] 10:11:08
+4K base frame, 2K steps, and…
+
+[Piter Garcia (RIT Student)] 10:11:12
+Um, 3, 5…
+
+[Daniel Krutz] 10:11:13
+Okay. Okay.
+
+[Piter Garcia (RIT Student)] 10:11:15
+3 to 5, yeah.
+
+[Daniel Krutz] 10:11:15
+So, what I would do is this. Address the feedback in here.
+
+[Piter Garcia (RIT Student)] 10:11:19
+Yeah. Oh yeah, I…
+
+[Daniel Krutz] 10:11:20
+Um, find a couple…
+
+[Piter Garcia (RIT Student)] 10:11:23
+that group has to give me feedback on those labels, yes.
+
+[Daniel Krutz] 10:11:25
+Well, I mean, yeah, so there's some feedback in there that hasn't been addressed yet.
+
+[Piter Garcia (RIT Student)] 10:11:29
+Okay.
+
+[Daniel Krutz] 10:11:29
+So, I would address some of that feedback.
+
+[Piter Garcia (RIT Student)] 10:11:32
+Yes.
+
+[Daniel Krutz] 10:11:32
+Um, and then what I will… and then, um, send me a list of, um,
+
+[Daniel Krutz] 10:11:38
+Uh, you know, come up with a list of 2 or 3 venues, and they should, at minimum, be B-rated venues. Do you know how to see what the rating of a venue is?
+
+[Piter Garcia (RIT Student)] 10:11:47
+I can figure it out. If you want to tell me right on top, yeah, that's fine.
+
+[Daniel Krutz] 10:11:52
+conference…
+
+[Daniel Krutz] 10:11:53
+So, journals are a little bit different, but if you look at, uh, gosh, it's like CORE,
+
+[Daniel Krutz] 10:11:58
+And I can put this in the chat.
+
+[Piter Garcia (RIT Student)] 10:12:00
+Yeah.
+
+[Daniel Krutz] 10:12:01
+Um…
+
+[Daniel Krutz] 10:12:03
+Basically, core is, like, the standard. It should be B or better.
+
+[Piter Garcia (RIT Student)] 10:12:07
+Okay.
+
+[Daniel Krutz] 10:12:07
+Um, optimally, it should be an A-ranked venue, but B is fine.
+
+[Piter Garcia (RIT Student)] 10:12:14
+I have a question, just a question, uh, then. Um…
+
+[Daniel Krutz] 10:12:14
+Um,
+
+[Piter Garcia (RIT Student)] 10:12:18
+We want to make sure that it's, um…
+
+[Piter Garcia (RIT Student)] 10:12:20
+journal, right?
+
+[Daniel Krutz] 10:12:21
+No, it can be a journal or a conference.
+
+[Piter Garcia (RIT Student)] 10:12:24
+Okay, got it. Okay.
+
+[Daniel Krutz] 10:12:25
+So, what… so typically journals are not… don't have core rankings.
+
+[Daniel Krutz] 10:12:29
+But, like, you can… you… you can do a little bit of digging and find out if something's a well-regarded journal or not. Like, you don't want to submit to some crap journal that they take anything.
+
+[Piter Garcia (RIT Student)] 10:12:39
+Yeah. Yeah, of course, yeah.
+
+[Daniel Krutz] 10:12:41
+Um, but, uh, so conferences, I think, are a little bit easier, but long story short, what I would do is find a couple venues where the submission time is in the next month or two.
+
+[Daniel Krutz] 10:12:52
+Or, um, and… or find some journals that this might work in, especially if the journals have rolling deadlines.
+
+[Piter Garcia (RIT Student)] 10:12:58
+Yeah.
+
+[Daniel Krutz] 10:12:59
+one journal to look at is the one
+
+[Daniel Krutz] 10:13:02
+that Xi published in, um…
+
+[Daniel Krutz] 10:13:04
+It's like the journal Machine Learning or something, I forget the name of it precisely.
+
+[Piter Garcia (RIT Student)] 10:13:08
+Yeah, I have that noted, yep.
+
+[Daniel Krutz] 10:13:08
+Um, um, but that's… that's definitely one I would…
+
+[Daniel Krutz] 10:13:14
+I would consider, but see if there's any conferences coming up.
+
+[Daniel Krutz] 10:13:17
+Um, before that. Um…
+
+[Piter Garcia (RIT Student)] 10:13:19
+Mm, mm.
+
+[Daniel Krutz] 10:13:20
+Let me see, where was I? Uh… yeah, okay, send you…
+
+[Daniel Krutz] 10:13:25
+So, in looking… and I want to worry about trimming this down, because we could do that.
+
+[Daniel Krutz] 10:13:31
+Um…
+
+[Piter Garcia (RIT Student)] 10:13:31
+Yeah, we can do that for the paper. I was thinking, like, if we're gonna submit, like, a 6A papers,
+
+[Piter Garcia (RIT Student)] 10:13:37
+We can either do it here, right, another… another… with the name of that paper,
+
+[Piter Garcia (RIT Student)] 10:13:43
+Right? And just base it on these findings, because…
+
+[Daniel Krutz] 10:13:43
+Yeah, that's… yeah, that's… yeah, that's what we'll do. Yeah, we'll just create another file.
+
+[Piter Garcia (RIT Student)] 10:13:46
+Yeah. Exactly.
+
+[Piter Garcia (RIT Student)] 10:13:49
+Yep.
+
+[Daniel Krutz] 10:13:49
+for whatever we're doing, or some… put it in here, and then we'll be fine.
+
+[Piter Garcia (RIT Student)] 10:13:54
+Yeah, yeah.
+
+[Daniel Krutz] 10:13:56
+Um, and so those are the two main things I want to talk to you about. So we need to submit it.
+
+[Piter Garcia (RIT Student)] 10:14:00
+Mm-hmm.
+
+[Daniel Krutz] 10:14:01
+You have some next steps to clear it up. I know DevRupin Shiraja, they'll have a little bit more time now, because they're…
+
+[Piter Garcia (RIT Student)] 10:14:04
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:14:07
+Mm-hmm.
+
+[Daniel Krutz] 10:14:07
+done with their submissions. Um, they were up against the wall. So I would contact them sooner rather than later.
+
+[Piter Garcia (RIT Student)] 10:14:09
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:14:13
+Yes.
+
+[Daniel Krutz] 10:14:14
+And once you get this, um,
+
+[Daniel Krutz] 10:14:17
+Um, this high-level feedback to me.
+
+[Daniel Krutz] 10:14:19
+I can then, uh, um…
+
+[Piter Garcia (RIT Student)] 10:14:19
+Yes.
+
+[Daniel Krutz] 10:14:22
+Um, you know, I'll start to give you some more feedback.
+
+[Piter Garcia (RIT Student)] 10:14:25
+Yes, and um…
+
+[Piter Garcia (RIT Student)] 10:14:28
+I know that… I just want to make sure you…
+
+[Piter Garcia (RIT Student)] 10:14:29
+You, you went… you…
+
+[Piter Garcia (RIT Student)] 10:14:31
+You're done, right? I wanted to touch base on something.
+
+[Daniel Krutz] 10:14:33
+Yeah, go ahead. Yeah, go ahead, yeah.
+
+[Piter Garcia (RIT Student)] 10:14:35
+I wanted to touch base on something else, and I wanna… I wanna hear your feedback. So, I talk…
+
+[Daniel Krutz] 10:14:37
+Yep.
+
+[Piter Garcia (RIT Student)] 10:14:40
+So, um…
+
+[Piter Garcia (RIT Student)] 10:14:44
+I… let me just make sure I remember…
+
+[Piter Garcia (RIT Student)] 10:14:49
+Her project, um…
+
+[Daniel Krutz] 10:14:51
+Sure does, yeah.
+
+[Piter Garcia (RIT Student)] 10:14:51
+No, her project is our…
+
+[Piter Garcia (RIT Student)] 10:14:55
+Um… you… it's a U… it's right here.
+
+[Piter Garcia (RIT Student)] 10:15:03
+There's so many things in my head. Okay, um…
+
+[Piter Garcia (RIT Student)] 10:15:06
+So… so I was… I talked to Shiraja, and, like, we saw… we talked about including… well, you also mentioned that, too.
+
+[Daniel Krutz] 10:15:11
+Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:15:17
+exploit UDRM, UDRM to…
+
+[Piter Garcia (RIT Student)] 10:15:21
+Um, our framework,
+
+[Piter Garcia (RIT Student)] 10:15:23
+And… what do you think about me using that for…
+
+[Daniel Krutz] 10:15:23
+Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:15:28
+for the DSCI CO1 paper.
+
+[Daniel Krutz] 10:15:33
+I think that's fine, I don't see why not.
+
+[Piter Garcia (RIT Student)] 10:15:35
+Yeah, so I was thinking to, like, kill two birds with one stone, right?
+
+[Piter Garcia (RIT Student)] 10:15:41
+perhaps, um, using the…
+
+[Piter Garcia (RIT Student)] 10:15:45
+Um, and I would be collaborating with her as well, right? She wants to collaborate also.
+
+[Piter Garcia (RIT Student)] 10:15:53
+And I'll… I'll… I'll…
+
+[Piter Garcia (RIT Student)] 10:15:56
+I'll… I'll talk to Debrew,
+
+[Piter Garcia (RIT Student)] 10:15:59
+To see, uh, what he thinks about it, or…
+
+[Piter Garcia (RIT Student)] 10:16:03
+Uh, what do you think? Should I talk to him and see what he thinks about it, if he has another idea?
+
+[Daniel Krutz] 10:16:07
+Well, so what I would do first is let's get the paper you have cleaned up.
+
+[Piter Garcia (RIT Student)] 10:16:07
+So, run… Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:16:11
+Okay.
+
+[Daniel Krutz] 10:16:12
+I mean, frankly, I think it's got a significant enough amount of work.
+
+[Daniel Krutz] 10:16:18
+Where, um…
+
+[Daniel Krutz] 10:16:21
+Where, um, you know, it's… I wanted…
+
+[Daniel Krutz] 10:16:25
+take on another focus, another direction.
+
+[Daniel Krutz] 10:16:29
+Until you get this paper cleaned up.
+
+[Piter Garcia (RIT Student)] 10:16:29
+Okay.
+
+[Piter Garcia (RIT Student)] 10:16:31
+Okay, I'll… I was just…
+
+[Daniel Krutz] 10:16:32
+So, I mean, trust me, I'm glad… I'm glad if you're like, hey, I have this other direction. I'm gonna… I can keep talking.
+
+[Piter Garcia (RIT Student)] 10:16:38
+No, no, I…
+
+[Daniel Krutz] 10:16:40
+Um, I…
+
+[Piter Garcia (RIT Student)] 10:16:40
+No, no, I get it. I agree with you in terms of the GA research.
+
+[Daniel Krutz] 10:16:42
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:16:45
+I was just, um…
+
+[Piter Garcia (RIT Student)] 10:16:47
+Trying to… because, like, I think…
+
+[Piter Garcia (RIT Student)] 10:16:51
+on Friday 18, I had to submit…
+
+[Piter Garcia (RIT Student)] 10:16:54
+a proposal, uh…
+
+[Piter Garcia (RIT Student)] 10:16:57
+with, uh… and I had to run it by you, because I chose you for…
+
+[Daniel Krutz] 10:17:01
+Yeah, I mean, the proposal, can't you submit what you, um, did for this paper?
+
+[Piter Garcia (RIT Student)] 10:17:03
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:17:06
+Okay, okay.
+
+[Daniel Krutz] 10:17:08
+Yeah, I mean, I don't… I don't see… you tell me why you can't.
+
+[Piter Garcia (RIT Student)] 10:17:11
+No, no, no, I… no, no, I… I'm learning by you, because I'm… I'm… yeah, yeah, yeah.
+
+[Daniel Krutz] 10:17:12
+Because… yeah.
+
+[Daniel Krutz] 10:17:15
+Yeah, I… yeah.
+
+[Piter Garcia (RIT Student)] 10:17:17
+Yeah. I…
+
+[Daniel Krutz] 10:17:18
+Uh, so what I… what I would say to do to make your life easier,
+
+[Piter Garcia (RIT Student)] 10:17:19
+Yep. Mhm.
+
+[Piter Garcia (RIT Student)] 10:17:22
+Yes.
+
+[Daniel Krutz] 10:17:22
+is for your proposal submission,
+
+[Daniel Krutz] 10:17:26
+You… for your dissertation stuff,
+
+[Piter Garcia (RIT Student)] 10:17:28
+Yeah.
+
+[Daniel Krutz] 10:17:28
+You can base it off of the paper you're writing now, okay?
+
+[Piter Garcia (RIT Student)] 10:17:31
+Okay, okay.
+
+[Daniel Krutz] 10:17:32
+And then what I would like to see you do is basically spend the minimal amount of time on your actual dissertation.
+
+[Piter Garcia (RIT Student)] 10:17:38
+Okay.
+
+[Daniel Krutz] 10:17:39
+And spend more time on your publications.
+
+[Piter Garcia (RIT Student)] 10:17:41
+Perfect.
+
+[Daniel Krutz] 10:17:41
+Because your dissertation, if you spend the time on your publications,
+
+[Daniel Krutz] 10:17:45
+One, that's what people care about, but also, like, basically the publications will self-build your dissertation.
+
+[Piter Garcia (RIT Student)] 10:17:48
+Yeah.
+
+[Daniel Krutz] 10:17:51
+It'll make it so it's easy. So, like, basically, like, if you had 2 or 3 papers written up, especially if they're published,
+
+[Piter Garcia (RIT Student)] 10:17:57
+Yeah.
+
+[Daniel Krutz] 10:17:58
+putting together a dissertation then is, like,
+
+[Daniel Krutz] 10:18:00
+a couple-day job. That's easy. It's just…
+
+[Daniel Krutz] 10:18:02
+copy and pasting, synthesizing it…
+
+[Piter Garcia (RIT Student)] 10:18:03
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:18:05
+Yeah.
+
+[Daniel Krutz] 10:18:05
+And that's trivial at that point.
+
+[Piter Garcia (RIT Student)] 10:18:08
+I agree with you. That's why I wanted to run it by you, because you have experience on that.
+
+[Piter Garcia (RIT Student)] 10:18:13
+And I'm gonna start…
+
+[Daniel Krutz] 10:18:13
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:18:15
+During the preparations that I wasn't able to do, uh…
+
+[Piter Garcia (RIT Student)] 10:18:19
+Next, last semester, I'm gonna start doing it now.
+
+[Piter Garcia (RIT Student)] 10:18:22
+to start preparing for applications and everything, because…
+
+[Daniel Krutz] 10:18:22
+Okay.
+
+[Piter Garcia (RIT Student)] 10:18:25
+I want to make sure that I'm ready, uh, to do all those submissions, uh, this year, and…
+
+[Daniel Krutz] 10:18:30
+Perfect, yep.
+
+[Piter Garcia (RIT Student)] 10:18:31
+Yeah, yeah.
+
+[Daniel Krutz] 10:18:33
+And what's your goal once you graduate?
+
+[Piter Garcia (RIT Student)] 10:18:36
+So, um…
+
+[Piter Garcia (RIT Student)] 10:18:39
+I'm definitely going into PhD, um…
+
+[Daniel Krutz] 10:18:42
+Where have you applied?
+
+[Piter Garcia (RIT Student)] 10:18:43
+So, I haven't applied yet. I still have…
+
+[Piter Garcia (RIT Student)] 10:18:47
+you know, um…
+
+[Piter Garcia (RIT Student)] 10:18:51
+this… I still have, like, this semester, another semester break. I did it on purpose.
+
+[Piter Garcia (RIT Student)] 10:18:56
+Just in case I didn't have time to do it last semester.
+
+[Daniel Krutz] 10:19:01
+Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:19:02
+Which, uh, because if I was able to do it last semester, like, you know, like you advised me, right? I just physically… I was able… if I was…
+
+[Daniel Krutz] 10:19:07
+Well, yeah, so, I mean, I'll…
+
+[Piter Garcia (RIT Student)] 10:19:10
+Mm-hmm. Right.
+
+[Daniel Krutz] 10:19:11
+So basically, I mean, when… 9 times out of 10, when you start a PhD program, it's gonna be in the fall.
+
+[Piter Garcia (RIT Student)] 10:19:18
+Yeah, which is fine, yeah, yeah, correct.
+
+[Daniel Krutz] 10:19:18
+And so, right now, it's too late to apply for the fall of 2026.
+
+[Piter Garcia (RIT Student)] 10:19:23
+But it's… but it's perfect time to prepare, right? Start preparing, huh?
+
+[Daniel Krutz] 10:19:24
+And so…
+
+[Daniel Krutz] 10:19:28
+Well, I mean, it's… you should always be preparing to enter a PhD program, but realistically, you're looking at applying starting this fall.
+
+[Piter Garcia (RIT Student)] 10:19:33
+Yeah, yeah.
+
+[Piter Garcia (RIT Student)] 10:19:37
+Yeah.
+
+[Daniel Krutz] 10:19:37
+for entering a program in the fall of 2027.
+
+[Piter Garcia (RIT Student)] 10:19:41
+Yeah, yeah, yeah.
+
+[Daniel Krutz] 10:19:42
+I just want to make sure that you're aware of that, like, it's… it's… I don't know who would…
+
+[Daniel Krutz] 10:19:46
+I don't know how you would even get into a program in the fall of 2026.
+
+[Piter Garcia (RIT Student)] 10:19:50
+Yeah, yeah.
+
+[Daniel Krutz] 10:19:52
+Um, so I just want to make sure you knew that. Um, yeah, basically the number one things you can do for a PhD program is get publications. And so, um…
+
+[Piter Garcia (RIT Student)] 10:19:55
+Yeah.
+
+[Daniel Krutz] 10:20:01
+I mean, we're on this… we're on the… we're always in the same team, but we're definitely on the same team when we start talking publications.
+
+[Piter Garcia (RIT Student)] 10:20:07
+Yeah, and…
+
+[Daniel Krutz] 10:20:08
+That helps me, that helps you, and uh…
+
+[Daniel Krutz] 10:20:10
+Yeah, let's do it.
+
+[Piter Garcia (RIT Student)] 10:20:10
+Exactly, exactly. And Travis, I was talking to Professor Travis, and he said, like, even after you graduate, you still can stay here.
+
+[Piter Garcia (RIT Student)] 10:20:17
+Uh, taking, you know, courses towards, like, you know, publications and stuff like that, right?
+
+[Daniel Krutz] 10:20:20
+Okay.
+
+[Daniel Krutz] 10:20:22
+Okay, okay, yeah, he, yeah, yeah, yeah.
+
+[Piter Garcia (RIT Student)] 10:20:23
+Um, yeah, and you know, and I was like, oh, that's a smart idea, right? So…
+
+[Piter Garcia (RIT Student)] 10:20:29
+Um, I'm still gonna be going to U of R anyways, so I, like, I'm, like, I'm gonna have…
+
+[Daniel Krutz] 10:20:32
+Okay.
+
+[Piter Garcia (RIT Student)] 10:20:36
+a… what's the word, um…
+
+[Piter Garcia (RIT Student)] 10:20:39
+I'm gonna have a… because I have a scholarship,
+
+[Piter Garcia (RIT Student)] 10:20:44
+to them, um, and I haven't learned through them, so I'm gonna have a sort, a little bit of source of income to pay my rent.
+
+[Daniel Krutz] 10:20:47
+Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:20:53
+So, which is gonna really help, you know, it's gonna be help for me to do it right. Because I want to do it right, you know, like you said, like, I want to…
+
+[Daniel Krutz] 10:20:53
+Yeah, yeah, yeah.
+
+[Piter Garcia (RIT Student)] 10:21:01
+Uh, start writing those papers, submit it, submit them, right?
+
+[Daniel Krutz] 10:21:05
+Mm-hmm.
+
+[Piter Garcia (RIT Student)] 10:21:06
+Become more knowledgeable in… especially in the field right now that…
+
+[Piter Garcia (RIT Student)] 10:21:11
+that I'm digging myself into, which is, like…
+
+[Piter Garcia (RIT Student)] 10:21:14
+It's something that I wasn't thinking about, but, like, it's, like, perfect for what I want, right? So…
+
+[Piter Garcia (RIT Student)] 10:21:20
+I… I… I have some ideas, I want to run them by you, but right now I'm organizing
+
+[Piter Garcia (RIT Student)] 10:21:27
+myself, you know, organizing everything.
+
+[Daniel Krutz] 10:21:29
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:21:30
+And then, like, when we are in a good place, like, let's say we submit a paper or two,
+
+[Piter Garcia (RIT Student)] 10:21:36
+Uh, I want to start running Ideas by you of, you know, certain directions within the whole quantum AI field.
+
+[Daniel Krutz] 10:21:43
+Yeah, yeah.
+
+[Piter Garcia (RIT Student)] 10:21:44
+That I'm, you know, that I'm looking for. It was just, you know, just to get your feedback, or see, you know,
+
+[Piter Garcia (RIT Student)] 10:21:51
+If you think it's silly or stupid, right, or it's a better way to do it, right?
+
+[Piter Garcia (RIT Student)] 10:21:55
+So…
+
+[Daniel Krutz] 10:21:56
+You know, yeah, that's fine. I mean, I think that's a very good idea.
+
+[Piter Garcia (RIT Student)] 10:22:00
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:22:02
+Yeah, so I… so I think… so…
+
+[Daniel Krutz] 10:22:03
+Um…
+
+[Piter Garcia (RIT Student)] 10:22:05
+I think I haven't actually… I have a list…
+
+[Piter Garcia (RIT Student)] 10:22:10
+of items to check, um…
+
+[Piter Garcia (RIT Student)] 10:22:12
+I'll follow up tonight.
+
+[Piter Garcia (RIT Student)] 10:22:14
+Uh, with an email, um, and I'll CC you in there. I'll make sure that I do it tonight. I have time tonight, so I'll be able to do so.
+
+[Daniel Krutz] 10:22:21
+Okay. Awesome, man.
+
+[Piter Garcia (RIT Student)] 10:22:23
+Yeah. Mm-hmm.
+
+[Daniel Krutz] 10:22:24
+So, let's do this. Let's, um… I'm gonna look at the calendar.
+
+[Piter Garcia (RIT Student)] 10:22:28
+Yeah, let me put it here right now.
+
+[Daniel Krutz] 10:22:29
+And, um, so, yeah, so, um, how does…
+
+[Daniel Krutz] 10:22:36
+How does Tuesday at 10.30 work?
+
+[Piter Garcia (RIT Student)] 10:22:42
+Okay, so 2010, I'm gonna be teaching, but I can do lunch.
+
+[Daniel Krutz] 10:22:48
+How about, like, 11.30?
+
+[Piter Garcia (RIT Student)] 10:22:49
+And… yeah, that's large. Yeah, that's large. I can do that.
+
+[Daniel Krutz] 10:22:50
+On Tuesday? Okay.
+
+[Daniel Krutz] 10:22:53
+Okay, so I'll say, uh…
+
+[Daniel Krutz] 10:22:55
+And so we'll do 11.30 the 17th.
+
+[Daniel Krutz] 10:22:58
+And, uh,
+
+[Piter Garcia (RIT Student)] 10:22:58
+Yeah, let me just double-check quickly, um…
+
+[Daniel Krutz] 10:23:01
+Yeah, yeah.
+
+[Piter Garcia (RIT Student)] 10:23:02
+But it, like, should work. Let me just double-check quickly.
+
+[Piter Garcia (RIT Student)] 10:23:07
+I have the calendar of…
+
+[Piter Garcia (RIT Student)] 10:23:10
+meditation calendar right here, yep.
+
+[Piter Garcia (RIT Student)] 10:23:14
+placement…
+
+[Piter Garcia (RIT Student)] 10:23:18
+Okay, so let me see…
+
+[Piter Garcia (RIT Student)] 10:23:31
+That's interesting.
+
+[Piter Garcia (RIT Student)] 10:23:36
+That's cool.
+
+[Piter Garcia (RIT Student)] 10:23:50
+Let me… look…
+
+[Piter Garcia (RIT Student)] 10:23:52
+Here…
+
+[Piter Garcia (RIT Student)] 10:24:00
+I had a… yeah, okay.
+
+[Piter Garcia (RIT Student)] 10:24:07
+That's weird. Anyways, that should work. If anything, I just… I'm just gonna let you know.
+
+[Piter Garcia (RIT Student)] 10:24:13
+Uh, but that should work. Um, he gave me…
+
+[Daniel Krutz] 10:24:13
+Okay.
+
+[Piter Garcia (RIT Student)] 10:24:17
+Oh, here it is, okay, so…
+
+[Piter Garcia (RIT Student)] 10:24:20
+Launch is, yes, 1130… okay, launches starts at 11.35, so can we do 11.35 instead?
+
+[Daniel Krutz] 10:24:26
+Yeah, fine, yeah.
+
+[Piter Garcia (RIT Student)] 10:24:27
+Okay, perfect. Yeah, so that was the… I knew there was at least 5 minutes up in there, I got it.
+
+[Daniel Krutz] 10:24:32
+Mm-hmm. That's fine, yeah, yeah.
+
+[Piter Garcia (RIT Student)] 10:24:34
+Yeah.
+
+[Piter Garcia (RIT Student)] 10:24:37
+So Tuesday, 11.35, 11 p.m., so I don't forget.
+
+[Daniel Krutz] 10:24:39
+Yes, sir. Yep.
+
+[Piter Garcia (RIT Student)] 10:24:42
+There you go…
+
+[Piter Garcia (RIT Student)] 10:24:47
+Right.
+
+[Piter Garcia (RIT Student)] 10:25:05
+That's my reminder.
+
+[Piter Garcia (RIT Student)] 10:25:10
+Perfect. Okay.
+
+[Piter Garcia (RIT Student)] 10:25:12
+Yeah, I'll… I'll… yeah.
+
+[Piter Garcia (RIT Student)] 10:25:15
+We'll follow up there, and…
+
+[Piter Garcia (RIT Student)] 10:25:22
+Yeah, we'll follow up there. Okay, so I got…
+
+[Daniel Krutz] 10:25:24
+Okay.
+
+[Piter Garcia (RIT Student)] 10:25:26
+Awesome. Thank you so much for this. It was very quick and productive.
+
+[Daniel Krutz] 10:25:29
+Yeah, thanks, man. Yeah, I'll, um, send me a note, or send me a message when you have the updates, and we'll go from there.
+
+[Piter Garcia (RIT Student)] 10:25:31
+Thank you.
+
+[Piter Garcia (RIT Student)] 10:25:36
+Yes, I'll do that. Awesome.
+
+[Daniel Krutz] 10:25:38
+Alright, see ya, buddy.
+
+[Piter Garcia (RIT Student)] 10:25:40
+Bye.
+

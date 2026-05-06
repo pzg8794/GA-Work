@@ -1,0 +1,21 @@
+Testbed,Algorithm,Avg Reward,Regret,Efficiency (%),Gap (%),Exp. Winner,Winner Count Text
+Paper 2,ORACLE,0.3927,0.0,,,,---
+Paper 2,CPursuitNeuralUCB,0.2888,508.7,73.24,26.76,38,38/300
+Paper 2,GNeuralUCB,0.2887,515.4,73.2,26.8,87,87/300
+Paper 2,iCPursuitNeuralUCB,0.2934,494.4,74.45,25.55,94,94/300
+Paper 2,EXPNeuralUCB,0.2811,581.4,71.24,28.76,81,81/300
+Paper 7,ORACLE,8.9237,0.0,,,,---
+Paper 7,iCPursuitNeuralUCB,6.9793,42.8,78.03,21.97,245,245/300
+Paper 7,EXPNeuralUCB,6.2227,272.3,69.57,30.43,16,16/300
+Paper 7,CPursuitNeuralUCB,6.3314,269.1,70.82,29.18,0,0/300
+Paper 7,GNeuralUCB,6.3314,269.1,70.82,29.18,39,39/300
+Paper 12,ORACLE,0.8724,0.0,,,,---
+Paper 12,GNeuralUCB,0.3833,864.1,43.72,56.28,53,53/300
+Paper 12,EXPNeuralUCB,0.373,892.2,42.54,57.46,91,91/300
+Paper 12,iCPursuitNeuralUCB,0.3869,858.3,44.14,55.86,97,97/300
+Paper 12,CPursuitNeuralUCB,0.3842,861.2,43.81,56.19,59,59/300
+Paper 8,ORACLE,300.5402,0.0,,,,---
+Paper 8,iCPursuitNeuralUCB,210.419,60833.4,67.85,32.15,1,1/20
+Paper 8,EXPNeuralUCB,186.6561,82175.2,61.93,38.07,10,10/20
+Paper 8,GNeuralUCB,183.0388,83361.0,61.65,38.35,4,4/20
+Paper 8,CPursuitNeuralUCB,182.0116,84024.2,61.42,38.58,5,5/20

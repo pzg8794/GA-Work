@@ -1,0 +1,2 @@
+Source,Allocator,Cap type,Frames,Run mode,Scenarios
+Master_Dataset_Hybrid.csv,Random,T,6000,3+5 mean,"Bl, Sh, Mk, Ag"

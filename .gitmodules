@@ -1,0 +1,12 @@
+[submodule "GA Papers/QuantumFaultTolerant"]
+	path = GA Papers/QuantumFaultTolerant
+	url = git@github.com:pzg8794/QuantumFaultTolerant.git
+	ignore = dirty
+[submodule "hybrid_variable_framework"]
+	path = hybrid_variable_framework
+	url = https://github.com/pzg8794/quantum_project.git
+	ignore = dirty
+[submodule "quantum_project_hub"]
+	path = quantum_project_hub
+	url = https://github.com/pzg8794/quantum_project_hub.git
+	ignore = dirty

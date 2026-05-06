@@ -1,0 +1,5 @@
+Algorithm,Avg Eff (%),Gap (%),Floor (%),Winner Count Text
+iCPursuitNeuralUCB,74.43,25.57,54.4,24/75
+CPursuitNeuralUCB,73.22,26.78,48.4,8/75
+GNeuralUCB,73.21,26.79,46.7,23/75
+EXPNeuralUCB,71.28,28.72,45.3,20/75

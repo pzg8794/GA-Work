@@ -1,0 +1,13 @@
+Allocator,Metric,Expected,Actual,Source,B - A,|B - A|,|B - A| / Expected,Priority,Item
+Fixed,Avg Eff (%),92.7,92.662,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.0379999999999967,0.0379999999999967,0.00041,Low,Fixed / Avg Eff (%)
+Fixed,Floor (%),88.9,88.87,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.030000000000001137,0.030000000000001137,0.000337,Low,Fixed / Floor (%)
+Fixed,Span (pp),7.8,7.769,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.030999999999999694,0.030999999999999694,0.003974,Low,Fixed / Span (pp)
+DynamicUCB,Avg Eff (%),92.6,92.562,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.0379999999999967,0.0379999999999967,0.00041,Low,DynamicUCB / Avg Eff (%)
+DynamicUCB,Floor (%),87.9,87.925,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,0.024999999999991473,0.024999999999991473,0.000284,Low,DynamicUCB / Floor (%)
+DynamicUCB,Span (pp),9.3,9.252,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.04800000000000004,0.04800000000000004,0.005161,Low,DynamicUCB / Span (pp)
+Random,Avg Eff (%),86.4,86.371,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.029000000000010573,0.029000000000010573,0.000336,Low,Random / Avg Eff (%)
+Random,Floor (%),68.3,68.289,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.01099999999999568,0.01099999999999568,0.000161,Low,Random / Floor (%)
+Random,Span (pp),26.7,26.707,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,0.0070000000000014495,0.0070000000000014495,0.000262,Low,Random / Span (pp)
+Thompson,Avg Eff (%),87.8,87.803,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,0.0030000000000001137,0.0030000000000001137,3.4e-05,Low,Thompson / Avg Eff (%)
+Thompson,Floor (%),73.3,73.252,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.04800000000000182,0.04800000000000182,0.000655,Low,Thompson / Floor (%)
+Thompson,Span (pp),26.4,26.38,Hybrid / CPursuitNeuralUCB / Tb / 6K / s=2 / runs=3+5 / all5,-0.019999999999999574,0.019999999999999574,0.000758,Low,Thompson / Span (pp)

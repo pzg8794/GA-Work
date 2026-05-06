@@ -1,0 +1,12 @@
+RQ3b snapshot provenance (pandas is canonical)
+csv: Validated_Logs/Master_Dataset_Hybrid.csv
+cap_type: Tb
+frames: 6000
+allocator: Default
+runs: 3
+experiments: [1, 2, 3]
+models: ['CPURSUITNEURALUCB', 'ICPURSUITNEURALUCB']
+scenarios: ['NONE', 'STOCHASTIC', 'MARKOV', 'ADAPTIVE']
+scales: ['1.0', '1.5', '2.0']
+matched_rows: 24
+missing_combos: 0

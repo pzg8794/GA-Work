@@ -1,0 +1,4 @@
+Branch,OA lift,Avg lift,iCP CV_scen,MAE vs paper
+"Caption-faithful: 6000, runs 3+5 mean",-0.807,-1.25,5.244,4.561
+"Provenance candidate: 6000, runs 3 only",18.31,3.666,3.312,1.805
+"Alternative: 4000+6000, runs 3 only",8.4,0.36,2.098,3.206

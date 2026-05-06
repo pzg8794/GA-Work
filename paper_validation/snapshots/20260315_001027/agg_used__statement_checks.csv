@@ -1,0 +1,4 @@
+Statement,Source check,Result,Note
+Top tier remains deployment-viable (>= 85% Avg. Eff.),Top-tier Avg. Eff. range = 85.86 to 90.11,supported,All four top-tier rows stay at or above the 85% viability threshold.
+Several variants degrade into the 60--80% band,Mid-tier Avg. Eff. range = 66.46 to 81.49; within 60--80 = 5 of 6,supported,Most mid-tier rows fall in the 60--80 band; EXPNeuralUCB sits slightly above it.
+Weakest policies collapse toward ~37--40% even without adversarial pressure,Collapsed Avg. Eff. range = 36.84 to 37.52,supported,"All collapsed rows remain tightly clustered around 37%, which supports the approximate ~37--40% statement."

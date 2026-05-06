@@ -1,0 +1,28 @@
+# macOS / editor metadata
+.DS_Store
+Icon?
+.vscode/
+
+# Local Python environments and caches
+.quantum/
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local scratch/worktree areas
+tmp/
+_worktrees/
+
+# Local credentials and secrets
+quantum-gd-credentials.json
+*credentials*.json
+*.env
+.env
+.env.*
+*.pem
+*.key
+
+# Local logs
+*.log

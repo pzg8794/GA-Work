@@ -1,0 +1,4 @@
+status,meaning
+verified,Notebook output matches the paper under a locked source contract.
+reconciliation required,"Source-backed computation exists, but the current paper value does not follow from one stable contract yet."
+TBD,Artifact is not yet backed by a clean master-dataset derivation path.

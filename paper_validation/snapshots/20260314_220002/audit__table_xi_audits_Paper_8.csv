@@ -1,0 +1,17 @@
+Source,Algorithm,Metric,Expected,Actual,Note,B - A,|B - A|,|B - A| / Expected,Priority
+Paper 8,iCPursuitNeuralUCB,Avg Eff (%),67.41,67.41,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Gap (%),32.59,32.59,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Floor (%),44.1,44.1,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Exp. Winner,1.0,1.0,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Avg Eff (%),62.08,62.08,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Gap (%),37.92,37.92,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Floor (%),23.9,23.9,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Exp. Winner,2.0,2.0,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Avg Eff (%),61.81,61.81,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Gap (%),38.19,38.19,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Floor (%),36.0,36.0,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Exp. Winner,0.0,0.0,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Avg Eff (%),61.65,61.65,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Gap (%),38.35,38.35,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Floor (%),35.2,35.2,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Exp. Winner,2.0,2.0,"file=Master_Dataset_1000_1000_1_paper8.csv, runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None

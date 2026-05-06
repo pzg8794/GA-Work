@@ -1,0 +1,7 @@
+index,Tier,Paper label,Source dataset,Source model,3 Runs,5 Runs,Avg. Eff.
+4,Mid-tier (degraded),EXPNeuralUCB,Hybrid,EXPNEURALUCB,82.05,80.94,81.49
+5,Mid-tier (degraded),EXPUCB,EXP3,EXPUCB,75.5,77.8,76.65
+6,Mid-tier (degraded),CEXP4,CMABs,CEXP4,69.24,69.32,69.28
+7,Mid-tier (degraded),iCPursuit,iCMABs,ICPURSUIT,67.18,67.45,67.32
+8,Mid-tier (degraded),CThompsonSampling,CMABs,CTHOMPSONSAMPLING,65.74,67.31,66.53
+9,Mid-tier (degraded),iCThompsonSampling,iCMABs,ICTHOMPSONSAMPLING,65.73,67.19,66.46

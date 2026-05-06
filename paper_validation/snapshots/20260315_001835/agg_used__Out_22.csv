@@ -1,0 +1,3 @@
+Paper label,Avg Eff. (%),CV (%),Floor (%),Win count (raw),Config count (raw),Source dataset,Source model
+EXPNeuralUCB,83.12,15.08,18.01,65,144,EXP3,EXPNEURALUCB
+EXPUCB,76.44,6.01,68.75,7,144,EXP3,EXPUCB

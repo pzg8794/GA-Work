@@ -1,0 +1,4 @@
+Algorithm,Avg Eff (%),Gap (%),Floor (%),Winner Count Text
+GNeuralUCB,85.37,14.63,61.6,41/75
+EXPNeuralUCB,80.86,19.14,18.0,28/75
+EXPUCB,78.06,21.94,68.8,6/75

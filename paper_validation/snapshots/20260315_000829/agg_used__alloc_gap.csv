@@ -1,0 +1,5 @@
+allocator,iCPursuitNeuralUCB,EXPNeuralUCB,GNeuralUCB,CPursuitNeuralUCB
+Default,32.59,37.918,38.195,38.35
+Dynamic,31.906,34.908,38.486,38.596
+Random,32.212,44.526,38.226,38.776
+ThompsonSampling,31.906,34.908,38.486,38.596

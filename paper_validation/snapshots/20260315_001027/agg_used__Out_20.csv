@@ -1,0 +1,2 @@
+Paper label,Avg Eff. (%),CV (%),Floor (%),Win count (raw),Config count (raw),Source dataset,Source model
+CPursuit,87.99,5.62,77.37,85,120,CMABs,CPURSUIT

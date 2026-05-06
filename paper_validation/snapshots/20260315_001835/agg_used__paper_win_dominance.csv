@@ -1,0 +1,5 @@
+index,paper_win_dominance
+CPursuit,25.6
+iCEpsilonGreedy,43.9
+EXPNeuralUCB,30.5
+EXP3/UCB,0.0

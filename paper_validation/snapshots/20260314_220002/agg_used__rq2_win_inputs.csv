@@ -1,0 +1,5 @@
+Model,Source,MARKOV wins,ADAPTIVE wins,ONLINEADAPTIVE wins,Wins
+CPursuit,CMABs,17,31,37,85
+iCEpsilonGreedy,iCMABs,48,48,48,144
+EXPNeuralUCB,EXP3,28,11,26,65
+EXP3/UCB,EXP3,0,5,2,7

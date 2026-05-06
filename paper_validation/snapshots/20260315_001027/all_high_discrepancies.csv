@@ -1,0 +1,74 @@
+AuditLabel,Tier,Model,Expected,Actual,Source,Note,B - A,|B - A|,|B - A| / Expected,Priority,Item,Wins (evaluator),Total Wins (evaluator),Source dataset,Source model,Wins (runner),Total Wins (runner),Metric,Algorithm,Scale
+rq1_summary,Top tier (viable under stochastic),GNeuralUCB,85.2,86.24,EXP3 / GNEURALUCB,,1.039999999999992,1.039999999999992,0.012207,High,GNeuralUCB / 3 Runs,,,,,,,,,
+rq1_summary,Mid-tier (degraded),iCPursuit,68.7,67.18,iCMABs / ICPURSUIT,,-1.519999999999996,1.519999999999996,0.022125,High,iCPursuit / 3 Runs,,,,,,,,,
+rq1_summary,Mid-tier (degraded),EXPNeuralUCB,83.8,80.94,Hybrid / EXPNEURALUCB,,-2.8599999999999994,2.8599999999999994,0.034129,High,EXPNeuralUCB / 5 Runs,,,,,,,,,
+rq1_summary,Mid-tier (degraded),iCPursuit,69.0,67.45,iCMABs / ICPURSUIT,,-1.5499999999999972,1.5499999999999972,0.022464,High,iCPursuit / 5 Runs,,,,,,,,,
+rq1_table_v_audit_3,Top tier (viable under stochastic),GNeuralUCB,85.2,86.24,EXP3 / GNEURALUCB,,1.039999999999992,1.039999999999992,0.012207,High,,,,,,,,,,
+rq1_table_v_audit_3,Mid-tier (degraded),iCPursuit,68.7,67.18,iCMABs / ICPURSUIT,,-1.519999999999996,1.519999999999996,0.022125,High,,,,,,,,,,
+rq1_table_v_audit_5,Mid-tier (degraded),EXPNeuralUCB,83.8,80.94,Hybrid / EXPNEURALUCB,,-2.8599999999999994,2.8599999999999994,0.034129,High,,,,,,,,,,
+rq1_table_v_audit_5,Mid-tier (degraded),iCPursuit,69.0,67.45,iCMABs / ICPURSUIT,,-1.5499999999999972,1.5499999999999972,0.022464,High,,,,,,,,,,
+rq2_evaluator_win_summary_df,,CPursuit,25.6,70.0,CMABs,,44.4,44.4,1.734375,High,,21.0,30.0,,,,,,,
+rq2_evaluator_win_summary_df,,iCEpsilonGreedy,43.9,100.0,iCMABs,,56.1,56.1,1.277904,High,,36.0,36.0,,,,,,,
+rq2_evaluator_win_summary_df,,EXPNeuralUCB,30.5,69.44,EXP3,,38.94,38.94,1.276721,High,,25.0,36.0,,,,,,,
+rq2_metric_audits['CV (%)'],,EXPNeuralUCB,16.5,15.08,,,-1.42,1.42,0.086061,High,,,,EXP3,EXPNEURALUCB,,,,,
+rq2_runner_win_summary_df,,CPursuit,25.6,70.83,CMABs,,45.23,45.23,1.766797,High,,,,,,85.0,120.0,,,
+rq2_runner_win_summary_df,,iCEpsilonGreedy,43.9,100.0,iCMABs,,56.1,56.1,1.277904,High,,,,,,144.0,144.0,,,
+rq2_runner_win_summary_df,,EXPNeuralUCB,30.5,45.14,EXP3,,14.64,14.64,0.48,High,,,,,,65.0,144.0,,,
+rq2_runner_win_summary_df,,EXP3/UCB,0.0,4.86,EXP3,,4.86,4.86,,High,,,,,,7.0,144.0,,,
+rq2_summary,,EXPNeuralUCB,16.5,15.08,,,-1.42,1.42,0.086061,High,EXPNeuralUCB / CV (%),,,EXP3,EXPNEURALUCB,,,,,
+rq3a_audit,,CPursuitNeuralUCB,93.9,90.65,,,-3.25,3.25,0.034611,High,,,,,,,,Mk,,
+rq3a_audit,,CPursuitNeuralUCB,87.4,92.77,,,5.36999999999999,5.36999999999999,0.061442,High,,,,,,,,Ag,,
+rq3a_audit,,CPursuitNeuralUCB,80.2,85.71,,,5.509999999999991,5.509999999999991,0.068703,High,,,,,,,,OA,,
+rq3a_audit,,CPursuitNeuralUCB,90.8,92.08,,,1.2800000000000011,1.2800000000000011,0.014097,High,,,,,,,,AVG,,
+rq3a_audit,,CPursuitNeuralUCB,7.2,4.41,,,-2.79,2.79,0.3875,High,,,,,,,,CV_scen,,
+rq3a_audit,,iCPursuitNeuralUCB,99.1,98.1,,,-1.0,1.0,0.010091,High,,,,,,,,Bl,,
+rq3a_audit,,iCPursuitNeuralUCB,94.0,86.4,,,-7.599999999999994,7.599999999999994,0.080851,High,,,,,,,,Sh,,
+rq3a_audit,,iCPursuitNeuralUCB,94.1,91.6,,,-2.5,2.5,0.026567,High,,,,,,,,Mk,,
+rq3a_audit,,iCPursuitNeuralUCB,88.0,93.12,,,5.1200000000000045,5.1200000000000045,0.058182,High,,,,,,,,Ag,,
+rq3a_audit,,iCPursuitNeuralUCB,99.1,84.9,,,-14.199999999999989,14.199999999999989,0.14329,High,,,,,,,,OA,,
+rq3a_audit,,iCPursuitNeuralUCB,94.9,90.82,,,-4.0800000000000125,4.0800000000000125,0.042993,High,,,,,,,,AVG,,
+rq3a_summary,,CPursuitNeuralUCB,93.9,90.65,,,-3.25,3.25,0.034611,High,,,,,,,,Mk,,
+rq3a_summary,,CPursuitNeuralUCB,87.4,92.77,,,5.36999999999999,5.36999999999999,0.061442,High,,,,,,,,Ag,,
+rq3a_summary,,CPursuitNeuralUCB,80.2,85.71,,,5.509999999999991,5.509999999999991,0.068703,High,,,,,,,,OA,,
+rq3a_summary,,CPursuitNeuralUCB,90.8,92.08,,,1.2800000000000011,1.2800000000000011,0.014097,High,,,,,,,,AVG,,
+rq3a_summary,,CPursuitNeuralUCB,7.2,4.41,,,-2.79,2.79,0.3875,High,,,,,,,,CV_scen,,
+rq3a_summary,,iCPursuitNeuralUCB,99.1,98.1,,,-1.0,1.0,0.010091,High,,,,,,,,Bl,,
+rq3a_summary,,iCPursuitNeuralUCB,94.0,86.4,,,-7.599999999999994,7.599999999999994,0.080851,High,,,,,,,,Sh,,
+rq3a_summary,,iCPursuitNeuralUCB,94.1,91.6,,,-2.5,2.5,0.026567,High,,,,,,,,Mk,,
+rq3a_summary,,iCPursuitNeuralUCB,88.0,93.12,,,5.1200000000000045,5.1200000000000045,0.058182,High,,,,,,,,Ag,,
+rq3a_summary,,iCPursuitNeuralUCB,99.1,84.9,,,-14.199999999999989,14.199999999999989,0.14329,High,,,,,,,,OA,,
+rq3a_summary,,iCPursuitNeuralUCB,94.9,90.82,,,-4.0800000000000125,4.0800000000000125,0.042993,High,,,,,,,,AVG,,
+rq3b_best_audit,,,90.4,92.835,Hybrid / Default / Tb / 6K / runs=3,,2.434999999999988,2.434999999999988,0.026936,High,,,,,,,,Sh,CPursuitNeuralUCB,1.0
+rq3b_best_audit,,,91.0,88.313,Hybrid / Default / Tb / 6K / runs=3,,-2.6869999999999976,2.6869999999999976,0.029527,High,,,,,,,,Mk,CPursuitNeuralUCB,1.0
+rq3b_best_audit,,,88.1,90.263,Hybrid / Default / Tb / 6K / runs=3,,2.163000000000011,2.163000000000011,0.024552,High,,,,,,,,Ag,CPursuitNeuralUCB,1.0
+rq3b_best_audit,,,98.1,99.819,Hybrid / Default / Tb / 6K / runs=3,,1.7190000000000083,1.7190000000000083,0.017523,High,,,,,,,,Bl,CPursuitNeuralUCB,1.5
+rq3b_best_audit,,,90.6,91.929,Hybrid / Default / Tb / 6K / runs=3,,1.3290000000000077,1.3290000000000077,0.014669,High,,,,,,,,Sh,CPursuitNeuralUCB,1.5
+rq3b_best_audit,,,89.1,93.813,Hybrid / Default / Tb / 6K / runs=3,,4.713000000000008,4.713000000000008,0.052896,High,,,,,,,,Ag,CPursuitNeuralUCB,1.5
+rq3b_best_audit,,,98.5,97.201,Hybrid / Default / Tb / 6K / runs=3,,-1.2990000000000066,1.2990000000000066,0.013188,High,,,,,,,,Bl,CPursuitNeuralUCB,2.0
+rq3b_best_audit,,,93.8,92.082,Hybrid / Default / Tb / 6K / runs=3,,-1.7180000000000035,1.7180000000000035,0.018316,High,,,,,,,,Sh,CPursuitNeuralUCB,2.0
+rq3b_best_audit,,,94.7,89.477,Hybrid / Default / Tb / 6K / runs=3,,-5.222999999999999,5.222999999999999,0.055153,High,,,,,,,,Mk,CPursuitNeuralUCB,2.0
+rq3b_best_audit,,,90.7,91.88,Hybrid / Default / Tb / 6K / runs=3,,1.1799999999999926,1.1799999999999926,0.01301,High,,,,,,,,Ag,CPursuitNeuralUCB,2.0
+rq3b_best_audit,,,92.6,89.146,Hybrid / Default / Tb / 6K / runs=3,,-3.4539999999999935,3.4539999999999935,0.0373,High,,,,,,,,Mk,iCPursuitNeuralUCB,1.0
+rq3b_best_audit,,,88.6,91.503,Hybrid / Default / Tb / 6K / runs=3,,2.903000000000006,2.903000000000006,0.032765,High,,,,,,,,Ag,iCPursuitNeuralUCB,1.0
+rq3b_best_audit,,,92.4,91.3,Hybrid / Default / Tb / 6K / runs=3,,-1.1000000000000085,1.1000000000000085,0.011905,High,,,,,,,,Sh,iCPursuitNeuralUCB,1.5
+rq3b_best_audit,,,89.7,93.811,Hybrid / Default / Tb / 6K / runs=3,,4.111000000000004,4.111000000000004,0.045831,High,,,,,,,,Ag,iCPursuitNeuralUCB,1.5
+rq3b_best_audit,,,99.1,96.639,Hybrid / Default / Tb / 6K / runs=3,,-2.4609999999999985,2.4609999999999985,0.024834,High,,,,,,,,Bl,iCPursuitNeuralUCB,2.0
+rq3b_best_audit,,,94.6,91.197,Hybrid / Default / Tb / 6K / runs=3,,-3.4029999999999916,3.4029999999999916,0.035973,High,,,,,,,,Sh,iCPursuitNeuralUCB,2.0
+rq3b_best_audit,,,95.0,88.87,Hybrid / Default / Tb / 6K / runs=3,,-6.1299999999999955,6.1299999999999955,0.064526,High,,,,,,,,Mk,iCPursuitNeuralUCB,2.0
+rq3b_summary,,,90.4,92.835,Hybrid / Default / Tb / 6K / runs=3,,2.434999999999988,2.434999999999988,0.026936,High,CPursuitNeuralUCB / s=1.0 / Sh,,,,,,,Sh,CPursuitNeuralUCB,1.0
+rq3b_summary,,,91.0,88.313,Hybrid / Default / Tb / 6K / runs=3,,-2.6869999999999976,2.6869999999999976,0.029527,High,CPursuitNeuralUCB / s=1.0 / Mk,,,,,,,Mk,CPursuitNeuralUCB,1.0
+rq3b_summary,,,88.1,90.263,Hybrid / Default / Tb / 6K / runs=3,,2.163000000000011,2.163000000000011,0.024552,High,CPursuitNeuralUCB / s=1.0 / Ag,,,,,,,Ag,CPursuitNeuralUCB,1.0
+rq3b_summary,,,98.1,99.819,Hybrid / Default / Tb / 6K / runs=3,,1.7190000000000083,1.7190000000000083,0.017523,High,CPursuitNeuralUCB / s=1.5 / Bl,,,,,,,Bl,CPursuitNeuralUCB,1.5
+rq3b_summary,,,90.6,91.929,Hybrid / Default / Tb / 6K / runs=3,,1.3290000000000077,1.3290000000000077,0.014669,High,CPursuitNeuralUCB / s=1.5 / Sh,,,,,,,Sh,CPursuitNeuralUCB,1.5
+rq3b_summary,,,89.1,93.813,Hybrid / Default / Tb / 6K / runs=3,,4.713000000000008,4.713000000000008,0.052896,High,CPursuitNeuralUCB / s=1.5 / Ag,,,,,,,Ag,CPursuitNeuralUCB,1.5
+rq3b_summary,,,98.5,97.201,Hybrid / Default / Tb / 6K / runs=3,,-1.2990000000000066,1.2990000000000066,0.013188,High,CPursuitNeuralUCB / s=2.0 / Bl,,,,,,,Bl,CPursuitNeuralUCB,2.0
+rq3b_summary,,,93.8,92.082,Hybrid / Default / Tb / 6K / runs=3,,-1.7180000000000035,1.7180000000000035,0.018316,High,CPursuitNeuralUCB / s=2.0 / Sh,,,,,,,Sh,CPursuitNeuralUCB,2.0
+rq3b_summary,,,94.7,89.477,Hybrid / Default / Tb / 6K / runs=3,,-5.222999999999999,5.222999999999999,0.055153,High,CPursuitNeuralUCB / s=2.0 / Mk,,,,,,,Mk,CPursuitNeuralUCB,2.0
+rq3b_summary,,,90.7,91.88,Hybrid / Default / Tb / 6K / runs=3,,1.1799999999999926,1.1799999999999926,0.01301,High,CPursuitNeuralUCB / s=2.0 / Ag,,,,,,,Ag,CPursuitNeuralUCB,2.0
+rq3b_summary,,,92.6,89.146,Hybrid / Default / Tb / 6K / runs=3,,-3.4539999999999935,3.4539999999999935,0.0373,High,iCPursuitNeuralUCB / s=1.0 / Mk,,,,,,,Mk,iCPursuitNeuralUCB,1.0
+rq3b_summary,,,88.6,91.503,Hybrid / Default / Tb / 6K / runs=3,,2.903000000000006,2.903000000000006,0.032765,High,iCPursuitNeuralUCB / s=1.0 / Ag,,,,,,,Ag,iCPursuitNeuralUCB,1.0
+rq3b_summary,,,92.4,91.3,Hybrid / Default / Tb / 6K / runs=3,,-1.1000000000000085,1.1000000000000085,0.011905,High,iCPursuitNeuralUCB / s=1.5 / Sh,,,,,,,Sh,iCPursuitNeuralUCB,1.5
+rq3b_summary,,,89.7,93.811,Hybrid / Default / Tb / 6K / runs=3,,4.111000000000004,4.111000000000004,0.045831,High,iCPursuitNeuralUCB / s=1.5 / Ag,,,,,,,Ag,iCPursuitNeuralUCB,1.5
+rq3b_summary,,,99.1,96.639,Hybrid / Default / Tb / 6K / runs=3,,-2.4609999999999985,2.4609999999999985,0.024834,High,iCPursuitNeuralUCB / s=2.0 / Bl,,,,,,,Bl,iCPursuitNeuralUCB,2.0
+rq3b_summary,,,94.6,91.197,Hybrid / Default / Tb / 6K / runs=3,,-3.4029999999999916,3.4029999999999916,0.035973,High,iCPursuitNeuralUCB / s=2.0 / Sh,,,,,,,Sh,iCPursuitNeuralUCB,2.0
+rq3b_summary,,,95.0,88.87,Hybrid / Default / Tb / 6K / runs=3,,-6.1299999999999955,6.1299999999999955,0.064526,High,iCPursuitNeuralUCB / s=2.0 / Mk,,,,,,,Mk,iCPursuitNeuralUCB,2.0

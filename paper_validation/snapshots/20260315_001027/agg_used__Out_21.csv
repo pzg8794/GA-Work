@@ -1,0 +1,2 @@
+Paper label,Avg Eff. (%),CV (%),Floor (%),Win count (raw),Config count (raw),Source dataset,Source model
+iCEpsilonGreedy,86.83,3.65,80.98,144,144,iCMABs,ICEPSILONGREEDY

@@ -1,0 +1,6 @@
+Scenario,Reported config,Expected Eff (%),Actual Eff (%),Expected Gain (pp),Actual Gain (pp),Note
+NONE,"Dynamic + (T, s=1.0)",99.9,99.899,0.0,0.014,
+STOCHASTIC,"ThompsonSampling + (T, s=1.0)",95.4,95.37,0.6,0.6,
+MARKOV,"Dynamic + (Tb, s=1.5)",93.2,93.242,0.3,0.286,
+ADAPTIVE,"ThompsonSampling + (T, s=1.0)",95.7,95.692,2.9,2.908,
+ONLINEADAPTIVE,"Default + (T, s=2.0)",99.8,99.792,0.0,0.0,

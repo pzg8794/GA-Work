@@ -1,0 +1,30 @@
+Label,High,Medium,Low,None,Rows
+rq3b_best_audit,17,2,5,0,24
+rq3b_summary,17,2,5,0,24
+rq3c_caption_audit,12,0,0,0,12
+rq3c_summary,12,0,0,0,12
+rq3a_audit,11,1,2,0,14
+rq3a_summary,11,1,2,0,14
+rq1_summary,4,12,10,0,26
+rq2_runner_win_summary_df,4,0,0,0,4
+rq2_evaluator_win_summary_df,3,0,0,1,4
+rq1_table_v_audit_5,2,7,4,0,13
+rq1_table_v_audit_3,2,5,6,0,13
+rq2_summary,1,1,12,2,16
+rq2_metric_audits['CV (%)'],1,0,3,0,4
+rq2_metric_audits['Avg Eff. (%)'],0,1,3,0,4
+rq3c_best_table_audit,0,0,12,0,12
+rq2_metric_audits['Floor (%)'],0,0,4,0,4
+view,0,0,4,0,4
+rq2_win_dominance_audit,0,0,2,2,4
+rq3d_default_audit,0,0,2,0,2
+audit_sub,0,0,0,16,16
+table_x_audit,0,0,0,88,88
+table_xi_audits['CMABs'],0,0,0,20,20
+table_xi_audits['EXP3-based'],0,0,0,12,12
+table_xi_audits['Hybrid Neural'],0,0,0,16,16
+table_xi_audits['Paper 12'],0,0,0,16,16
+table_xi_audits['Paper 2'],0,0,0,16,16
+table_xi_audits['Paper 7'],0,0,0,16,16
+table_xi_audits['Paper 8'],0,0,0,16,16
+table_xi_audits['iCMABs'],0,0,0,20,20

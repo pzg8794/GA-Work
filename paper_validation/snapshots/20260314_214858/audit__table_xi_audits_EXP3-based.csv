@@ -1,0 +1,13 @@
+Source,Algorithm,Metric,Expected,Actual,Note,B - A,|B - A|,|B - A| / Expected,Priority
+EXP3-based,GNeuralUCB,Avg Eff (%),85.37,85.37,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,GNeuralUCB,Gap (%),14.63,14.63,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,GNeuralUCB,Floor (%),61.6,61.6,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,GNeuralUCB,Exp. Winner,41.0,41.0,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPNeuralUCB,Avg Eff (%),80.86,80.86,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPNeuralUCB,Gap (%),19.14,19.14,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPNeuralUCB,Floor (%),18.0,18.0,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPNeuralUCB,Exp. Winner,28.0,28.0,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPUCB,Avg Eff (%),78.06,78.06,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPUCB,Gap (%),21.94,21.94,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPUCB,Floor (%),68.8,68.8,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+EXP3-based,EXPUCB,Exp. Winner,6.0,6.0,"file=Master_Dataset_EXP3.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None

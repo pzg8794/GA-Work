@@ -1,0 +1,5 @@
+Mean Gap (%),Algorithm,Gap Reduction (%),Rank,Lead vs Next (pp)
+32.153626059222454,iCPursuitNeuralUCB,67.846,1,5.912
+38.06533194336812,EXPNeuralUCB,61.935,2,
+38.348184552307956,GNeuralUCB,61.652,3,
+38.579523925280384,CPursuitNeuralUCB,61.42,4,

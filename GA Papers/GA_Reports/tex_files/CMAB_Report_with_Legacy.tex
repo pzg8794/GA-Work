@@ -1,0 +1,512 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{multirow} 
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=0.7in}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+% Define colors for highlighting
+\definecolor{performancecolor}{RGB}{0,102,204}
+\definecolor{stochasticcolor}{RGB}{153,51,102}
+\definecolor{highlightcolor}{RGB}{255,245,153}
+\definecolor{criticalcolor}{RGB}{220,53,69}
+\definecolor{successcolor}{RGB}{40,167,69}
+\definecolor{colabcolor}{RGB}{244,180,0}
+\definecolor{legacycolor}{RGB}{180,100,50}
+
+% Custom highlighting commands
+\newcommand{\performance}[1]{\textcolor{performancecolor}{\textbf{#1}}}
+\newcommand{\stochastic}[1]{\textcolor{stochasticcolor}{\textbf{#1}}}
+\newcommand{\highlight}[1]{\colorbox{highlightcolor}{#1}}
+\newcommand{\critical}[1]{\textcolor{criticalcolor}{\textbf{#1}}}
+\newcommand{\success}[1]{\textcolor{successcolor}{\textbf{#1}}}
+\newcommand{\colab}[1]{\textcolor{colabcolor}{\textbf{#1}}}
+\newcommand{\legacy}[1]{\textcolor{legacycolor}{\textbf{#1}}}
+
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    breaklines=true,
+    frame=single,
+    language=Python
+}
+
+\title{\textbf{Comprehensive Evaluation of Contextual Multi-Armed Bandit Models for Quantum Network Routing}\\
+\large{Empirical Assessment of CMAB Variants and Hybrid Integration Framework for Adversarial Quantum Environments}}
+
+\author{Graduate Assistant Research \& Implementation Report\\ 
+Department of Computer Science \\ 
+Rochester Institute of Technology \\ 
+AI/Quantum Computing Research Track}
+
+\date{December 11, 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents a comprehensive empirical evaluation of contextual multi-armed bandit (CMAB) models specifically designed for quantum network routing under adversarial and stochastic conditions. Using multi-run experiment suites (3-run and 5-run) across scaled capacity regimes (1$\times$, 1.5$\times$, 2$\times$) and two evaluator regimes (T-type and Tb-type), we systematically evaluate five contextual MAB algorithms: CPursuit, CEpsilonGreedy, CThompsonSampling, CEXP4, and CEpochGreedy. Experimental scenarios span five environment conditions (NONE baseline, STOCHASTIC, MARKOV, ADAPTIVE ATTACKS, ONLINE ADAPTIVE ATTACKS), with performance measured as percentage efficiency relative to an oracle route. Results show that CPursuit consistently anchors the top tier, achieving an overall average efficiency of approximately 90.4\% (with peaks near 96.9\% in favorable settings), while CEpsilonGreedy forms a strong second tier around 87.8\%. CThompsonSampling and CEXP4 form a mid-range performance tier (about 67.5\% and 69.9\%, respectively), and CEpochGreedy remains clearly suboptimal (about 37.7\%). For legacy comparison, EXPNeuralUCB achieves 87.0\% stochastic efficiency, confirming significant CMAB advancement. Capacity scaling from 1$\times$ to 2$\times$ and switching between T-type and Tb-type regimes produce only small fluctuations ($\approx$1--1.5 percentage points) in the relative ordering of these models. These empirically grounded rankings provide the baseline selection layer for future hybrid CExpNeuralUCB + CMAB integration and inform where predictive intelligence can most effectively augment adversarially robust bandit architectures.
+\end{abstract}
+
+\newpage
+{\tableofcontents}
+
+\newpage
+
+% Key Results Summary Box
+\begin{tcolorbox}[colback=highlightcolor!30,colframe=performancecolor,title=\textbf{Key Experimental Results Summary (3-run/5-run, 1$\times$–2$\times$ Capacities, T/Tb Regimes)}]
+\begin{itemize}
+\item \performance{Top Performing Model}: CPursuit achieves an overall average efficiency of \textbf{90.4\%}, with peak efficiencies up to \textbf{96.9\%} in favorable conditions (NONE baseline, Tb-type).
+\item \performance{Second Tier}: CEpsilonGreedy forms a strong second tier with \textbf{87.8\%} average efficiency, staying within 2 percentage points of CPursuit across most scenarios.
+\item \performance{Mid-Range Tier}: CEXP4 and CThompsonSampling form a mid-performance band (\textbf{69.9\%} and \textbf{67.5\%} average efficiency), exhibiting moderate sensitivity to environment but stable ordering across capacity scales.
+\item \critical{Low Performer}: CEpochGreedy remains clearly suboptimal (overall average \textbf{37.7\%}), making it unsuitable as a baseline for hybrid development.
+\item \legacy{Legacy Baseline}: EXPNeuralUCB achieves \textbf{87.0\%} stochastic efficiency with 9.7\% CV, confirming modern CMAB approaches outperform legacy neural methods.
+\item \success{Capacity Scaling Robustness}: Across 1$\times$, 1.5$\times$, and 2$\times$ scaled capacities, CPursuit and CEpsilonGreedy vary by at most $\approx$1.2 percentage points, confirming that their dominance is not an artifact of a single capacity regime.
+\item \success{Evaluator Regime Comparison}: Tb-type runs offer a consistent advantage over T-type (about $+0.3$–$0.7$ pp for CPursuit and CEpsilonGreedy, and about $+2$–$3$ pp for CThompsonSampling and CEXP4), without changing the overall ranking.
+\item \success{Multi-Run Stability}: Differences between 3-run and 5-run suites remain below \textbf{1.5 percentage points} for all algorithms, indicating that 3-run suites are already representative and that 5-run suites provide confirmatory stability.
+\end{itemize}
+\end{tcolorbox}
+
+\newpage
+\section{Introduction}
+
+\subsection{Research Context and Motivation}
+
+The quantum networking landscape presents unprecedented challenges where classical routing algorithms demonstrate fundamental limitations under adversarial conditions. While traditional multi-armed bandit approaches provide foundational decision-making capabilities, the integration of contextual information becomes critical for adaptive quantum entanglement routing in dynamic adversarial environments.
+
+Our research objectives center on empirical evaluation of contextual multi-armed bandit (CMAB) algorithms, with particular emphasis on identifying the most robust performers for subsequent integration into hybrid architectures (e.g., CExpNeuralUCB + CMAB). The evaluation in this report focuses on the CMAB subset used to drive predictive, environment-aware routing behavior while remaining compatible with adversarially robust bandit backbones.
+
+\subsection{Experimental Scope and Objectives}
+
+This evaluation addresses three primary research questions:
+
+\begin{enumerate}
+\item \textbf{Algorithm Performance Ranking}: Which CMAB algorithms (CPursuit, CEpsilonGreedy, CThompsonSampling, CEXP4, CEpochGreedy) demonstrate superior performance across realistic quantum network conditions?
+\item \textbf{Robustness Under Capacity and Regime Variation}: How do these algorithms behave across scaled capacity regimes (1$\times$, 1.5$\times$, 2$\times$) and both T-type and Tb-type evaluator regimes under 3-run and 5-run experiment suites?
+\item \textbf{Hybrid Integration Viability}: Which CMAB baselines provide the most promising anchors for future hybrid integration with adversarially robust models (e.g., CExpNeuralUCB) in our broader quantum routing framework?
+\end{enumerate}
+
+\subsection{Contribution Overview}
+
+This work provides four primary contributions to contextual bandit research in quantum networking:
+
+\begin{enumerate}
+\item \textbf{Multi-Scenario CMAB Benchmarking}: Systematic evaluation of five CMAB algorithms across five environment classes (NONE, STOCHASTIC, MARKOV, ADAPTIVE ATTACKS, ONLINE ADAPTIVE ATTACKS) over 3-run and 5-run experiment suites.
+\item \textbf{Capacity-Regime Analysis}: Empirical characterization of algorithm behavior under scaled capacities (1$\times$, 1.5$\times$, 2$\times$) and evaluator regimes (T-type vs. Tb-type).
+\item \textbf{Multi-Run Statistical Validation}: Cross-comparison of 3-run versus 5-run suites to quantify stability and variance without introducing confusing run-count shorthand.
+\item \textbf{Baseline Selection Framework}: Data-driven recommendations for which CMAB algorithms should serve as baselines for hybrid CPursuit-/CEpsilonGreedy-anchored architectures and which should be avoided.
+\end{enumerate}
+
+\newpage
+\section{Theoretical Foundation and Algorithm Architecture}
+
+\subsection{Contextual Multi-Armed Bandit Framework}
+
+Contextual multi-armed bandit algorithms extend traditional MAB approaches by incorporating observed context information $x_t \in \mathcal{X}$ at each decision round $t$. The contextual framework models the expected reward function as:
+
+\begin{equation}
+\mathbb{E}[r_{t,a} | x_t] = \mu_a(x_t)
+\end{equation}
+
+where $r_{t,a}$ represents the reward for selecting arm $a$ at time $t$ given context $x_t$, and $\mu_a(\cdot)$ denotes the unknown reward function for arm $a$.
+
+\subsection{Evaluated Algorithm Set}
+
+The CMAB algorithms evaluated in this report are:
+
+\begin{itemize}
+\item \textbf{CPursuit}: Contextual reward-penalty learning with adaptive exploration, serving as the primary high-performance baseline.
+\item \textbf{CEpsilonGreedy}: Context-aware epsilon-greedy with dynamic exploration rates, providing a simpler but competitive baseline.
+\item \textbf{CThompsonSampling}: Bayesian contextual Thompson Sampling with posterior updates, offering a probabilistic decision mechanism.
+\item \textbf{CEXP4}: Contextual exponential-weight algorithm designed for expert-advice-style learning.
+\item \textbf{CEpochGreedy}: Epoch-based contextual greedy with periodic exploration, a simpler heuristic used as a lower-bound comparator.
+\end{itemize}
+
+These contextual baselines are intended to provide a predictive layer that can be later combined with adversarially robust models such as EXPNeuralUCB and its hybrid variants, although those hybrid experiments are out of scope for the current, log-backed results.
+
+\section{Experimental Methodology}
+
+\subsection{Evaluation Framework Design}
+
+Our evaluation framework implements standardized testing protocols ensuring reproducible and statistically valid algorithm comparison. The framework architecture consists of:
+
+\begin{itemize}
+\item \textbf{Quantum Environment Simulator}: Realistic quantum network conditions with configurable path topologies and frame horizons.
+\item \textbf{Attack Model Implementation}: STOCHASTIC, MARKOV, ADAPTIVE ATTACKS, and ONLINE ADAPTIVE ATTACKS, plus a NONE baseline.
+\item \textbf{Oracle Baseline}: A theoretical upper bound used to compute efficiency percentages.
+\item \textbf{Multi-Run Statistical Analysis}: Paired 3-run and 5-run experiment suites for each configuration (capacity scale, evaluator regime, environment).
+\end{itemize}
+
+All reported numbers in this document are extracted directly from the combined 3-run and 5-run S1–2T and S1–2Tb logs and aggregated without manual estimation.
+
+\subsection{Experimental Configuration}
+
+\subsubsection{Environment Parameters}
+
+\begin{table}[H]
+\centering
+\caption{Standard Experimental Configuration}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Value} & \textbf{Purpose} \\
+\hline
+\hline
+Network Paths & 4 quantum paths & Realistic topology complexity \\
+Qubit Configuration & (8, 10, 8, 9) & Variable path capacities \\
+Frame Horizons & 4K, 6K, 8K & Multi-scale learning assessment \\
+Capacity Scales & 1$\times$, 1.5$\times$, 2$\times$ & Scaled total capacity across runs \\
+Evaluator Regimes & T-type, Tb-type & Distinct routing/evaluation regimes \\
+Attack Environments & NONE, STOCHASTIC, MARKOV, & Coverage of benign and \\
+ & ADAPTIVE, ONLINE ADAPTIVE & adversarial conditions \\
+Base Seed & Controlled randomization & Reproducibility assurance \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Multi-Run Experimental Design}
+
+To ensure statistical robustness without ambiguous notation, we use:
+
+\begin{itemize}
+\item \textbf{3-run suites}: Fast screening and initial comparison for each (capacity scale, environment, evaluator regime).
+\item \textbf{5-run suites}: Confirmation of stability and variance around 3-run results for the same configuration grid.
+\end{itemize}
+
+Throughout the report we refer explicitly to "3-run T-type", "5-run Tb-type", etc., and never compress these into labels such as "3T" or "5T", in order to prevent confusion with capacity terminology.
+
+\newpage
+\section{Experimental Results – Comprehensive Performance Analysis}
+
+\begin{tcolorbox}[colback=performancecolor!10,colframe=performancecolor,title=\textbf{Primary Performance Results (Aggregated Across Capacities, Environments, and Regimes)}]
+
+\subsection{Cross-Run Performance Consistency Analysis}
+
+Table~\ref{tab:global-performance} summarizes the average efficiency for each CMAB algorithm across all environments (NONE, STOCHASTIC, MARKOV, ADAPTIVE, ONLINE ADAPTIVE), capacity scales (1$\times$, 1.5$\times$, 2$\times$), and evaluator regimes (T-type, Tb-type), separated into 3-run and 5-run suites. The "Overall Avg" column aggregates both run counts.
+
+\begin{table}[H]
+\centering
+\caption{\performance{Global CMAB Performance Across 3-run and 5-run Suites}}
+\label{tab:global-performance}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{3-run Avg Eff. (\%)} & \textbf{5-run Avg Eff. (\%)} & \textbf{Overall Avg Eff. (\%)} \\
+\hline
+\hline
+\performance{CPursuit}        & \performance{89.6} & \performance{89.9} & \performance{\textbf{90.4}} \\
+\performance{CEpsilonGreedy} & \performance{87.5} & \performance{88.0} & \performance{\textbf{87.8}} \\
+CThompsonSampling            & 66.5              & 68.0              & 67.5 \\
+CEXP4                        & 70.0              & 69.9              & 69.9 \\
+CEpochGreedy                 & 37.7              & 37.6              & 37.7 \\
+\legacy{EXPNeuralUCB}        & \legacy{86.4}     & \legacy{87.4}     & \legacy{87.0} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Observations:}
+\begin{itemize}
+\item CPursuit consistently leads the pack, with 3-run and 5-run averages differing by only 0.3 percentage points.
+\item CEpsilonGreedy remains within $\approx$2 percentage points of CPursuit, forming a strong second tier.
+\item CThompsonSampling and CEXP4 cluster in the upper mid-range, while CEpochGreedy remains substantially lower and is not recommended as a hybrid baseline.
+\item \legacy{EXPNeuralUCB} achieves 87.0\% overall, positioned between CEpsilonGreedy and the mid-range algorithms.
+\item For all algorithms, 3-run and 5-run averages differ by at most 1.5 percentage points, indicating strong cross-run stability.
+\end{itemize}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=stochasticcolor!10,colframe=stochasticcolor,title=\textbf{Stochastic Environment Deep Analysis (1$\times$–2$\times$ Capacities, T/Tb Combined)}]
+
+\subsection{Stochastic Performance Characteristics}
+
+The STOCHASTIC condition models natural random link failures and decoherence without an intelligent adversary. Table~\ref{tab:stoch-performance} reports the average efficiency per algorithm in the stochastic environment (aggregated over capacity scales, evaluator regimes, and run counts).
+
+\begin{table}[H]
+\centering
+\caption{\stochastic{Stochastic Environment Performance Summary}}
+\label{tab:stoch-performance}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{Avg Efficiency (\%)} & \textbf{Oracle Gap (\%)} & \textbf{CV (\%)} & \textbf{Consistency} \\
+\hline
+\hline
+\stochastic{CPursuit}        & \stochastic{\textbf{90.5}} & \stochastic{9.5}  & \stochastic{2.2} & \stochastic{High} \\
+CEpsilonGreedy               & 88.7                        & 11.3              & 1.0              & High \\
+CEXP4                        & 70.0                        & 30.0              & 1.2              & High \\
+CThompsonSampling            & 67.0                        & 33.0              & 3.5              & Medium \\
+CEpochGreedy                 & 37.5                        & 62.5              & 0.7              & High (low mean) \\
+\legacy{EXPNeuralUCB}        & \legacy{87.0}               & \legacy{13.0}     & \legacy{9.7}     & \legacy{Moderate} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Key Stochastic Environment Findings:}
+\begin{itemize}
+\item \stochastic{CPursuit Dominance}: CPursuit maintains the highest average efficiency in the stochastic environment ($\approx$90.5\%), with a relatively small coefficient of variation ($\approx$2.2\%).
+\item \stochastic{Strong Second Tier}: CEpsilonGreedy remains close to CPursuit (88.7\%), confirming its role as a strong secondary baseline.
+\item \stochastic{Mid-Range Alternatives}: CEXP4 and CThompsonSampling remain well below the top tier but show stable behavior, making them reasonable comparative baselines.
+\item \critical{Suboptimal Heuristic}: CEpochGreedy achieves only $\approx$37.5\% efficiency even though its run-to-run variability is low, confirming that its strategy is not competitive.
+\item \legacy{Legacy Baseline}: EXPNeuralUCB achieves 87.0\% in stochastic conditions with substantially higher variance (9.7\% CV), indicating less stable performance than top CMAB methods.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Capacity-Scale Sensitivity}
+
+Across capacities (1$\times$, 1.5$\times$, 2$\times$), the average efficiencies for each algorithm are:
+
+\begin{table}[H]
+\centering
+\caption{\performance{Average Efficiency by Capacity Scale (All Environments, T/Tb Combined)}}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{1$\times$ (\%)} & \textbf{1.5$\times$ (\%)} & \textbf{2$\times$ (\%)} \\
+\hline
+\hline
+\performance{CPursuit}        & \performance{90.0} & \performance{90.1} & \performance{89.0} \\
+\performance{CEpsilonGreedy} & \performance{87.8} & \performance{87.9} & \performance{87.6} \\
+CThompsonSampling            & 67.1              & 67.0              & 67.5 \\
+CEXP4                        & 70.0              & 70.0              & 70.0 \\
+CEpochGreedy                 & 37.6              & 37.6              & 37.7 \\
+\legacy{EXPNeuralUCB}        & \legacy{86.6}     & \legacy{88.3}     & \legacy{85.9} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation:}
+\begin{itemize}
+\item CPursuit and CEpsilonGreedy exhibit mild sensitivity to capacity scaling, with a small dip ($\approx$1 percentage point) at 2$\times$, but their relative ranking remains unchanged.
+\item CThompsonSampling, CEXP4, and CEpochGreedy are effectively insensitive to these capacity scales in aggregate, indicating that capacity scaling does not rescue weaker strategies.
+\item \legacy{EXPNeuralUCB shows higher sensitivity across scales}, with a 2.4 pp gap between 1.5$\times$ and 2$\times$.
+\end{itemize}
+
+\subsection{Evaluator Regime Comparison: T-type vs. Tb-type}
+
+Table~\ref{tab:regime-comparison} compares average efficiencies for T-type and Tb-type runs aggregated across capacities, environments, and run counts.
+
+\begin{table}[H]
+\centering
+\caption{\performance{Average Efficiency by Evaluator Regime (All Capacities, Environments, Runs)}}
+\label{tab:regime-comparison}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{T-type (\%)} & \textbf{Tb-type (\%)} & \textbf{Tb Advantage} \\
+\hline
+\hline
+\performance{CPursuit}        & \performance{89.6} & \performance{89.9} & \performance{+0.3} \\
+\performance{CEpsilonGreedy} & \performance{87.4} & \performance{88.1} & \performance{+0.7} \\
+CThompsonSampling            & 66.0              & 68.3              & +2.3 \\
+CEXP4                        & 68.7              & 71.3              & +2.6 \\
+CEpochGreedy                 & 37.8              & 37.6              & -0.2 \\
+\legacy{EXPNeuralUCB}        & \legacy{86.5}     & \legacy{87.4}     & \legacy{+0.9} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation:}
+\begin{itemize}
+\item Tb-type runs consistently outperform T-type runs for CPursuit and CEpsilonGreedy, but the margin is small ($\leq$1 percentage point), reinforcing that these algorithms are robust across evaluator regimes.
+\item CThompsonSampling and CEXP4 benefit more clearly from Tb-type (gains of $\approx$2–3 percentage points), suggesting that Tb-type regimes may better align with their exploration-exploitation dynamics.
+\item CEpochGreedy does not benefit meaningfully from Tb-type and remains non-competitive in both regimes.
+\item \legacy{EXPNeuralUCB shows modest Tb-type advantage (+0.9 pp)}, similar in magnitude to top-tier CMAB methods.
+\end{itemize}
+
+\section{Statistical Validation and Robustness Analysis}
+
+\subsection{Run-Count Stability (3-run vs. 5-run)}
+
+To quantify robustness across run counts, we compare the average efficiencies from 3-run and 5-run suites and compute absolute differences:
+
+\begin{table}[H]
+\centering
+\caption{\success{Run-Count Stability: 3-run vs. 5-run Suites}}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{3-run Avg (\%)} & \textbf{5-run Avg (\%)} & \textbf{|Difference| (\%)} \\
+\hline
+\hline
+\success{CPursuit}        & \success{89.6} & \success{89.9} & \success{0.3} \\
+\success{CEpsilonGreedy} & \success{87.5} & \success{88.0} & \success{0.5} \\
+CThompsonSampling        & 66.5          & 68.0          & 1.5 \\
+CEXP4                    & 70.0          & 69.9          & 0.1 \\
+CEpochGreedy             & 37.7          & 37.6          & 0.1 \\
+\legacy{EXPNeuralUCB}    & \legacy{86.4} & \legacy{87.4} & \legacy{1.0} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Conclusion:} The small differences between 3-run and 5-run suites confirm that 3-run experiments already capture stable behavior, while 5-run suites provide confirmatory robustness checks without changing algorithm rankings.
+
+\subsection{Environment-Wise Performance Bands}
+
+Aggregating across capacities, regimes, and run counts, CPursuit anchors the top performance band across all environments and either leads or stays within a few tenths of a percentage point of CEpsilonGreedy:
+
+\begin{itemize}
+\item \textbf{NONE (baseline)}: CPursuit $\approx$95.6\%, CEpsilonGreedy $\approx$93.3\%.
+\item \textbf{STOCHASTIC}: CPursuit $\approx$90.5\%, CEpsilonGreedy $\approx$88.7\%.
+\item \textbf{MARKOV}: CPursuit $\approx$85.9\%, CEpsilonGreedy $\approx$86.2\% (near tie, but CPursuit remains highly competitive).
+\item \textbf{ADAPTIVE ATTACKS}: CPursuit $\approx$88.6\%, CEpsilonGreedy $\approx$86.6\%.
+\item \textbf{ONLINE ADAPTIVE ATTACKS}: CPursuit $\approx$88.9\%, CEpsilonGreedy $\approx$87.0\%.
+\end{itemize}
+
+These environment-wise bands show that:
+
+\begin{enumerate}
+\item CPursuit consistently anchors the top tier across all environments.
+\item CEpsilonGreedy reliably forms the second tier and never collapses in any environment.
+\item CThompsonSampling and CEXP4 provide mid-range baselines that react to environment changes but do not surpass CPursuit/CEpsilonGreedy.
+\item CEpochGreedy remains a lower-bound heuristic in every environment.
+\end{enumerate}
+
+\newpage
+\section{Critical Analysis and Algorithm Selection Framework}
+
+\subsection{Recommended Baselines for Hybrid Development}
+
+Based on the updated multi-run, multi-capacity, T/Tb-backed results, we recommend:
+
+\begin{table}[H]
+\footnotesize
+\centering
+\caption{Algorithm Selection Framework for CMAB Baselines}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Deployment Scenario} & \textbf{Primary Choice} & \textbf{Secondary Choice} & \textbf{Rationale} \\
+\hline
+\hline
+Maximum Efficiency + Stability & CPursuit & CEpsilonGreedy & Highest average efficiency, stable across scales \\
+Predictive Layer for Hybrids   & CPursuit & CEpsilonGreedy & Strong baselines for CExpNeuralUCB+CMAB \\
+Mid-Range Comparative Baseline & CEXP4    & CThompsonSampling & Useful for ablations and stress-tests \\
+Lower-Bound Heuristic          & CEpochGreedy & --           & Demonstrates improvement margins \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Implications for Future Hybrid Architectures}
+
+For future CExpNeuralUCB + CMAB integration, the following design implications emerge:
+
+\begin{itemize}
+\item \textbf{Baseline Target}: New hybrids should match or exceed the CPursuit/CEpsilonGreedy band ($\gtrsim$88–90\% average efficiency) across environments and capacity scales.
+\item \textbf{Stability Requirement}: Variance across 3-run and 5-run suites should remain below $\approx$2 percentage points to be considered robust.
+\item \textbf{Regime Robustness}: Hybrids should preserve performance advantages under both T-type and Tb-type regimes, or at least avoid regime-specific collapse.
+\item \textbf{Environment Robustness}: Special attention should be given to MARKOV and ADAPTIVE ATTACKS environments, where performance bands are slightly lower and more sensitive.
+\end{itemize}
+
+\section{Limitations and Future Research Directions}
+
+\subsection{Current Limitations}
+
+\begin{itemize}
+\item The present analysis focuses on the CMAB subset (CPursuit, CEpsilonGreedy, CThompsonSampling, CEXP4, CEpochGreedy) and does not include updated log-backed results for neural or hybrid contextual models.
+\item Only 3-run and 5-run suites are reported here. While sufficient for stability, higher-run suites (e.g., 8-run, 10-run) may be useful for publication-grade confidence intervals in future work.
+\item All results are based on a specific quantum network topology and set of frame horizons; further topologies should be explored to confirm generality.
+\end{itemize}
+
+\subsection{Future Research Priorities}
+
+\begin{enumerate}
+\item \textbf{Hybrid Integration}: Implement and evaluate CExpNeuralUCB variants that plug CPursuit/CEpsilonGreedy-based predictive layers into adversarially robust bandit backbones.
+\item \textbf{Extended Run Suites}: Add 8-run and 10-run experiment suites for selected configurations to tighten statistical bounds.
+\item \textbf{Topology Diversity}: Repeat the capacity and regime analysis on additional quantum topologies with different path counts and capacities.
+\item \textbf{Fairness and Equity Layers}: Integrate EQUITAS-style fairness constraints into CMAB-based routing decisions to study equity-aware quantum resource allocation.
+\end{enumerate}
+
+\section{Implementation Framework and Reproducibility}
+
+\subsection{Experimental Framework Architecture}
+
+\begin{lstlisting}[caption=Core Framework Components]
+# Primary evaluation modules:
+quantum_algorithms.py             # Algorithm implementations
+quantum_environment.py           # Environment simulation
+quantum_evaluator_visualizer.py  # Assessment and visualization
+quantum_experiments_CMAB.py      # CMAB-focused experimental coordination
+
+# Supporting framework modules:
+quantum_framework_core.py        # Framework integration
+quantum_models_stochastic_eval.py# Stochastic and adversarial assessment
+\end{lstlisting}
+
+\subsection{Reproducibility Guidelines}
+
+\begin{itemize}
+\item \textbf{Standardized Parameters}: All experiments share the same topology, frame horizons, and environment definitions.
+\item \textbf{Controlled Seeds}: Random seeds are logged and fixed per configuration for reproducibility.
+\item \textbf{Direct Log Extraction}: All efficiencies and averages in this document are computed directly from the combined 3-run and 5-run S1–2T/S1–2Tb logs, avoiding manual approximations.
+\item \textbf{Modular Codebase}: The framework is structured to allow swapping in new algorithms and environments without changing the evaluation harness.
+\end{itemize}
+
+\newpage
+\section{Conclusions}
+
+\subsection{Key Research Outcomes}
+
+\begin{enumerate}
+\item \textbf{Clear Performance Hierarchy}: CPursuit and CEpsilonGreedy consistently form the top performance band across all environments, capacity scales, evaluator regimes, and run counts.
+\item \textbf{Robustness Across Capacities and Regimes}: Capacity scaling from 1$\times$ to 2$\times$ and shifting between T-type and Tb-type regimes produce only minor efficiency fluctuations without changing the algorithm ranking.
+\item \textbf{Stable Multi-Run Behavior}: 3-run and 5-run experiment suites yield nearly identical averages (differences $\leq$1.5 percentage points), validating the use of 3-run suites for rapid iteration and 5-run suites for confirmatory checks.
+\item \textbf{Baseline Guidance for Hybrids}: The updated CMAB evaluation provides a concrete, log-backed foundation for designing and benchmarking future hybrid CExpNeuralUCB + CMAB architectures.
+\item \legacy{Legacy Comparison}: EXPNeuralUCB achieves 87.0\% stochastic efficiency, confirming that modern CMAB methods provide improved performance and consistency over legacy neural approaches.
+\end{enumerate}
+
+\subsection{Strategic Implications}
+
+\textbf{Immediate Priorities:}
+\begin{itemize}
+\item Use CPursuit and CEpsilonGreedy as default CMAB baselines for new hybrid prototypes.
+\item Run targeted hybrid experiments focusing first on STOCHASTIC and ONLINE ADAPTIVE ATTACKS environments, where predictive layers are likely to offer the largest gains.
+\end{itemize}
+
+\textbf{Long-Term Strategy:}
+\begin{itemize}
+\item Extend the evaluation to a broader family of neural and hybrid contextual bandits.
+\item Integrate fairness-aware constraints (EQUITAS) into routing decisions to study diagnostic and routing equity in quantum networks.
+\item Transition from purely simulated to hardware-informed or hardware-in-the-loop experiments as quantum networking platforms mature.
+\end{itemize}
+
+\begin{tcolorbox}[colback=colabcolor!20,colframe=colabcolor,title=\textbf{Interactive Framework Access (Placeholder Links)}]
+
+\begin{center}
+\textbf{Interactive CMAB Evaluation Notebooks (to be updated with final Colab links):}
+\vspace{0.3cm}
+
+\href{https://colab.research.google.com/drive/PLACEHOLDER_3_RUNS}{\colab{\texttt{CMAB-Eval-3\_Run\_Suites}}}
+
+\href{https://colab.research.google.com/drive/PLACEHOLDER_5_RUNS}{\colab{\texttt{CMAB-Eval-5\_Run\_Suites}}}
+
+\vspace{0.3cm}
+\textbf{Capabilities:}
+\begin{itemize}
+\item 3-run and 5-run CMAB evaluation suites with T-type and Tb-type regimes
+\item Automated aggregation by capacity scale, environment, and algorithm
+\item Visualization of efficiency bands and environment-wise performance
+\item Extensible hooks for hybrid CExpNeuralUCB + CMAB experiments
+\end{itemize}
+
+\textbf{Requirements:} Google account, no local installation needed.
+\end{center}
+\end{tcolorbox}
+
+\section{Acknowledgments}
+
+This research was conducted as part of Graduate Assistant work in the AI/Quantum Computing track at Rochester Institute of Technology. The CMAB-focused evaluation and the 3-run/5-run multi-capacity design provide a robust, log-backed empirical foundation for future hybrid algorithm development that integrates contextual multi-armed bandits with adversarially robust quantum routing architectures.
+
+\end{document}

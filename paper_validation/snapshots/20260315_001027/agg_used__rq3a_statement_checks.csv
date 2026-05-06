@@ -1,0 +1,6 @@
+Claim,Actual source result,Support,Note
+OnlineAdaptive lift is +18.3 pp,-0.807,No,Caption-faithful reconstruction yields the opposite sign
+Overall average is higher for iCPursuitNeuralUCB,-1.25,No,Positive means iCPursuitNeuralUCB is higher
+Cross-scenario dispersion is tighter for iCPursuitNeuralUCB,0.834,No,Negative means tighter for iCPursuitNeuralUCB
+Stochastic behavior is essentially unchanged,-6.553,No,Threshold used: |Δ| <= 1.0 pp
+Markov behavior is essentially unchanged,0.955,Yes,Threshold used: |Δ| <= 1.0 pp

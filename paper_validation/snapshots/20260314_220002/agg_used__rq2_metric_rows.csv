@@ -1,0 +1,5 @@
+Paper label,Avg Eff. (%),CV (%),Floor (%),Win count (raw),Config count (raw),Source dataset,Source model
+CPursuit,87.99,5.62,77.37,85,120,CMABs,CPURSUIT
+iCEpsilonGreedy,86.83,3.65,80.98,144,144,iCMABs,ICEPSILONGREEDY
+EXPNeuralUCB,83.12,15.08,18.01,65,144,EXP3,EXPNEURALUCB
+EXPUCB,76.44,6.01,68.75,7,144,EXP3,EXPUCB

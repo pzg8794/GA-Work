@@ -1,0 +1,14 @@
+Tier,Paper label,Source dataset,Source model
+Top tier (viable under stochastic),CPursuit,CMABs,CPURSUIT
+Top tier (viable under stochastic),iCEpsilonGreedy,iCMABs,ICEPSILONGREEDY
+Top tier (viable under stochastic),CEpsilonGreedy,CMABs,CEPSILONGREEDY
+Top tier (viable under stochastic),GNeuralUCB,EXP3,GNEURALUCB
+Mid-tier (degraded),EXPNeuralUCB,Hybrid,EXPNEURALUCB
+Mid-tier (degraded),EXPUCB,EXP3,EXPUCB
+Mid-tier (degraded),CEXP4,CMABs,CEXP4
+Mid-tier (degraded),iCPursuit,iCMABs,ICPURSUIT
+Mid-tier (degraded),CThompsonSampling,CMABs,CTHOMPSONSAMPLING
+Mid-tier (degraded),iCThompsonSampling,iCMABs,ICTHOMPSONSAMPLING
+Collapsed (structural failure),CEpochGreedy,CMABs,CEPOCHGREEDY
+Collapsed (structural failure),iCEpochGreedy,iCMABs,ICEPOCHGREEDY
+Collapsed (structural failure),iCEXP4,iCMABs,ICEXP4

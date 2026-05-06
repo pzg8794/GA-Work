@@ -1,0 +1,168 @@
+00:00:00 Speaker 1
+Section C. So they can be combined or reduced somehow.
+00:00:05 Speaker 2
+Which one you said it can be combined?
+00:00:07 Speaker 1
+So in related work, sections A and B are relatively longer compared to section C.
+00:00:14 Speaker 2
+That is something that I noticed. Related work definitely can be reduced even more.
+00:00:23 Speaker 1
+You can combine papers together like that.
+00:00:29 Speaker 2
+I was thinking about it. Especially there's one that I think maybe it's the one that you say A and B. Let me see, Browning and online learning and then habits. Oh yeah, that makes sense. So yeah, because this is about bandits as well, and then you have online learning. Those two can be easily combined.
+00:00:59 Speaker 1
+So that could give you more space for graphs.
+00:01:02 Speaker 2
+Yes I agree.
+00:01:05 Speaker 3
+So my suggestion is to put in your graphs first, define what they mean. Then we can see exactly how much we need to reduce.
+00:01:15 Speaker 1
+I think that should be the first thing that you do. Because right now, we have no idea how many graphs are going to be there and how much space is going to be required. Just put in all the graphs. Put in the descriptions. And then start doing anything else. That should be the first thing that you do right now.
+00:01:30 Speaker 2
+I'm gonna do that right next. And then, see what's the and then after that. I'll work on adding what's missing. And then that should cover these things. Actually I'm gonna move this right now to appendix. These big tables. And while I was talking to So what we were talking yesterday, That group is to move this to appendix and have a concise version of this. Where he only has like, test bed, something like test bed algorithm. Reward or gap.
+00:02:23 Speaker 2
+Percentage or efficiency, one of
+00:02:24 Speaker 3
+You can have a bar chart for this as well if that helps to concise things around.
+00:02:28 Speaker 2
+That's a good yeah. That would be good.
+00:02:32 Speaker 3
+But make sure you have your key tables in there either as step tables or graphs.
+00:02:41 Speaker 2
+The key tables, as death tables or graph.
+00:02:45 Speaker 3
+I mean the tables that actually demonstrate your key findings and results. They should be in the main paper, not in the appendix.
+00:02:53 Speaker 2
+Can you repeat that again?
+00:02:55 Speaker 3
+The tables that highlight your key findings and results. The point of the research you have done. All those tables should be in your main paper, not the appendix.
+00:03:05 Speaker 2
+Oh exactly, and that's why I was saying that we could have for this, for the findings of this here. Instead of having it so much like breaking down like this, so much we can just put the winner right. For each case, for each test bed, and then talk about the oh in a graph, like you said, we can show by the winner. It's a lot easier and show. And it would take a lot less space in a graph, and then we can print the table also.
+00:03:45 Speaker 2
+But, but we have to make sure, like you said, that we have the findings in there in the exactly in the main. So.
+00:03:56 Speaker 3
+Whatever results you show and your discussions that you do, they should be in sync.
+00:04:04 Speaker 2
+Exactly. No. Oh.
+00:04:12 Speaker 2
+You guys helped me already. You guys moved some stuff in there. Thank you.
+00:04:16 Speaker 3
+I went in and shuffled everything around so the flow should be fine now. Just need to do a proofreading session on this and add any other graphs as well.
+00:04:30 Speaker 2
+Thank you so much for this. I'm like, wait, when did I do this? It's like, when they're like, did I wake up and start working on this? Did I notice? Yeah. Okay. So that's gonna make it even easier now, because now I just have to work on the graphs, place them in there, work on putting the findings in their graphs or table or both, and move those big ones to the appendix. That's gonna give us a lot more space, because right now we have eleven good references, which means we have ten exactly. That's going to moving those two tables and just having.
+00:05:09 Speaker 2
+The main findings in there, whether it is a concise table, a graph or both, that's gonna make a lot of space for us. That's really good. So that's good because that and that means we're in a good place now because we just have to do a not like multiple paths on head and start, adding more graphs and making fixes like that because I cut a lot of stuff and everything. That we were discussing yesterday, I need to do at least a couple of parts to go into the writing and make sure that things as I was cutting stuff things you know. Sound will come off a little bit off.
+00:06:04 Speaker 3
+I think right now what you need to do is just go in, add in your graphs, at least the important ones. Reorganize the tables a bit to make the results more interpretable. Once that is done, we'll know exactly how much to add in or cut down.
+00:06:20 Speaker 2
+Exactly. And I just want you guys to know I'm following here. There's a whole checklist that I'm following here. From the INCP compliance that I got online. And also from your feedback. If there's anything here that you guys find questionable or you want to add as I go through it, because this is what I'm following to make sure that I'm making it as close as possible to the teeth, to be compatible with theirs.
+00:07:03 Speaker 2
+With the requirements.
+00:07:06 Speaker 3
+Quick question: Is I C N B A double lined or single lined?
+00:07:12 Speaker 1
+I think it's double blind.
+00:07:13 Speaker 3
+It's double blind. What does that mean?
+00:07:16 Speaker 1
+Double-blind means the reviewers don't know the authors and the authors don't know the reviewers.
+00:07:21 Speaker 2
+I see.
+00:07:30 Speaker 1
+I remember reading it was double blind.
+00:07:34 Speaker 2
+I'll double check and make sure that's in here as well. If it's a double line or not, let's see.
+00:07:43 Speaker 3
+I think it's single blind. Look at the checklist on the submissions.
+00:07:50 Speaker 2
+In here.
+00:07:53 Speaker 3
+If you go to the homepage. The homepage. Are you using the.
+00:07:58 Speaker 1
+Submission page. Have entered all authors, their email and affiliation.
+00:08:01 Speaker 3
+A single blank.
+00:08:04 Speaker 3
+I have a problem with the ten pages with author information removed for double-blind review.
+00:08:11 Speaker 2
+This is contradictory.
+00:08:20 Speaker 1
+It says double blind.
+00:08:25 Speaker 3
+I think it's just for the submission part. Have entered all authors, the email and affiliation.
+00:08:33 Speaker 2
+So it is sold out. I was gonna check in the website. I know I have it somewhere here.
+00:08:45 Speaker 1
+in the paper submissions. Title. I think.
+00:08:52 Speaker 3
+And go to submission. Paper submission. Checklist, there you go.
+00:08:59 Speaker 1
+Is what four th please remove the double blind review.
+00:09:06 Speaker 3
+And number four point three.
+00:09:11 Speaker 3
+Oh. Double blind.
+00:09:12 Speaker 2
+Double blind review.
+00:09:14 Speaker 3
+Then we're good.
+00:09:17 Speaker 1
+I don't know who's making mistakes.
+00:09:24 Speaker 2
+That's something I learned new. I didn't know what that meant. I was literally going to look it up online.
+00:09:38 Speaker 1
+They usually say it in the conference page. Some of them are triple blind. The authors don't so the reviewers don't know each other. That's triple blind. Most conferences are double-blind.
+00:10:01 Speaker 2
+That's that's this is the last thing I'm gonna even though I'm I'm following as I passing it in there. That's the last thing I'm gonna do. Check it against the format and. Ten points. But I'm following as I'm doing it so. Oh.
+00:10:31 Speaker 2
+Oh yeah, you were right. Fifteen, I had in mind twelve. I guess maybe I told myself that I usually do that on purpose because I know my brain. So I always do it a couple of days before.
+00:10:47 Speaker 1
+That's good. Better safe than sorry.
+00:10:51 Speaker 2
+Cause I know myself, I'll be like. It's fifteen. I'm fine. It will be thirteen. I'll be like, I'm fine. So you tell yourself it's twelve or thirteen like that. I'm still thinking it's twelve. It's on purpose.
+00:11:08 Speaker 3
+That's completely fine. So if you can get this ready by this week, I think Dan will have more time to go over it for the final pass.
+00:11:18 Speaker 2
+Exactly. And that's my goal. I have my final submission. My one final submission is today, but it's not as intensive as last night's submission. It's a lot of reading the papers and everything, but this is all going to be done now and next week. So we should be good. Before even twelve, we should be going. And that's good because that way we can have more people look at it and review it.
+00:11:54 Speaker 2
+And get their feedback. So if you guys have anything in mind, feel free to ping me or anything. I'm purposely organizing it this way so that you guys know how I'm coming to the conclusion of everything. There's literally an audit for every section here. Just in the event that you come across and say, how did he come up with this? You guys can just come in and take a look at it and say, okay. Also, I was showing something yesterday. Let me see quickly. That I did for our paper.
+00:12:53 Speaker 2
+On purpose, as to further validate our works. If you go to the GitHub here, quantum project. I'm sure, maybe I passed it. So I haven't pushed in a long time. It's been three weeks. I'm working on that paper. In here, if you go to notebooks, there is a verification hub that I created. All it does is take everything we have in terms of tables and graphs and validates against the raw data. We have master datasets for every test bit.
+00:13:53 Speaker 2
+And it's a way of validating our work. I guess multiple times you can think of it because I already validated it, but then I wanted to have a way for people even without running it to validate everything from the raw data. This does exactly that. So every table in here, and I'm gonna add the graphs. That's gonna be my last step after we finish everything. I'm gonna add the graphs in there to have everything validated with the raw data so we know there's nothing in there. I purposely did this because even after I validated it, there were still sometimes numbers I was mixing here and there.
+00:14:44 Speaker 2
+And I wanted to make sure that it was as accurate as possible, and this guarantees that everything that is reported, any finding, any claim in the paper is strictly connected to the raw data of the output.
+00:15:05 Speaker 3
+You might want to also mention that in the parent readme file.
+00:15:11 Speaker 2
+Yes. I'm definitely mentioning there because that is something that I want them to be able to, because it's also in the drive. I had to clean up the drive because I haven't updated a drive in a long time, but I'm going to update it. And it's a way for people that don't want to deal with code, just to if we give them access, just to go in there and either launch a couple of runs or just go in there and validate any findings that we have directly from the raw data.
+00:15:43 Speaker 2
+It's a good way to have two different types of validation, whether they want to validate reproducibility or not validate, but see the reproducibility that we are able to repeat. The findings show that the findings reproduce the findings we're claiming and also validate the claims in their paper. So I hope that makes our paper a little bit more serious. Take it more seriously. So that was the whole point. But if you guys have any ideas, just let me know. I think we have time to execute anything.
+00:16:42 Speaker 2
+Last minute. Since I anticipate this to be wrapped up with extra verification or feedback from multiple people. This should be wrapped up in a week. What do you guys think? You think it might take longer?
+00:17:10 Speaker 1
+I think it might take longer because you will have to get everyone to. Not everyone will have time, right? So it's better to get it done as soon as possible. You don't know when everyone's gonna be available.
+00:17:24 Speaker 2
+Like you know, like after wrapping it up this week, I'm anticipating that it would take like maybe one more week for people to. Provide feedback like that, but I might be.
+00:17:41 Speaker 2
+If everyone finishes
+00:17:43 Speaker 1
+If everyone is able to provide feedback within a week, consider yourself lucky.
+00:17:48 Speaker 2
+Exactly because last time we were getting feedback and it was like. You're right, when I do you mentioning that I remember. It took a long time to just. Good, professor. Travis. To just take a look at it. It's alright. I wasn't thinking about it, actually doing it a month before is. It's the safest thing. Well. You live and learn. So. You guys have anything else for me before I start working on this.
+00:18:36 Speaker 1
+That's it from me. I don't have anything else.
+00:18:39 Speaker 2
+Same here. So cool. I'm gonna go and grab something to eat and jump on this meeting.
+00:18:46 Speaker 1
+Let us know when you're done or if you need any feedback, we'll get to it.
+00:18:51 Speaker 2
+Definitely, I'll be doing that. I'll be pinging you guys sometime on Thursday or Friday.
+00:18:57 Speaker 1
+Cool. Sounds good.
+00:18:59 Speaker 2
+Bye. Bye.
+00:19:00 Speaker 1
+Talk to you tomorrow.
+00:19:02 Speaker 2
+Bye later.

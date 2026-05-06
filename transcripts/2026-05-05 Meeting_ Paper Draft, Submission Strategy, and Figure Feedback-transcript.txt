@@ -1,0 +1,172 @@
+00:00:00 Speaker 1
+That's very interesting that you're saying that because that's something important. I think when we're referencing those tables, we had to make sure and what we're talking about the capacity paradox, that we're talking about the settings, right, and how they can be reproduced because we have that. So we have something that is called in the code, and I can show you if you want. It's called the verification hub. It verifies every data that is in the table with real data. So we have a master dataset for every test bit. So ours is called hybrid, so it doesn't have any suffix at the end. So that's ours. Everything else that you see that ends in, for example, XP three, those mean XP three based models right from Chi. Then everything that you say, for example, paper eight, you have to go to GitHub and see the reference of paper eight.
+00:00:56 Speaker 1
+Cause he has the paper that belongs to in there, um and then paper seven five and two so. Um, they also the verification hub has that too. It has a linkage, you can see, you can see it somewhere in the, if it doesn't have it. Let me actually let me see if I can. Let me see if the internet is being nice to me now that I move. But um. I purposely make sure that it has a walkthrough that walks the person through the verification, and it doesn't just verify tables and say like green. No no, I preferably Ah, but I want to make sure the if no cause that's important cause, ah it be it be good to reference that in there um. Let me okay. Ah, quantum project here.
+00:01:49 Speaker 1
+Yeah, but we're so close. I, I, I told them that by Wednesday we should have a full draft. To yeah to like food to start going through it, and they. Yes, by tomorrow. No, this Wednesday. Tomorrow Wednesday. Yeah, uh. As you can tell, look at my bags. I'm not sleeping. So you can tell what I mean. Yeah, yeah, yeah. Take take uh, just so you know it's rough. Is I haven't I haven't read through it uh to like polish it right. What I'm just doing right now is that I'm merging contents, reducing and referencing contents. So and I'm doing it based on your feedback as well. Um and I'm going even more aggressive. So what I'm doing is uh.
+00:02:41 Speaker 1
+I'm like guessing everything and see what is being mentioned before that can be referenced now. And especially for this paper, because I'm also following. If you go the GitHub, there is something in the GitHub that. For the proposal for the documentation because there are two GitHub. If you go the paper GitHub, it has a ICMP. Directory in there are the requirements. I have all of that already. The requirements. the checklist that we need to do. So that's what I'm following as I'm reading. I'm following that checklist, your feedback, and I'm cutting stuff like crazy. Yeah. Oh, there you go. It loaded okay. It loaded. It did load it perfect. Oh, now it's working.
+00:03:39 Speaker 1
+Now I can let me let sorry, let me just join now because it's working. Let me join now in Zoom because this is working. I am. I can't believe it's working. I think it's the signal. I happened to choose the worst signal here. Unbelievable. Yes.
+00:04:08 Speaker 1
+Metadata would be metadata, yes. Yeah. The graph is right now just like a rough draft to make sure that let me cut this because now I'm going to join in there here. Sorry, hold on. Let me see. Let me let me join you with microphone. Uh. Same as Mike, okay Go ahead now.
+00:04:37 Speaker 2
+Main dot tech is still nineteen pages long, right? Yes. So if you are going to use that for the submission, then doesn't it I don't know how you are going to do it. So your draft. It makes more sense to get a PDF out of the draft draft. Okay. Draftsman,
+00:04:54 Speaker 1
+Because either way I don't mind. Uh, The only reason why I'm keeping Meng in there right is just to have uh.
+00:05:01 Speaker 2
+No, I agree. I agree with your concept like. It makes sense that you will have main, like you wrote so much, you don't want to just throw it out. No no no hold on.
+00:05:09 Speaker 1
+There is something I'm I'm missing that I didn't tell you, it is already backed up in archive. Okay. Yeah, That's why I was saying that I was gonna update. Uh main the main that text because it's already backed up. So yeah, you're right. Yeah, We we wrote so much of it, and that's something that web group also advised, which makes sense because yeah. It's, not it wasn't just like it was all of us, like, you know, feedback like I added stuff based on the feedback and all those things make sense, and they are helpful, but they're like, Every venue is different. So we yeah, we're gonna be choosing like picking shoes in differently as as based on the venue that we are submitting.
+00:05:49 Speaker 2
+Yeah, true. So yeah, so that that makes sense. So. Now if you're going to do, if you're going to submit submit the PDF from main dot tex, that is still nineteen pages. So you were going to have to, Re place it. Yeah, that. Yes, I would I would recommend using the draft text as the final since you're already cutting it down. So that's like that makes more sense. Fine,
+00:06:09 Speaker 1
+I I think it makes even more sense. I just didn't want to interrupt anybody else's flow, you know what I mean? Yeah. That's why I was like, you know, Let me keep that draft first here. So I can because i'm i'm replacing stuff in main just slowly, you know what i mean? Yeah. Okay. So not quite the same speed. Like if you check main right now. Main has a different introduction. It has a different abstract, and it has a different the next one after that. I forgot background, right? So I am doing this slowly, like sections section by section, And I am making sure that uh that I that I don't remove anything critical. But we still have the archive version in there, so in the event that we're like, "Hey, I think you deleted something useful," so. We still can go back to archive and check. Yeah.
+00:06:58 Speaker 2
+Okay, that's cool. That's cool. Yeah, yeah. Okay. Yeah, so I guess we'll talk tomorrow again, and then you'll have like better stuff, right Like more exactly.
+00:07:07 Speaker 1
+Yeah. Okay. Cool. Yeah, And I can share with you quickly. What I was talking about now that now that finally is ah Normal. Okay. Yeah.
+00:07:18 Speaker 1
+I was starting to think that it's just my day. Um. So like we got two notebooks in here, right? This is the repo, the quantum project. Yeah, you go to the dynamic routing evaluation framework, and then you go to notebooks. Right at the end, you're going to see something that says verification hub. When you open this, everything that we claim is verified here. If it's not verified, then I did something wrong, but everything here is verified and. I try to do it in a way that explains, like shows the source.
+00:07:56 Speaker 2
+U hhuh. Okay.
+00:07:57 Speaker 1
+Let me see. Yeah, so you can see here hybrid XPT, right? So mm hmm. Yeah, Everything here is And then you you'll see the checks. The checks we're getting to the checks. I wanna see. I don't miss anything. Okay. Uh, okay. So these are the R questions. They're all validated here also from the master data set. And there was stuff that I had to update because. I accidentally, you know, had the wrong numbers. That, this is the reason why I am using this because I have ADHD and I know I'll be confusing stuff.
+00:08:33 Speaker 2
+Okay, yeah, that makes sense.
+00:08:34 Speaker 1
+Especially after you write for so long, and then you know and then go back to it.
+00:08:40 Speaker 2
+Yeah, I agree. Makes sense. Yeah.
+00:08:41 Speaker 1
+Yeah, but but if you see all the way to the end, okay. So this is basically it, I guess. Okay. Yeah, yeah. Yeah,
+00:08:51 Speaker 2
+That's fine. I guess this is fine, um. Yeah, so you'll have to add this link also in the paper. I think you already did that. That is cool. So yeah, so you can just make updates to the draft. I'll take a look. Um, I guess tonight or tomorrow morning, and then tomorrow afternoon we can meet again, and then you can like. Let me know if you want me to do anything on it. Yeah. And, then we can we can let Dan know. And then we get all from there.
+00:09:15 Speaker 1
+I'm not gonna be able to work on it tonight because I have two things I had to submit for my project.
+00:09:21 Speaker 2
+That's fine.
+00:09:22 Speaker 1
+Okay. But I'll I'll be able to work on it tomorrowum at nonstop. Uh, that's for sure.
+00:09:28 Speaker 2
+Yeah, that's fine. That's I I'm actually happy that there's another draft version and nineteen pages he started, and you said, oh,
+00:09:35 Speaker 1
+Yes, yes, okay, yeah. Yeah, you can start with the draft because the draft is the one version that, okay, yeah, that is going there. Uh. And the only thing that is missing, like I can show you right here, which is very uh easy Um. The only thing that is oh, that's not it. The only thing that is missing, um. Is um. The limitation discussion, yeah, and which altogether is is not even two pages. Okay, that's fine. But the one that is long, which I think is this one here. Yeah, this one here. The one that is long is this one here. So this is the only thing that it's missing here if we go here.
+00:10:20 Speaker 1
+And this actually, it would be easier if I just split it here. So the only thing that is missing, which I'll show you. I did I work on this yesterday. I was so tired and then. And the thing is, I don't have internet, so I have to work from here until like so late. But I'm like, I have to get this done. This is more exciting than anything else. And um, yeah. So basically I got it up until. Um. I can actually. There you go, so system model. I got all of this done. All of this. Of course, There are some figures and something that you know we had to decide what to put. But I haven't even deal with the with the only the tables I put in there. None of the figures yet.
+00:11:19 Speaker 1
+Okay. Cause I wanna put the figures, but at the same time I wanna validate them as well. Cause I validated everything but the figures. I want to validate those as well again.
+00:11:28 Speaker 2
+Okay, Okay. So so if you're going to validate uh the figures Yeah Is there, a reason why you chose area graphs for thoseum graphs? Not not like they they're like area graphs on the, P op right, so why did you is there a particular reason? No,
+00:11:43 Speaker 1
+I didn't pick you. I literally looked it up. What would be the best graph? I didn't. It was there was no reason whatsoever specific. Okay,
+00:11:50 Speaker 2
+So can you can you like make them also line graphs because when you because those triangles, they kind of overlap each other, and you can't really see this one here,
+00:11:58 Speaker 1
+Right? Yeah yeah.
+00:11:59 Speaker 2
+That and there was another one which had like just two colors. Yeah, but it was not even visible, not not this scroll down.
+00:12:06 Speaker 1
+Oh down. Yeah,
+00:12:07 Speaker 2
+I think it's down.
+00:12:10 Speaker 2
+Oh yeah, there that one. So you see there are like five things in the legend, but you can actually only see two colors. Yes,
+00:12:17 Speaker 1
+Exactly. And something else I was thinking about. I was thinking about for like for the gaps. Perhaps use uh theum, the box plotting. Um, You, yeah, right, because that is so much more clear when it comes to like gaps and stuff like that. Yeah.
+00:12:33 Speaker 2
+And also another thing is like the the y axis. You see any graph, right? It's very high. The graphs are all in the top. Just don't start the y- axis from zero. Yeah. Unless you actually have something on the bottom, I think that's what Dave mentioned, like zoom in on the images. But it would makes just cut off like the half of the y axis.
+00:12:53 Speaker 1
+I see. I see that makes a lot of sense. Yeah, cause that way you're letting the user.
+00:12:57 Speaker 2
+Yeah lines will actually separate, Yeah. Yeah, your lines were separate. Like there were like some graphs where all the lines were like, literally on top of each other. Like yeah, that one? Figure eleven? Yeah, eleven and twelve.
+00:13:08 Speaker 1
+Right a little bit more, then we can see better the yeah, yes. Yes. And this one too, like here.
+00:13:15 Speaker 2
+Yeah just start from so you you start from forty just started from seventy five.
+00:13:20 Speaker 1
+Yeah exactly for figure eleven, Exactly, yeah, we start from seventy seventy five. Yes, if yeah,
+00:13:25 Speaker 2
+Just start from seventy five, and then it should pop up more.
+00:13:28 Speaker 1
+That's so. That's so true.
+00:13:31 Speaker 2
+For for figure twelve, you would have to start from I guess sixty five or seventy Even then, if the eighty eight stuff above eighty is just clumping up, Just increase the y axis to like one twenty You can make that graph a little bigger.
+00:13:43 Speaker 1
+Yes Yes Exactly Um uh yeah You're right Like, sixty five. And then And also, you know, I don't know if you know that, but I've done it before You can actually use aum What is the. There is a way to normalize the data so that.
+00:14:01 Speaker 2
+You can.
+00:14:02 Speaker 1
+See the gap between them a lot bigger. So I was thinking perhaps, you know, We can also do that for images that are so hard to see like this one. The lines are all on top of each other. Yeah. Mhm. Yeah. That's a very good observation, yeah. And, the funny thing is that this is the last right here. Um Where is this? Okay, this is the last section that I need to put. This the cross test validation. And that's all of this. I think it's like three, well, four without counting the tables. It might be like three pages.
+00:14:33 Speaker 2
+Put all the tables in the appendix. It's unlimited. Yeah,
+00:14:36 Speaker 1
+Yeah, go nuts too huge Yeah, It's worth it to have it in the paper But I think we can have like the the results you know for each one, perhaps in one table. Yeah, From from, we can have the result from each of this in just one simple table, right Just condense everything.
+00:14:57 Speaker 1
+Yeah. Claim they claim that we're making right. Yeah. The right answer. That's what that we're gonna and then just reference to the appendix. Yeah, I like that. Yeah, I think I think we're good. I think we're in good shape with that. Yeah,
+00:15:10 Speaker 2
+I agree. I agree. Yeah. So yeah, so yeah, Just work on whatever you can tomorrow, and then we'll meet in the afternoon, and then we'll take it from there.
+00:15:19 Speaker 1
+Yeah, I agree. Yeah, I don't blame Dan. You know, if I was him, I would be worried too because that was twenty pages.
+00:15:27 Speaker 2
+He y, Yeah. I was like, oh, nineteen pages. When are you going to reduce it?
+00:15:31 Speaker 1
+That's why I didn't sleep because I'm like, you know what? I had to cut this out. No,
+00:15:36 Speaker 2
+So you were not even at fault. The only problem the mistake you did was not letting him know. There's a draft paper. I became happy as soon as I said," Oh, perfect.
+00:15:44 Speaker 1
+Done." I did mention that to him, but he just doesn't know exactly what I'm talking about.
+00:15:49 Speaker 2
+So because you know,
+00:15:51 Speaker 1
+Because there are so many files in the GitHub. So he's like," Ah, what is he talking about?" So you know Yeah yeah It's a, But when we meet, he'll see and then he'll he'll he'll realize that you know.
+00:16:01 Speaker 2
+Yeah, yeah. I'll I'll just tell him now. Like yeah, he's in good shape. It's fine. Let him relax a little bit.
+00:16:07 Speaker 1
+Yes, yes, yes. Let let him know that you know ourum yeah Even, though we are in like in like awkward times, uh with all these things that are happening, I am working on that. Yeah.
+00:16:21 Speaker 2
+Okay. Yeah. Yeah. Yeah, I I saw it's all about it.
+00:16:25 Speaker 1
+Yes and, I'm so happy that you guys are helping because you guys have been a huge help, because sometimes when I come back to it, I'm like, I don't even know where to start. But with your feedback, I just start with that and that gets me going. So that's pretty good. Yeah, of course.
+00:16:40 Speaker 2
+Yeah, anytime you feel like you need something to be done reviewed like add stuff. Yes. Let me know. I can help yeah.
+00:16:47 Speaker 1
+Yeah, I'll definitely be pinging you guys on Wednesday uh if not Thursday early, I just to let you know, hey, you know this is a draft. Let me know what you guys think. I'm still polishing maybe I'll if I've sent if I send it on Wednesday, I'll be saying I'm still polishing. But if I send it on Thursday, I think i'll actually be done because that's all that's all i'm going to be doing um today. Today, I have submissions today and tomorrow, but the hardest one are today, right, which is my project for uh DSI.
+00:17:18 Speaker 1
+U h, which actually I I have I wanna work with you on that with you. Because it's I'm taking quantum on it. Like I'm taking quantum and then I brought another project that is on a clinical domain, right?
+00:17:31 Speaker 2
+Oh yeah, my domain. Yeah,
+00:17:33 Speaker 1
+I built a layer. Uhhuh. And it's all based on fairness, so I'm measuring how fairness in context. You know, the relationship between fairness and context and the quality of context, right? And that's why I found the maps to be so ideal because. I have here, like I have spectrum, especially here in quantum. No context, context and then I have predict context protected. So It like the perfect picture to show how you know fairness, you know. How fairness relate to context and how it affects.
+00:18:10 Speaker 1
+Uh, certain groups, whether it is resources or a group of people like minorities, right? Yeah. You'll see. Um. Yeah, make sense. It's, it's a little bit complex, but it's starting to look like They just a project. Yeah, so. I'll be I'll be sharing with you when is when is digestible to get your feedback to see. Oh yeah, of course. I'm really interested in your project and how we can fit it, um into the whole um. performance things. I think it would be really great. The way you're taking like that data as a feedback, that's awesome. And that's also, That's going to be critical because I really want to steal that process from you. Okay. I'm stealing illegally, okay? With you.
+00:19:01 Speaker 2
+Yeah, yeah.
+00:19:03 Speaker 1
+We're doing it together, okay? Yes,
+00:19:05 Speaker 2
+Yes. Agreed.
+00:19:06 Speaker 1
+Yeah, So I'm gonna let you go'cause I know I kept you for like, uh, it was at what time was it like a forty five, and it's been like an hour. Yeah. Yeah, but if you have any feedback or anything, just feel free to write it in there. Cause as I'm coding more stuff and adding in there, the second thing I'm gonna do is like a whole. I'm gonna go back again and I'm gonna make sure that. Nothing critical is missing. If you do that, write the feedback in there. You're gonna be helping me because I'm gonna, you know, I'm gonna yeah. It's gonna be less work for me, but I'm still gonna go through it. Yeah.
+00:19:39 Speaker 2
+Okay. Yeah, makes sense. Just, my my only major concern with that two concerns was one was the pages, the second one was the graphs are not visible.
+00:19:49 Speaker 1
+Yes, yes I I promise right after I cut everything and I do okay yeah, That's the next step, you know, and I'm I'm I should be doing it sometime tomorrow, right? Mhm. At the end of the day or finish it on Thursday. But even if I don't finish it, I'm still gonna be uh uh pinging you guys on Wednesday. Okay. You know, hey, you know, approaching X, Y and Z, but mhm you know,
+00:20:15 Speaker 2
+So so whatever charge you're planning to put it Just put them in. Right now itself, if you can, before tomorrow morning itself, So that you know how many pages it's gonna come out. And then you can just swap in the. Um, file names.
+00:20:29 Speaker 1
+Yes, that's a great idea. Yes.
+00:20:31 Speaker 2
+Yeah, because right now it says like nine pages. Mhm. So just put in all that stuff. So you'll know how much it is. And then just swap in the file names at the end. Yes,
+00:20:38 Speaker 1
+That makes a lot of sense. Yeah, I'm actually, yes, I'll do that, even if it's not at in the state that we want it, yep,
+00:20:46 Speaker 2
+Yeah, unless any. It's something that goes into the appendix. Add everything, just just use it as like a garbage can. I said, just dump everything in there and basically reserve. Each graph's space and then work on it.
+00:21:00 Speaker 1
+Exactly, yeah, yeah, And and if you guys also have like a better idea of a better graph, just let me know because those graphs like. I'm not sentimental with any of those graphs. I literally just research, you know. Which graph would be best for like, Whatever uh a specific uh thing we're trying to show there, whether it's the gap or, you know or or the performance so stuff like that. That's what I did. Like I didn't really, okay. Yeah.
+00:21:31 Speaker 2
+Okay, cool. Yeah. Sounds good.
+00:21:34 Speaker 1
+Sounds good. Thank you so much, and thank you for.
+00:21:36 Speaker 2
+No problem, thank you. See you. See you tomorrow. Bye.

@@ -1,0 +1,14 @@
+Paper label,3 Runs,5 Runs
+CPursuit,89.6,90.1
+iCEpsilonGreedy,88.0,88.6
+CEpsilonGreedy,87.5,87.9
+GNeuralUCB,85.2,86.3
+EXPNeuralUCB,82.1,83.8
+EXPUCB,76.2,78.4
+CEXP4,70.1,70.2
+iCPursuit,68.7,69.0
+CThompsonSampling,66.6,68.1
+iCThompsonSampling,66.5,68.0
+CEpochGreedy,37.6,37.6
+iCEpochGreedy,37.5,37.5
+iCEXP4,37.4,37.4

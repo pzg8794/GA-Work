@@ -1,0 +1,5 @@
+index,Tier,Paper label,Source dataset,Source model,3 Runs,5 Runs,Avg. Eff.
+0,Top tier (viable under stochastic),CPursuit,CMABs,CPURSUIT,90.02,90.2,90.11
+1,Top tier (viable under stochastic),iCEpsilonGreedy,iCMABs,ICEPSILONGREEDY,87.75,87.85,87.8
+2,Top tier (viable under stochastic),CEpsilonGreedy,CMABs,CEPSILONGREEDY,87.93,87.82,87.87
+3,Top tier (viable under stochastic),GNeuralUCB,EXP3,GNEURALUCB,86.24,85.48,85.86

@@ -1,0 +1,4 @@
+Section,Branch,Closer to claims?,Closer to reported data?,Support / fit,Decision note
+RQ3a,T / 6K / Fixed / s=2 / runs=3 only,Yes,Yes,OA lift +18.3 pp; strongest provenance candidate; MAE ≈ 1.805,Best current correction path; already used in paper patch
+RQ3b,T / Random / 6K / runs=3+5 mean / scale sweep,Yes,No,Supports the narrative of s=1.5 degradation and s=2.0 recovery,"Claim-support option, not the printed-table provenance option"
+RQ3c,T / CPursuitNeuralUCB / 6K / s=2 / runs=3+5 / all5,No,"Slightly better than Tb, but still no",Caption-branch MAE ≈ 15.193; statement-side T branch is incomplete for allocator comparison,Not defensible as a final fix on its own

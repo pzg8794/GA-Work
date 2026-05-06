@@ -1,0 +1,6 @@
+Algorithm,Avg Eff (%),Gap (%),Floor (%),Winner Count Text
+iCEpsilonGreedy,88.56,11.44,81.0,75/75
+iCPursuit,68.69,31.31,56.9,0/75
+iCThompsonSampling,68.01,31.99,62.8,0/75
+iCEXP4,37.5,62.5,36.1,0/75
+iCEpochGreedy,37.57,62.43,36.1,0/75

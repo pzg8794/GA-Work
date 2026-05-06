@@ -1,0 +1,6 @@
+Claim,Supported?,Note
+Hybrid neural models define the performance ceiling.,Yes,"iCPursuitNeuralUCB reaches 90.86%, above CPursuit at 89.90% and GNeuralUCB at 85.37%."
+iCPursuitNeuralUCB is the strongest overall neural model by Oracle-relative gap reduction.,Yes,"It has the lowest aggregate gap across the Hybrid and external neural source worlds, and it retains that lead within each allocator slice."
+Efficiency degrades with testbed complexity.,Yes,"Hybrid efficiency drops from 90.86% internally to 74.43% (Paper 2), 77.50% (Paper 7), and 41.55% (Paper 12)."
+Floor performance varies dramatically across families.,Yes,CMAB floors span 62.5–79.4%; Hybrid Neural 45.0–76.4%; EXP3-based 18.0–68.8%; external floors span 21.7–54.4 from the reconstructed sources.
+Epoch-based and pure exploitation strategies collapse.,Yes,CEpochGreedy and iCEpochGreedy both remain near 37–38% with 0 experiment wins.

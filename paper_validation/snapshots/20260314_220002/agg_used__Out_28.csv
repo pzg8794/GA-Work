@@ -1,0 +1,5 @@
+Paper label,Avg Eff. (%),CV (%),Floor (%),Source dataset,Source model,Win Dominance (%)
+CPursuit,87.99,5.62,77.37,CMABs,CPURSUIT,25.6
+iCEpsilonGreedy,86.83,3.65,80.98,iCMABs,ICEPSILONGREEDY,43.9
+EXPNeuralUCB,83.12,15.08,18.01,EXP3,EXPNEURALUCB,30.5
+EXPUCB,76.44,6.01,68.75,EXP3,EXPUCB,0.0

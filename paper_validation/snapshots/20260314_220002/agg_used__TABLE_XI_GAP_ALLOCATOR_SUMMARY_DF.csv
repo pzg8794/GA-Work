@@ -1,0 +1,6 @@
+Source,iCP winner in every allocator?,Allocator winners
+Hybrid Neural,Yes,"Default=iCPursuitNeuralUCB, Dynamic=iCPursuitNeuralUCB, Random=iCPursuitNeuralUCB, ThompsonSampling=iCPursuitNeuralUCB"
+Paper 2,Yes,"Default=iCPursuitNeuralUCB, Dynamic=iCPursuitNeuralUCB, Random=iCPursuitNeuralUCB, ThompsonSampling=iCPursuitNeuralUCB"
+Paper 7,Yes,"Default=iCPursuitNeuralUCB, Dynamic=iCPursuitNeuralUCB, Random=iCPursuitNeuralUCB, ThompsonSampling=iCPursuitNeuralUCB"
+Paper 12,Yes,"Default=iCPursuitNeuralUCB, Dynamic=iCPursuitNeuralUCB, Random=iCPursuitNeuralUCB, ThompsonSampling=iCPursuitNeuralUCB"
+Paper 8,Yes,"Default=iCPursuitNeuralUCB, Dynamic=iCPursuitNeuralUCB, Random=iCPursuitNeuralUCB, ThompsonSampling=iCPursuitNeuralUCB"

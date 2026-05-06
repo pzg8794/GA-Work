@@ -1,0 +1,5 @@
+Allocator,Winner,Mean Gap (%),Gap Reduction (%)
+Default,iCPursuitNeuralUCB,32.59,67.41
+Dynamic,iCPursuitNeuralUCB,31.906,68.094
+Random,iCPursuitNeuralUCB,32.212,67.788
+ThompsonSampling,iCPursuitNeuralUCB,31.906,68.094

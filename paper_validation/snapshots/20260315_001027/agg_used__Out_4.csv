@@ -1,0 +1,13 @@
+label,type,status
+tab:rq1masterstochastic,table,included
+fig:context_capacity_effects,figure,included
+tab:rq2_adversarial,table,included
+fig:scenario_penalties,figure,included
+fig:capacity_all,figure,included
+fig:threat_rules,figure,included
+tab:rq3a_informative,table,included
+tab:rq3b_capacity_scaling,table,included
+tab:rq3c_allocators,table,included
+tab:testbed_comparison,table,included
+tab:model_family_comparison,table,included
+fig:convergence_hybrid,figure,TBD

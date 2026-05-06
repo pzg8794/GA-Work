@@ -1,0 +1,5 @@
+Formula,RMSE vs paper,Comment
+Micro share,5.177,Global runner win share across the displayed models
+Macro threat-balanced share,5.222,"Equal weight to MARKOV, ADAPTIVE, ONLINEADAPTIVE"
+Dirichlet-smoothed share,5.154,Jeffreys-smoothed global runner share
+Evaluator dominance share,0.008,Aggregated scenario wins across the displayed representatives

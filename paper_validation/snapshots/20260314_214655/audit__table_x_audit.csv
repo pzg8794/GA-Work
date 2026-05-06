@@ -1,0 +1,89 @@
+Testbed,Algorithm,Metric,Expected,Actual,Source,Note,B - A,|B - A|,|B - A| / Expected,Priority
+Paper 2,ORACLE,Avg Reward,0.3927,0.3927,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,ORACLE,Regret,0.0,0.0,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,CPursuitNeuralUCB,Avg Reward,0.2888,0.2888,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,CPursuitNeuralUCB,Regret,508.7,508.7,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,CPursuitNeuralUCB,Efficiency (%),73.24,73.24,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,CPursuitNeuralUCB,Gap (%),26.76,26.76,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,CPursuitNeuralUCB,Exp. Winner,38.0,38.0,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,GNeuralUCB,Avg Reward,0.2887,0.2887,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,GNeuralUCB,Regret,515.4,515.4,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,GNeuralUCB,Efficiency (%),73.2,73.2,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,GNeuralUCB,Gap (%),26.8,26.8,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,GNeuralUCB,Exp. Winner,87.0,87.0,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,iCPursuitNeuralUCB,Avg Reward,0.2934,0.2934,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,iCPursuitNeuralUCB,Regret,494.4,494.4,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,iCPursuitNeuralUCB,Efficiency (%),74.45,74.45,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,iCPursuitNeuralUCB,Gap (%),25.55,25.55,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,iCPursuitNeuralUCB,Exp. Winner,94.0,94.0,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,EXPNeuralUCB,Avg Reward,0.2811,0.2811,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,EXPNeuralUCB,Regret,581.4,581.4,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,EXPNeuralUCB,Efficiency (%),71.24,71.24,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,EXPNeuralUCB,Gap (%),28.76,28.76,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 2,EXPNeuralUCB,Exp. Winner,81.0,81.0,Master_Dataset_paper2_4000_2000_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,ORACLE,Avg Reward,8.9237,8.9237,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,ORACLE,Regret,0.0,0.0,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Avg Reward,6.9793,6.9793,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Regret,42.8,42.8,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Efficiency (%),78.03,78.03,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Gap (%),21.97,21.97,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Exp. Winner,245.0,245.0,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Avg Reward,6.2227,6.2227,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Regret,272.3,272.3,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Efficiency (%),69.57,69.57,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Gap (%),30.43,30.43,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Exp. Winner,16.0,16.0,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Avg Reward,6.3314,6.3314,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Regret,269.1,269.1,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Efficiency (%),70.82,70.82,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Gap (%),29.18,29.18,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Exp. Winner,0.0,0.0,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Avg Reward,6.3314,6.3314,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Regret,269.1,269.1,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Efficiency (%),70.82,70.82,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Gap (%),29.18,29.18,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Exp. Winner,39.0,39.0,Master_Dataset_paper7_50_50_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,ORACLE,Avg Reward,0.8724,0.8724,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,ORACLE,Regret,0.0,0.0,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,GNeuralUCB,Avg Reward,0.3833,0.3833,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,GNeuralUCB,Regret,864.1,864.1,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,GNeuralUCB,Efficiency (%),43.72,43.72,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,GNeuralUCB,Gap (%),56.28,56.28,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,GNeuralUCB,Exp. Winner,53.0,53.0,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,EXPNeuralUCB,Avg Reward,0.373,0.373,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,EXPNeuralUCB,Regret,892.2,892.2,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,EXPNeuralUCB,Efficiency (%),42.54,42.54,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,EXPNeuralUCB,Gap (%),57.46,57.46,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,EXPNeuralUCB,Exp. Winner,91.0,91.0,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,iCPursuitNeuralUCB,Avg Reward,0.3869,0.3869,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,iCPursuitNeuralUCB,Regret,858.3,858.3,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,iCPursuitNeuralUCB,Efficiency (%),44.14,44.14,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,iCPursuitNeuralUCB,Gap (%),55.86,55.86,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,iCPursuitNeuralUCB,Exp. Winner,97.0,97.0,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,CPursuitNeuralUCB,Avg Reward,0.3842,0.3842,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,CPursuitNeuralUCB,Regret,861.2,861.2,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,CPursuitNeuralUCB,Efficiency (%),43.81,43.81,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,CPursuitNeuralUCB,Gap (%),56.19,56.19,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 12,CPursuitNeuralUCB,Exp. Winner,59.0,59.0,Master_Dataset_paper12_1500_500_5_ST.csv,"runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 8,ORACLE,Avg Reward,300.5402,300.5402,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,ORACLE,Regret,0.0,0.0,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Avg Reward,210.419,210.419,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Regret,60833.4,60833.4,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Efficiency (%),67.85,67.85,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Gap (%),32.15,32.15,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,iCPursuitNeuralUCB,Exp. Winner,1.0,1.0,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Avg Reward,186.6561,186.6561,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Regret,82175.2,82175.2,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Efficiency (%),61.93,61.93,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Gap (%),38.07,38.07,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,EXPNeuralUCB,Exp. Winner,10.0,10.0,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Avg Reward,183.0388,183.0388,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Regret,83361.0,83361.0,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Efficiency (%),61.65,61.65,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Gap (%),38.35,38.35,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,GNeuralUCB,Exp. Winner,4.0,4.0,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Avg Reward,182.0116,182.0116,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Regret,84024.2,84024.2,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Efficiency (%),61.42,61.42,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Gap (%),38.58,38.58,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None
+Paper 8,CPursuitNeuralUCB,Exp. Winner,5.0,5.0,Master_Dataset_1000_1000_1_paper8.csv,"runs=1, cap_type=T, scales=[1.0]",0.0,0.0,0.0,None

@@ -1,0 +1,6 @@
+Model,Source,Threats,Allocator,Run suites,Wins,Wins / All wins (%)
+CPursuit,CMABs,"ADAPTIVE, MARKOV, ONLINEADAPTIVE",Default,"3, 5",85,28.24
+iCEpsilonGreedy,iCMABs,"ADAPTIVE, MARKOV, ONLINEADAPTIVE",Default,"3, 5",144,47.84
+EXPNeuralUCB,EXP3,"ADAPTIVE, MARKOV, ONLINEADAPTIVE",Default,"3, 5",65,21.59
+EXPUCB,EXP3,"ADAPTIVE, MARKOV, ONLINEADAPTIVE",Default,"3, 5",7,2.33
+Total wins (shown models),—,—,—,—,301,100.0

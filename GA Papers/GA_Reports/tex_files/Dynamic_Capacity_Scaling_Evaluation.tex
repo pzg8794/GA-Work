@@ -1,0 +1,315 @@
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{multirow} 
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=0.4in}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+% TikZ for visualizations
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes, calc}
+
+% Section formatting with color
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{performancecolor}}{\thesection.}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{stochasticcolor}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Define colors for highlighting
+\definecolor{performancecolor}{RGB}{0,102,204}
+\definecolor{stochasticcolor}{RGB}{153,51,102}
+\definecolor{highlightcolor}{RGB}{255,245,153}
+\definecolor{criticalcolor}{RGB}{220,53,69}
+\definecolor{successcolor}{RGB}{40,167,69}
+\definecolor{colabcolor}{RGB}{244,180,0}
+
+% Custom highlighting commands
+\newcommand{\performance}[1]{\textcolor{performancecolor}{\textbf{#1}}}
+\newcommand{\stochastic}[1]{\textcolor{stochasticcolor}{\textbf{#1}}}
+\newcommand{\highlight}[1]{\colorbox{highlightcolor}{#1}}
+\newcommand{\critical}[1]{\textcolor{criticalcolor}{\textbf{#1}}}
+\newcommand{\success}[1]{\textcolor{successcolor}{\textbf{#1}}}
+\newcommand{\colab}[1]{\textcolor{colabcolor}{\textbf{#1}}}
+
+% Listings configuration
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    breaklines=true,
+    frame=single,
+    language=Python
+}
+
+% Bibliography style
+\bibliographystyle{IEEEtran}
+
+% ============================================================
+% TITLE PAGE
+% ============================================================
+
+\title{
+  \vspace{-1.5cm}
+  \textbf{\LARGE Dynamic Capacity Scaling in Quantum Bandit Environments:} \\
+  \vspace{0.4cm}
+  \textbf{\Large A Dynamic Capacity Scaling Evaluation Framework} \\
+  \vspace{0.6cm}
+  \large Comparative Analysis Across Allocators, Scenarios, and Neural Bandits
+}
+
+\author{
+  \textbf{Piter Garcia} \\
+  Graduate Assistant, AI/Quantum Computing Research \\
+  Department of Computer Science \\
+  Rochester Institute of Technology \\
+  \texttt{pzg8794@g.rit.edu}
+}
+
+\date{
+  November 12, 2025 \\
+  \vspace{0.3cm}
+  \textit{Internal Review \& GA Deliverable}
+}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+
+\begin{abstract}
+We evaluate the effect of \textit{capacity scaling} on quantum entanglement routing with neural bandits by comparing performance at horizon $T$ versus scaled capacity $SC{=}2T$. Using the same framework, style, and metrics as our prior allocator study, we analyze four algorithms (GNeuralUCB, EXPNeuralUCB, CPursuitNeuralUCB, iCPursuitNeuralUCB) across five scenarios (Stochastic, Markov, Adaptive, OnlineAdaptive, None) and multiple qubit allocators. 
+\textbf{Key result:} increasing capacity from $T$ to $2T$ is \emph{not} universally beneficial; it \success{improves or preserves} efficiency in Stochastic/Markov/None, but \critical{can degrade} performance under Adaptive (and occasionally OnlineAdaptive), confirming that \textbf{dynamic, context-aware capacity} is essential for robust deployment.
+\end{abstract}
+
+\vspace{0.3cm}
+\noindent\textbf{Keywords:} Quantum networking, capacity scaling, multi-armed bandits, neural bandits, adversarial robustness, dynamic resource allocation
+
+\newpage
+
+{\small\tableofcontents}
+\newpage
+
+% ============================================================
+% 1. EXECUTIVE SUMMARY
+% ============================================================
+\section{Executive Summary}
+
+\textbf{Objective.} Quantify how scaling qubit capacity from $T$ to $2T$ impacts performance across scenarios, allocators, and models, holding all other protocol components constant.
+
+\textbf{Findings at a glance.}
+\begin{itemize}
+    \item \success{Structured \& memoryless settings (None, Markov, Stochastic):} $2T$ capacity yields neutral to positive changes due to reduced contention and fewer starvation events.
+    \item \critical{Reactive adversaries (Adaptive, OnlineAdaptive):} $2T$ capacity can \emph{increase} the adversary's attack surface (more exploitable exploratory moves), leading to observable drops in efficiency; effect strongest with exploration-heavy allocators.
+    \item \textbf{Allocator interaction:} Deterministic allocators (Fixed) mask some $2T$ penalties under Adaptive, while probabilistic (Thompson) or exploratory (Dynamic UCB) may amplify them depending on the model.
+    \item \textbf{Modeling takeaway:} Pursuit-based algorithms retain the highest floors across $T\!\rightarrow\!2T$ shifts; EXPNeuralUCB exhibits the steepest negative swings under adversarial adaptivity.
+\end{itemize}
+
+\begin{tcolorbox}[colback=successcolor!10,colframe=successcolor,title=Deployment Implication]
+Use \textbf{dynamic capacity scaling}: scale up in Stochastic/Markov/None; \textbf{throttle or pin} to conservative levels under Adaptive/OnlineAdaptive unless attack-detection confirms low reactivity.
+\end{tcolorbox}
+
+% ============================================================
+% 2. METHODOLOGY & SETUP
+% ============================================================
+\section{Methodology \& Experimental Setup}
+
+\subsection{Controlled Comparison: $T$ vs $2T$}
+We compare capacity $SC{=}T$ and $SC{=}2T$ at the \emph{same} time horizons ($T \in \{4\text{K},6\text{K},8\text{K}\}$), scenarios, models, and allocators. Metrics mirror the prior report: \textbf{Efficiency} (\% of Oracle), \textbf{Gap} (complement), and \textbf{floors/variance} for generalization stability.
+
+\subsection{Scenarios, Models, Allocators}
+\begin{itemize}
+    \item \textbf{Scenarios:} Stochastic (rate 0.0625), Markov (0.25), Adaptive (0.25), OnlineAdaptive (0.25), None (0.0).
+    \item \textbf{Models:} GNeuralUCB, EXPNeuralUCB, CPursuitNeuralUCB, iCPursuitNeuralUCB.
+    \item \textbf{Allocators:} Fixed $(8,10,8,9)$, Dynamic UCB ($\beta\!=\!2.0$), Random ($\epsilon\!=\!1.0$), Thompson (Bayesian, $(9,9,9,8)$ init).
+\end{itemize}
+
+\subsection{Metrics}
+\begin{equation}
+\scriptsize
+\text{Efficiency} = \frac{R_{\text{Alg}}}{R_{\text{Oracle}}}\cdot 100\%,\quad
+\text{Gap}\% = 100 - \text{Efficiency}\%.
+\end{equation}
+We report per-scenario \textbf{$\Delta_{T\rightarrow 2T}$} as the signed change in efficiency (\%-points).
+
+% ============================================================
+% 3. RESULTS OVERVIEW
+% ============================================================
+\section{Results Overview}
+
+\subsection{Capacity Scaling Summary by Scenario}
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Scenario} & \textbf{Direction ($\Delta_{T\rightarrow 2T}$)} & \textbf{Risk} & \textbf{Allocator Note} & \textbf{Recommendation}\\
+\midrule
+Stochastic & \success{Slightly Positive / Neutral} & Low & Thompson best overall & Allow $2T$ \\
+Markov & \success{Positive} & Low--Med & Dynamic synergy & Prefer $2T$ \\
+Adaptive & \critical{Negative (often)}} & High & Fixed mitigates & \textbf{Throttle capacity} \\
+OnlineAdaptive & Mixed (model-dependent) & Med--High & Thompson strong & Prefer $T$ or modest $>T$ \\
+None & \success{Neutral / Ceiling-limited} & Low & Any & Either $T$ or $2T$ \\
+\bottomrule
+\end{tabular}
+\caption{Scenario-level capacity effect synopsis.}
+\end{table}
+
+\subsection{Allocator Interaction Map}
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Allocator} & \textbf{Stochastic} & \textbf{Markov} & \textbf{Adaptive} & \textbf{OnlineAdaptive} \\
+\midrule
+Fixed & ${\small +/0}$ & ${\small +}$ & \success{${\small 0/-}$ (least hurt at $2T$)} & ${\small 0}$ \\
+Dynamic UCB & ${\small 0}$ & \success{${\small +}$} & \critical{${\small -}$ (exploration conflict)} & ${\small 0/-}$ \\
+Random & \critical{${\small -}$} & \critical{${\small -}$} & \critical{${\small -}$} & \critical{${\small -}$} \\
+Thompson & \success{${\small +}$} & ${\small 0/+}$ & ${\small 0/-}$ & \success{${\small +}$} \\
+\bottomrule
+\end{tabular}
+\caption{Allocator $\times$ Scenario qualitative $\Delta_{T\rightarrow 2T}$ effects.}
+\end{table}
+
+% ============================================================
+% 4. PER-MODEL CAPACITY SCALING TABLES
+% ============================================================
+\section{Per-Model Capacity Scaling (T $\rightarrow$ 2T)}
+
+The following tables focus on \textbf{per-model} capacity effects. Each cell reports the signed change in efficiency (\%-points) when capacity is doubled from $T$ to $2T$ at the same horizon and scenario, averaged across horizons.
+
+\subsection{iCPursuitNeuralUCB}
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Scenario} & \textbf{Fixed} & \textbf{Dynamic} & \textbf{Random} & \textbf{Thompson} \\
+\midrule
+Stochastic & ${\small 0/+}$ & ${\small +}$ & ${\small -}$ & \success{${\small +}$} \\
+Markov & ${\small 0/+}$ & \success{${\small +}$} & ${\small 0}$ & ${\small 0}$ \\
+Adaptive & \success{${\small 0}$} & \critical{${\small -}$} & \critical{${\small -}$} & ${\small -}$ \\
+OnlineAdaptive & ${\small 0}$ & ${\small 0/-}$ & ${\small 0}$ & \success{${\small +}$} \\
+None & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ \\
+\bottomrule
+\end{tabular}
+\caption{iCPursuit: qualitative $\Delta_{T\rightarrow 2T}$ across allocators.}
+\end{table}
+
+\subsection{CPursuitNeuralUCB}
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Scenario} & \textbf{Fixed} & \textbf{Dynamic} & \textbf{Random} & \textbf{Thompson} \\
+\midrule
+Stochastic & ${\small +}$ & \success{${\small +}$} & ${\small -}$ & ${\small +}$ \\
+Markov & ${\small 0/+}$ & \success{${\small +}$} & ${\small 0/-}$ & ${\small 0/+}$ \\
+Adaptive & \success{${\small 0}$} & \critical{${\small -}$} & \critical{${\small -}$} & ${\small 0/-}$ \\
+OnlineAdaptive & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ & \success{${\small +}$} \\
+None & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ \\
+\bottomrule
+\end{tabular}
+\caption{CPursuit: qualitative $\Delta_{T\rightarrow 2T}$ across allocators.}
+\end{table}
+
+\subsection{GNeuralUCB}
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Scenario} & \textbf{Fixed} & \textbf{Dynamic} & \textbf{Random} & \textbf{Thompson} \\
+\midrule
+Stochastic & ${\small 0}$ & ${\small 0/-}$ & ${\small 0}$ & \success{${\small +}$} \\
+Markov & ${\small 0}$ & ${\small +}$ & \critical{${\small -}$} & ${\small 0}$ \\
+Adaptive & \success{${\small 0}$} & \critical{${\small -}$} & \critical{${\small -}$} & ${\small 0}$ \\
+OnlineAdaptive & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ & \success{${\small +}$} \\
+None & ${\small 0}$ & ${\small 0}$ & ${\small 0/+}$ & ${\small 0}$ \\
+\bottomrule
+\end{tabular}
+\caption{GNeuralUCB: qualitative $\Delta_{T\rightarrow 2T}$ across allocators.}
+\end{table}
+
+\subsection{EXPNeuralUCB}
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Scenario} & \textbf{Fixed} & \textbf{Dynamic} & \textbf{Random} & \textbf{Thompson} \\
+\midrule
+Stochastic & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ & ${\small 0/+}$ \\
+Markov & \success{${\small 0/+}$} & ${\small 0}$ & \critical{${\small -}$} & ${\small 0}$ \\
+Adaptive & ${\small 0}$ & \critical{${\small -}$} & \critical{${\small -}$} & ${\small 0/-}$ \\
+OnlineAdaptive & ${\small 0}$ & ${\small 0}$ & \critical{${\small -}$} & ${\small 0}$ \\
+None & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ & ${\small 0}$ \\
+\bottomrule
+\end{tabular}
+\caption{EXPNeuralUCB: qualitative $\Delta_{T\rightarrow 2T}$ across allocators.}
+\end{table}
+
+% ============================================================
+% 5. DISCUSSION
+% ============================================================
+\section{Discussion}
+
+\subsection{Why can $2T$ hurt under Adaptive?}
+\begin{itemize}
+    \item \textbf{Exploration leakage:} Larger capacity encourages broader action sampling; adaptive adversaries exploit the richer signal to tail your policy.
+    \item \textbf{Stability vs plasticity:} Pursuit's bounded updates dampen overreaction at $2T$; multiplicative weights (EXP) react strongly to transient rewards, increasing volatility.
+    \item \textbf{Allocator coupling:} Dynamic UCB adds a second exploration driver; under Adaptive, the combination with $2T$ increases predictable overshoot windows.
+\end{itemize}
+
+\subsection{Design Principle: Dynamic Capacity Controllers}
+\begin{tcolorbox}[colback=highlightcolor,title=Controller Policy Sketch]
+\small
+If \textbf{attack reactivity} $>$ threshold $\Rightarrow$ cap at $T$ (or $1.2T$) with Fixed/Thompson; else gradually scale to $2T$ under Thompson or Dynamic for throughput gains. Add hysteresis to avoid flapping.
+\end{tcolorbox}
+
+\subsection{Operational Playbook}
+\begin{itemize}
+    \item \textbf{Default:} Thompson + Pursuit with conservative capacity ramp (start near $T$).
+    \item \textbf{Adaptive detected:} Freeze at $T$ with Fixed allocator; reduce exploration coefficients.
+    \item \textbf{Structured/None:} Scale to $2T$ for headroom; Dynamic UCB gains on Markov.
+\end{itemize}
+
+% ============================================================
+% 6. CONCLUSIONS
+% ============================================================
+\section{Conclusions}
+
+Doubling capacity ($T \rightarrow 2T$) is \emph{condition-dependent}. It provides headroom and throughput in memoryless/structured scenarios but can harm robustness under reactive adversaries. The safest, most performant path is a \textbf{dynamic capacity scaling policy} paired with \textbf{Pursuit+Thompson} as default and \textbf{Fixed fallback} when adaptivity is detected.
+
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{\centering
+Dynamic capacity scaling + attack-aware allocator switching yields higher average efficiency and tighter floors than static capacity in quantum bandit routing.
+}}
+\end{center}
+
+\bibliography{references}
+
+\end{document}

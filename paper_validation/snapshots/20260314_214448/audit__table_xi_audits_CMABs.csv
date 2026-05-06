@@ -1,0 +1,21 @@
+Source,Algorithm,Metric,Expected,Actual,Note,B - A,|B - A|,|B - A| / Expected,Priority
+CMABs,CPursuit,Avg Eff (%),89.9,89.9,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CPursuit,Gap (%),10.1,10.1,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CPursuit,Floor (%),77.4,77.4,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CPursuit,Exp. Winner,54.0,54.0,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpsilonGreedy,Avg Eff (%),88.08,88.08,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpsilonGreedy,Gap (%),11.92,11.92,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpsilonGreedy,Floor (%),79.4,79.4,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpsilonGreedy,Exp. Winner,21.0,21.0,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEXP4,Avg Eff (%),70.06,70.06,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEXP4,Gap (%),29.94,29.94,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEXP4,Floor (%),67.4,67.4,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEXP4,Exp. Winner,0.0,0.0,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CThompsonSampling,Avg Eff (%),68.16,68.16,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CThompsonSampling,Gap (%),31.84,31.84,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CThompsonSampling,Floor (%),62.5,62.5,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CThompsonSampling,Exp. Winner,0.0,0.0,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpochGreedy,Avg Eff (%),37.65,37.65,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpochGreedy,Gap (%),62.35,62.35,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpochGreedy,Floor (%),36.3,36.3,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+CMABs,CEpochGreedy,Exp. Winner,0.0,0.0,"file=Master_Dataset_CMABs.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None

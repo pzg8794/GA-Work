@@ -1,0 +1,13 @@
+label,status,reason
+tab:rq1masterstochastic,reconciliation required,Neural rows need source lock.
+fig:context_capacity_effects,pending implementation,"Mapped in plan, not yet coded here."
+tab:rq2_adversarial,pending implementation,"Mapped in plan, not yet coded here."
+fig:scenario_penalties,pending implementation,"Mapped in plan, not yet coded here."
+fig:capacity_all,pending implementation,"Mapped in plan, not yet coded here."
+fig:threat_rules,pending implementation,"Mapped in plan, not yet coded here."
+tab:rq3a_informative,pending implementation,"Mapped in plan, not yet coded here."
+tab:rq3b_capacity_scaling,pending implementation,"Mapped in plan, not yet coded here."
+tab:rq3c_allocators,pending implementation,"Mapped in plan, not yet coded here."
+tab:testbed_comparison,pending implementation,"Mapped in plan, not yet coded here."
+tab:model_family_comparison,pending implementation,"Mapped in plan, not yet coded here."
+fig:convergence_hybrid,TBD,Not cleanly master-dataset-backed yet.

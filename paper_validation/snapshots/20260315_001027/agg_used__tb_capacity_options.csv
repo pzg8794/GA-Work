@@ -1,0 +1,4 @@
+Section,Branch,Closer to claims?,Closer to reported data?,Support / fit,Decision note
+RQ3a,Tb / 6K / Fixed / s=2 / runs=3 only,No,No,OA lift +0.911 pp; MAE ≈ 4.534,Weaker than T for both claim support and table fit
+RQ3b,Tb / Default / 6K / runs=3 only / scale sweep,No,Yes,Best table-match branch; MAE ≈ 2.110,"Reported-data option, but it does not explain the narrative branch"
+RQ3c,Tb / iCPursuitNeuralUCB / 6K / s=2 / runs=3 / all5,Yes,No,Fixed best avg and floor; Thompson strongest in Adaptive; caption-branch Tb MAE ≈ 16.254,"Strongest source-backed statement option, but not the printed-table provenance option"

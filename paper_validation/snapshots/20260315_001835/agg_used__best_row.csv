@@ -1,0 +1,7 @@
+index,best_row
+MAE,0.027
+Model,iCPursuitNeuralUCB
+Cap type,Tb
+Run mode,3only
+Scenario set,all5
+Statement branch supports answer text,True

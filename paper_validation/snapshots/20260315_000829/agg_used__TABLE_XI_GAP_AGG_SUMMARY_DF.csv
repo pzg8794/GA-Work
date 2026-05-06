@@ -1,0 +1,6 @@
+Source,Aggregate Winner,Aggregate Mean Gap (%),Aggregate Gap Reduction (%),Lead vs Next (pp),iCP aggregate winner?
+Hybrid Neural,iCPursuitNeuralUCB,10.281,89.719,2.052,Yes
+Paper 2,iCPursuitNeuralUCB,25.551,74.449,1.213,Yes
+Paper 7,iCPursuitNeuralUCB,21.97,78.03,7.213,Yes
+Paper 12,iCPursuitNeuralUCB,55.856,44.144,0.329,Yes
+Paper 8,iCPursuitNeuralUCB,32.154,67.846,5.912,Yes

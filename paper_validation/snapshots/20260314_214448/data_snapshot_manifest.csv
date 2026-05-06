@@ -1,0 +1,4 @@
+Label,SourceCSV,Rows,uniq_cap_type,nuniq_cap_type,uniq_frames,nuniq_frames,uniq_allocator,nuniq_allocator,uniq_runs,nuniq_runs,uniq_model,nuniq_model,uniq_scenario,nuniq_scenario,uniq_scale,nuniq_scale
+rq3b_hybrid_icpn_default_Tb_frames6000_runs3_scales1-2_scen4__RAW,/Users/pitergarcia/DataScience/Semester4/GA-Work/Validated_Logs/Master_Dataset_Hybrid.csv,12,Tb,1,6000,1,Default,1,3,1,ICPURSUITNEURALUCB,1,ADAPTIVE|MARKOV|NONE|STOCHASTIC,4,1.0|1.5|2.0,3
+rq3b_hybrid_icpn_random_T_frames6000_runs3_scales1-2_scen4__RAW,/Users/pitergarcia/DataScience/Semester4/GA-Work/Validated_Logs/Master_Dataset_Hybrid.csv,8,T,1,6000,1,Random,1,3,1,ICPURSUITNEURALUCB,1,ADAPTIVE|MARKOV|NONE|STOCHASTIC,4,1.0|1.5,2
+rq3b_hybrid_cp_and_icpn_default_Tb_frames6000_runs3_scales1-2_scen4__RAW,/Users/pitergarcia/DataScience/Semester4/GA-Work/Validated_Logs/Master_Dataset_Hybrid.csv,24,Tb,1,6000,1,Default,1,3,1,CPURSUITNEURALUCB|ICPURSUITNEURALUCB,2,ADAPTIVE|MARKOV|NONE|STOCHASTIC,4,1.0|1.5|2.0,3

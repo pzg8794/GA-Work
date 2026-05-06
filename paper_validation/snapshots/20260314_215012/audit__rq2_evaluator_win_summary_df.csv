@@ -1,0 +1,5 @@
+Model,Source,Wins (evaluator),Total Wins (evaluator),Expected,Actual,B - A,|B - A|,|B - A| / Expected,Priority
+CPursuit,CMABs,21,30,25.6,70.0,44.4,44.4,1.734375,High
+iCEpsilonGreedy,iCMABs,36,36,43.9,100.0,56.1,56.1,1.277904,High
+EXPNeuralUCB,EXP3,25,36,30.5,69.44,38.94,38.94,1.276721,High
+EXP3/UCB,EXP3,0,36,0.0,0.0,0.0,0.0,0.0,None

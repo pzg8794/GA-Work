@@ -1,0 +1,17 @@
+Source,Algorithm,Metric,Expected,Actual,Note,B - A,|B - A|,|B - A| / Expected,Priority
+Paper 7,iCPursuitNeuralUCB,Avg Eff (%),77.5,77.5,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Gap (%),22.5,22.5,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Floor (%),28.7,28.7,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,iCPursuitNeuralUCB,Exp. Winner,58.0,58.0,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Avg Eff (%),70.89,70.89,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Gap (%),29.11,29.11,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Floor (%),41.5,41.5,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,GNeuralUCB,Exp. Winner,10.0,10.0,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Avg Eff (%),70.89,70.89,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Gap (%),29.11,29.11,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Floor (%),41.5,41.5,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,CPursuitNeuralUCB,Exp. Winner,0.0,0.0,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Avg Eff (%),69.54,69.54,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Gap (%),30.46,30.46,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Floor (%),33.0,33.0,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None
+Paper 7,EXPNeuralUCB,Exp. Winner,7.0,7.0,"file=Master_Dataset_paper7_50_50_5_ST.csv, runs=5, cap_type=T, scales=[1.0, 1.5, 2.0]",0.0,0.0,0.0,None

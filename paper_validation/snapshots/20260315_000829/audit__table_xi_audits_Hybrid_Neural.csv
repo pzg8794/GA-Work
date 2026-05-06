@@ -1,0 +1,17 @@
+Source,Algorithm,Metric,Expected,Actual,Note,B - A,|B - A|,|B - A| / Expected,Priority
+Hybrid Neural,iCPursuitNeuralUCB,Avg Eff (%),90.86,90.86,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,iCPursuitNeuralUCB,Gap (%),9.14,9.14,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,iCPursuitNeuralUCB,Floor (%),76.4,76.4,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,iCPursuitNeuralUCB,Exp. Winner,23.0,23.0,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,CPursuitNeuralUCB,Avg Eff (%),89.0,89.0,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,CPursuitNeuralUCB,Gap (%),11.0,11.0,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,CPursuitNeuralUCB,Floor (%),45.0,45.0,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,CPursuitNeuralUCB,Exp. Winner,17.0,17.0,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,GNeuralUCB,Avg Eff (%),88.99,88.99,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,GNeuralUCB,Gap (%),11.01,11.01,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,GNeuralUCB,Floor (%),62.2,62.2,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,GNeuralUCB,Exp. Winner,21.0,21.0,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,EXPNeuralUCB,Avg Eff (%),88.37,88.37,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,EXPNeuralUCB,Gap (%),11.63,11.63,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,EXPNeuralUCB,Floor (%),63.9,63.9,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None
+Hybrid Neural,EXPNeuralUCB,Exp. Winner,14.0,14.0,"file=Master_Dataset_Hybrid.csv, runs=5, cap_type=Tb",0.0,0.0,0.0,None

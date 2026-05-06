@@ -1,0 +1,17 @@
+Label,RawFile,RawRows,RawRowsNumericEff,GroupKeys,AggRows,PivotMeanWritten,PivotCountWritten,MissingCombos,MissingCombosWritten
+base_run5,data__base_run5.csv,120,120,model|scale|scenario|runs|frames|cap_type|allocator,110,True,True,10,True
+filtered,data__filtered.csv,231,231,model|scale|scenario|runs|frames|cap_type|allocator,144,True,True,36,True
+frame,data__frame.csv,1540,1155,model|scale|scenario|runs|frames|cap_type|allocator,720,True,True,480,True
+match3,data__match3.csv,1,1,model|scale|scenario|runs|frames|cap_type|allocator,1,True,True,0,False
+rq2_frames_CMABs,data__rq2_frames_CMABs.csv,1200,1000,model|scale|scenario|runs|frames|cap_type|allocator,1000,True,True,800,True
+rq2_frames_EXP3,data__rq2_frames_EXP3.csv,1540,1155,model|scale|scenario|runs|frames|cap_type|allocator,720,True,True,480,True
+rq2_frames_iCMABs,data__rq2_frames_iCMABs.csv,2580,2150,model|scale|scenario|runs|frames|cap_type|allocator,1200,True,True,600,True
+rq2_icmab_family,data__rq2_icmab_family.csv,1290,1290,model|scale|scenario|runs|frames|cap_type|allocator,720,True,True,180,True
+rq3a_alt_scope,data__rq3a_alt_scope.csv,20,20,model|scale|scenario|runs|frames|cap_type|allocator,20,True,True,0,False
+rq3a_scope,data__rq3a_scope.csv,20,20,model|scale|scenario|runs|frames|cap_type|allocator,20,True,True,0,False
+rq3b_df,data__rq3b_df.csv,4650,3720,model|scale|scenario|runs|frames|cap_type|allocator,3460,True,True,2540,True
+rq3c_approved_branch,data__rq3c_approved_branch.csv,25,25,model|scale|scenario|runs|frames|cap_type|allocator,20,True,True,0,False
+rq3d_core,data__rq3d_core.csv,80,80,model|scale|scenario|runs|frames|cap_type|allocator,80,True,True,10,True
+rq3d_run3,data__rq3d_run3.csv,110,110,model|scale|scenario|runs|frames|cap_type|allocator,105,True,True,15,True
+run5,data__run5.csv,1,1,model|scale|scenario|runs|frames|cap_type|allocator,1,True,True,0,False
+subset,data__subset.csv,10,10,model|scale|scenario|runs|frames|cap_type|allocator,10,True,True,0,False

@@ -1,0 +1,19 @@
+Allocator,Cap type,Run mode,MAE vs paper
+Default,Tb,3only,2.11
+Dynamic,Tb,3only,3.151
+Dynamic,Tb,3+5mean,3.219
+Dynamic,Tb,5only,3.725
+Default,Tb,3+5mean,3.834
+ThompsonSampling,T,3only,5.002
+ThompsonSampling,Tb,5only,5.056
+Default,Tb,5only,5.951
+ThompsonSampling,T,3+5mean,6.103
+ThompsonSampling,Tb,3+5mean,6.455
+Dynamic,T,3only,6.459
+Dynamic,T,3+5mean,7.063
+ThompsonSampling,T,5only,7.209
+Random,Tb,3only,11.835
+Random,Tb,3+5mean,12.123
+Random,T,3+5mean,13.52
+Random,T,5only,13.52
+Random,Tb,5only,13.558

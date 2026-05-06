@@ -1,0 +1,19 @@
+\subsection{Methodological Limitations}
+
+The proposed hybrid approach incorporates several methodological limitations that warrant careful consideration:
+
+\begin{enumerate}
+    \item \textbf{Forecasting Accuracy Dependencies:} The effectiveness of the iCMAB world model is contingent upon the quality and stability of historical quantum network data. In scenarios with limited training data or rapidly changing network topologies, the evolved RNN architectures may exhibit reduced predictive accuracy, potentially compromising the overall system performance.
+    
+    \item \textbf{Computational Complexity Trade-offs:} The integration of EXAMM-evolved RNNs introduces significant computational overhead compared to traditional bandit approaches. The neuroevolution process requires substantial processing resources and time, which may limit real-time applicability in resource-constrained quantum network environments.
+    
+    \item \textbf{Theoretical Guarantee Preservation:} While EXPNeuralUCB provides proven regret bounds of $O(T^{3/4} \log T)$, the integration with iCMAB's forecasting layer may affect these theoretical guarantees. The interaction between predictive context and adversarial decision-making introduces complexity that requires further theoretical analysis to ensure maintained performance bounds.
+    
+    \item \textbf{Adversarial Attack Model Assumptions:} The current framework assumes specific adversarial behavior patterns that may not encompass the full spectrum of potential quantum network attacks. Sophisticated adversaries employing novel attack vectors or adaptive strategies beyond the current model may compromise system effectiveness.
+    
+    \item \textbf{Domain Transferability Constraints:} The adaptation of financial market forecasting techniques (iCMAB) to quantum networking domains involves inherent assumptions about pattern similarity between these distinct environments. The effectiveness of this cross-domain transfer remains empirically unvalidated across diverse quantum network configurations.
+    
+    \item \textbf{Scalability Limitations:} The proposed architecture's performance under increasing network size, node count, and concurrent user scenarios requires comprehensive evaluation. The interaction between forecasting accuracy and system scalability may introduce performance bottlenecks not addressed in the current framework.
+\end{enumerate}
+
+These limitations highlight the need for extensive empirical validation, computational optimization strategies, and theoretical analysis to ensure the robustness and practical viability of the proposed hybrid approach in real-world quantum networking scenarios.

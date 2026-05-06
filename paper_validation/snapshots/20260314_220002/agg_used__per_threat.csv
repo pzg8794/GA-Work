@@ -1,0 +1,5 @@
+Model,MARKOV wins,ADAPTIVE wins,ONLINEADAPTIVE wins
+CPursuit,17.0,31.0,37.0
+iCEpsilonGreedy,48.0,48.0,48.0
+EXPNeuralUCB,28.0,11.0,26.0
+EXP3/UCB,0.0,5.0,2.0

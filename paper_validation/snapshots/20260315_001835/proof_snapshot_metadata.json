@@ -1,0 +1,9 @@
+{
+  "timestamp": "20260315_001835",
+  "snapshot_dir": "/Users/pitergarcia/DataScience/Semester4/GA-Work/paper_validation/snapshots/20260315_001835",
+  "python": "/Users/pitergarcia/DataScience/Semester4/GA-Work/.quantum/bin/python3.12",
+  "pandas_version": "2.1.4",
+  "exported_slice_csvs": 16,
+  "exported_agg_used_csvs": 133,
+  "excluded_entries": 68
+}

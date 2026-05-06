@@ -1,0 +1,2 @@
+model,scale,runs,frames,cap_type,allocator,ONLINEADAPTIVE
+ICPURSUITNEURALUCB,2.0,5,6000,T,Default,1
