@@ -2,6 +2,35 @@
 
 This file applies to the entire `Semester4/GA-Work/` tree unless a deeper `AGENTS.md` overrides it.
 
+## Current post-ICNP resume point — August 2026
+
+For the active quantum-paper / GA work, **do not resume from the March 2026 task state alone**. Strategic post-ICNP decisions were documented later in the separate `RESEARCH` repository and must be reconciled before paper edits or new experiments.
+
+Start here, in this order:
+
+1. `GA Papers/GA_Communications/md_files/2026-08-27-ICNP-REVISION-WEEKLY-EXECUTION-PLAN.md`
+2. `pzg8794/RESEARCH/RESEARCH/2026-08-04-icnp-review-classification-and-revision-roadmap.md`
+3. `pzg8794/RESEARCH/ADMIN/2026-08-04-dsci602-quantum-paper-consolidation-advisor-draft.md`
+4. `GA Papers/QuantumFaultTolerant/ICNP_VENUE_PREP/HIGH_PRIORITY_REVIEW_BACKLOG.md`
+5. `GA Papers/QuantumFaultTolerant/ICNP_VENUE_PREP/ACTIVE_FEEDBACK_RESOLUTION_LOG.md`
+6. `GA Papers/QuantumFaultTolerant/ICNP_2026_venue_draft.tex`
+7. `GA Papers/GA_Communications/md_files/Task-Tracker-Formal.md` for historical task IDs and prior commitments.
+
+### Post-ICNP source precedence
+
+- **Revision strategy / priorities:** August 2026 `RESEARCH` roadmap overrides stale pre-review GA planning.
+- **What is actually implemented in the paper:** current `QuantumFaultTolerant` source and feedback-resolution logs are authoritative.
+- **Actual result values:** validated datasets/logs are authoritative over prose summaries.
+- **Direct advisor/reviewer instructions:** documented feedback is authoritative over inferred intent.
+
+### Weekly GA work rule
+
+- Plan and document **10 hours of GA work per week**.
+- Every week must end with concrete artifacts, hours used, reviewer items closed, validation performed, blockers, and next-week targets.
+- Do not recreate work that reconciliation shows is already complete.
+- Do not launch expensive new experiments before reconciling reviewer requests against the active manuscript state.
+- The locked review strategy is **Reviewer A accepted core + Reviewer C conversion checklist first; Reviewer B is a secondary risk audit**.
+
 ## Resume points
 
 - For the quantum framework, start here:
