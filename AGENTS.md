@@ -4,17 +4,22 @@ This file applies to the entire `Semester4/GA-Work/` tree unless a deeper `AGENT
 
 ## Current post-ICNP resume point — August 2026
 
-For the active quantum-paper / GA work, **do not resume from the March 2026 task state alone**. Strategic post-ICNP decisions were documented later in the separate `RESEARCH` repository and must be reconciled before paper edits or new experiments.
+For the active quantum-paper / GA work, **do not resume from the March 2026 task state alone**. Use the documented venue feedback, the August 2026 reviewer roadmap, and the current manuscript state.
+
+This workstream is scope-locked to closing reviewer-feedback gaps and preparing
+the paper and evidence package for resubmission. Anything that cannot be traced
+directly to that outcome is not a current priority.
 
 Start here, in this order:
 
 1. `GA Papers/GA_Communications/md_files/2026-08-27-ICNP-REVISION-WEEKLY-EXECUTION-PLAN.md`
 2. `pzg8794/RESEARCH/RESEARCH/2026-08-04-icnp-review-classification-and-revision-roadmap.md`
-3. `pzg8794/RESEARCH/ADMIN/2026-08-04-dsci602-quantum-paper-consolidation-advisor-draft.md`
+3. `GA Papers/GA_Communications/md_files/Task-Tracker-Formal.md`
 4. `GA Papers/QuantumFaultTolerant/ICNP_VENUE_PREP/HIGH_PRIORITY_REVIEW_BACKLOG.md`
 5. `GA Papers/QuantumFaultTolerant/ICNP_VENUE_PREP/ACTIVE_FEEDBACK_RESOLUTION_LOG.md`
-6. `GA Papers/QuantumFaultTolerant/ICNP_2026_venue_draft.tex`
-7. `GA Papers/GA_Communications/md_files/Task-Tracker-Formal.md` for historical task IDs and prior commitments.
+6. `GA Papers/QuantumFaultTolerant/ICNP_VENUE_PREP/ICNP_DRAFT_AUDIT_TODO.md`
+7. `GA Papers/QuantumFaultTolerant/ICNP_2026_venue_draft.tex`
+8. framework, configuration, and validated-result sources only when an active reviewer item requires them.
 
 ### Post-ICNP source precedence
 
@@ -22,6 +27,7 @@ Start here, in this order:
 - **What is actually implemented in the paper:** current `QuantumFaultTolerant` source and feedback-resolution logs are authoritative.
 - **Actual result values:** validated datasets/logs are authoritative over prose summaries.
 - **Direct advisor/reviewer instructions:** documented feedback is authoritative over inferred intent.
+- **Planning boundary:** do not promote an interpretation, suspected defect, or untested hypothesis into a task priority or advisor communication without validated evidence.
 
 ### Weekly GA work rule
 
@@ -33,8 +39,7 @@ Start here, in this order:
 
 ## Resume points
 
-- For the quantum framework, start here:
-  - `hybrid_variable_framework/AGENTS.md`
+- For framework work, follow only the source/configuration pointers required by an active reviewer-feedback item.
 - For Drive migration details, read:
   - `hybrid_variable_framework/Dynamic_Routing_Eval_Framework/STATE-DRIVE-MIGRATION-PLAN.md`
 
@@ -47,6 +52,7 @@ Start here, in this order:
 
 ## Drive migration rules
 
+- Cleanup Rule 0: never delete by age, size, or duplicate-looking name alone. A file is deletable only when it is explicitly approved and is either (1) verified in the Drive data lake, (2) a generated/build/cache artifact that can be recreated, or (3) an obsolete local archive of state runs after the canonical state-management path is confirmed.
 - Stay on the existing Drive implementation.
 - Only valid remote datalake roots are:
   - `quantum_data_lake/framework_state/`
