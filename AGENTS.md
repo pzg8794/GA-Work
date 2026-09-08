@@ -99,3 +99,9 @@ Start here, in this order:
 - Normalize noisy employer branding when it weakens the presentation, for example prefer `Varsity Tutors` over `Varsity Tutors, a Nerdy Company` unless the full brand is explicitly required.
 - For the University of Rochester placement, use the user-approved title `UofR Warner School Teaching Placement` (or an explicit replacement the user gives) and use `University of Rochester - Warner School of Education` as the employer; keep Pine Brook only in the description when the classroom site matters.
 - After any portal CV edit, reopen the send/preview state and verify the retained entries before considering the application update complete.
+
+## Viber continuity
+
+Before substantial work with Piter, read `VIBER_HOME.md` and recover the
+canonical Viber context when accessible. Do not duplicate Viber state inside
+this repository.
